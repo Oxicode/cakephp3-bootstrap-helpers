@@ -65,7 +65,7 @@ class BootstrapPaginatorHelperTest extends TestCase {
             ]],
             ['a' => true],
             ['i' => [
-                'class' => 'glyphicon glyphicon-chevron-left',
+                'class' => 'fa fa-chevron-left',
                 'aria-hidden' => 'true'
             ]],
             '/i', '/a', '/li'
@@ -86,7 +86,7 @@ class BootstrapPaginatorHelperTest extends TestCase {
                 'href' => '/index?page=2'
             ]],
             ['i' => [
-                'class' => 'glyphicon glyphicon-chevron-right',
+                'class' => 'fa fa-chevron-right',
                 'aria-hidden' => 'true'
             ]],
             '/i', '/a', '/li'

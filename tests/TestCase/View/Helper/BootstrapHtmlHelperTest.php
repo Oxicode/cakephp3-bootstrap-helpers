@@ -36,7 +36,7 @@ class BootstrapHtmlHelperTest extends TestCase {
         $expected = [
             ['i' => [
                 'aria-hidden' => 'true',
-                'class' => 'glyphicon glyphicon-home my-class',
+                'class' => 'fa fa-home my-class',
                 'id' => 'my-id'
             ]],
             '/i'
@@ -88,7 +88,7 @@ class BootstrapHtmlHelperTest extends TestCase {
         // Standard test
         $this->assertHtml([
             ['span' => [
-                'class' => 'label label-default'
+                'class' => 'badge badge-default'
             ]],
             'My Label',
             '/span'
@@ -96,19 +96,19 @@ class BootstrapHtmlHelperTest extends TestCase {
         // Type
         $this->assertHtml([
             ['span' => [
-                'class' => 'label label-primary'
+                'class' => 'badge badge-primary'
             ]],
             'My Label',
             '/span'
         ], $this->html->label($content, 'primary'));
         // Type + Options
         $options = [
-            'class' => 'my-label-class',
-            'id'    => 'my-label-id'
+            'class' => 'my-badge-class',
+            'id'    => 'my-badge-id'
         ];
         $this->assertHtml([
             ['span' => [
-                'class' => 'label label-primary '.$options['class'],
+                'class' => 'badge badge-primary '.$options['class'],
                 'id'    => $options['id']
             ]],
             'My Label',
@@ -116,13 +116,13 @@ class BootstrapHtmlHelperTest extends TestCase {
         ], $this->html->label($content, 'primary', $options));
         // Only options
         $options = [
-            'class' => 'my-label-class',
-            'id'    => 'my-label-id',
+            'class' => 'my-badge-class',
+            'id'    => 'my-badge-id',
             'type'  => 'primary'
         ];
         $this->assertHtml([
             ['span' => [
-                'class' => 'label label-primary '.$options['class'],
+                'class' => 'badge badge-primary '.$options['class'],
                 'id'    => $options['id']
             ]],
             'My Label',
@@ -223,7 +223,7 @@ class BootstrapHtmlHelperTest extends TestCase {
         $expected = [
             ['div' => ['class' => 'progress']],
             ['div' => [
-                'class' => 'progress-bar progress-bar-primary',
+                'class' => 'progress-bar bg-primary',
                 'role' => 'progressbar',
                 'aria-valuenow' => 20,
                 'aria-valuemin' => 0,
@@ -245,7 +245,7 @@ class BootstrapHtmlHelperTest extends TestCase {
         $expected = [
             ['div' => ['class' => 'progress']],
             ['div' => [
-                'class' => 'progress-bar progress-bar-primary my-class progress-bar-striped',
+                'class' => 'progress-bar bg-primary my-class progress-bar-striped',
                 'role' => 'progressbar',
                 'aria-valuenow' => 20,
                 'aria-valuemin' => 0,
@@ -255,7 +255,7 @@ class BootstrapHtmlHelperTest extends TestCase {
             ['span' => ['class' => 'sr-only']], '20%', '/span',
             '/div',
             ['div' => [
-                'class' => 'progress-bar progress-bar-primary progress-bar-striped',
+                'class' => 'progress-bar bg-primary progress-bar-striped',
                 'role' => 'progressbar',
                 'aria-valuenow' => 15,
                 'aria-valuemin' => 0,
@@ -266,7 +266,7 @@ class BootstrapHtmlHelperTest extends TestCase {
             ['span' => ['class' => 'sr-only']], '15%', '/span',
             '/div',
             ['div' => [
-                'class' => 'progress-bar progress-bar-primary progress-bar-striped active',
+                'class' => 'progress-bar bg-primary progress-bar-striped progress-bar-animated',
                 'role' => 'progressbar',
                 'aria-valuenow' => 10,
                 'aria-valuemin' => 0,

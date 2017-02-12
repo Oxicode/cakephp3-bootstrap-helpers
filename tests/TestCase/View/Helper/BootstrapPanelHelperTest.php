@@ -143,7 +143,7 @@ class BootstrapPanelHelperTest extends TestCase {
                 'class' => 'panel-title'
             ]],
             ['i' => [
-                'class' => 'glyphicon glyphicon-home',
+                'class' => 'fa fa-home',
                 'aria-hidden' => 'true'
             ]], '/i', ' Home',
             '/h4',
@@ -226,7 +226,7 @@ class BootstrapPanelHelperTest extends TestCase {
                 'aria-controls' => 'collapse-2'
             ]],
             ['i' => [
-                'class' => 'glyphicon glyphicon-home',
+                'class' => 'fa fa-home',
                 'aria-hidden' => 'true'
             ]], '/i', ' Home',
             '/a',

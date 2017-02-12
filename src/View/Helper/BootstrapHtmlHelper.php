@@ -74,16 +74,17 @@ class BootstrapHtmlHelper extends HtmlHelper {
             'javascriptend' => '</script>',
 
             // New templates for Bootstrap
-            'icon' => '<i aria-hidden="true" class="glyphicon glyphicon-{{type}}{{attrs.class}}"{{attrs}}></i>',
-            'label' => '<span class="label label-{{type}}{{attrs.class}}"{{attrs}}>{{content}}</span>',
-            'badge' => '<span class="badge{{attrs.class}}"{{attrs}}>{{content}}</span>',
-            'alert' => '<div class="alert alert-{{type}}{{attrs.class}}" role="alert"{{attrs}}>{{close}}{{content}}</div>',
-            'alertCloseButton' => 
+            'icon' => '<i aria-hidden="true" class="fa fa-{{type}}{{attrs.class}}"{{attrs}}></i>',
+            'label' => '<span class="badge badge-{{type}}{{attrs.class}}"{{attrs}}>{{content}}</span>',
+            'badge' => '<span class="badge badge-{{type}}{{attrs.class}}"{{attrs}}>{{content}}</span>',
+            'alert' => '<div class="alert alert-{{type}}{{attrs.class}}" role="alert"{{attrs}}>{{close}}{{heading}}{{content}}</div>',
+            'alertCloseButton' =>
                 '<button type="button" class="close{{attrs.class}}" data-dismiss="alert" aria-label="{{label}}"{{attrs}}>{{content}}</button>',
             'alertCloseContent' => '<span aria-hidden="true">&times;</span>',
+            'alertHeading' => '<h4 class="alert-heading{{attrs.class}}"{{attrs}}>{{content}}</h4>',
             'tooltip' => '<{{tag}} data-toggle="{{toggle}}" data-placement="{{placement}}" title="{{tooltip}}">{{content}}</{{tag}}>',
-            'progressBar' => 
-'<div class="progress-bar progress-bar-{{type}}{{attrs.class}}" role="progressbar" 
+            'progressBar' =>
+'<div class="progress-bar bg-{{type}}{{attrs.class}}" role="progressbar"
 aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style="width: {{width}}%%;"{{attrs}}>{{inner}}</div>',
             'progressBarInner' => '<span class="sr-only">{{width}}%%</span>',
             'progressBarContainer' => '<div class="progress{{attrs.class}}"{{attrs}}>{{content}}</div>'
@@ -95,6 +96,9 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
             'toggle'    => 'tooltip'
         ],
         'label' => [
+            'type' => 'default'
+        ],
+        'badge' => [
             'type' => 'default'
         ],
         'alert' => [
@@ -133,13 +137,12 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
     /**
      * Create a Twitter Bootstrap span label.
      *
-     * The second parameter may either be `$type` or `$options` (in which case 
+     * The second parameter may either be `$type` or `$options` (in which case
      * the third parameter is not used, and the label type can be specified in the
      * `$options` array).
      *
      * ### Options
      *
-     * - `tag` The HTML tag to use.
      * - `type` The type of the label.
      * - `templateVars` Provide template variables for the `label` template.
      * - Other attributes will be assigned to the wrapper element.
@@ -151,6 +154,8 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
      * from the configuration.
      *
      * @return string The HTML label element.
+     *
+     * @deprecated 4.0.0 Bootstrap 4 does not have labels any more, use `badge()` instead.
      */
     public function label($text, $type = null, $options = []) {
         if (is_string($type)) {
@@ -174,22 +179,39 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
     /**
      * Create a Twitter Bootstrap badge.
      *
+     * The second parameter may either be `$type` or `$options` (in which case
+     * the third parameter is not used, and the badge type can be specified in the
+     * `$options` array).
+     *
      * ### Options
      *
+     * - `type` The type of the badge.
      * - `templateVars` Provide template variables for the `badge` template.
      * - Other attributes will be assigned to the wrapper element.
      *
-     * @param string $text The badge text.
+     * @param string $text The badge text
+     * @param string|array $type The badge type (default, primary, success, warning,
+     * info, danger) or the array of options (see `$options`).
+     * @param array $options Array of options. See above. Default values are retrieved
+     * from the configuration..
      *
      * @param array $options Array of attributes for the span element.
      */
-    public function badge($text, $options = []) {
-        $options += [
+    public function badge($text, $type = null, $options = []) {
+        if (is_string($type)) {
+            $options['type'] = $type;
+        }
+        else if (is_array($type)) {
+            $options = $type;
+        }
+        $options += $this->config('badge') + [
             'templateVars' => []
         ];
+        $type = $options['type'];
         return $this->formatTemplate('badge', [
+            'type' => $options['type'],
             'content' => $text,
-            'attrs' => $this->templater()->formatAttributes($options),
+            'attrs' => $this->templater()->formatAttributes($options, ['type']),
             'templateVars' => $options['templateVars']
         ]);
     }
@@ -329,7 +351,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
                 $width = $this->addClass($width, 'progress-bar-striped');
             }
             if ($width['active']) {
-                $width = $this->addClass($width, 'active');
+                $width = $this->addClass($width, 'progress-bar-animated');
             }
             $inner = $this->formatTemplate('progressBarInner', [
                 'width' => $width['width']

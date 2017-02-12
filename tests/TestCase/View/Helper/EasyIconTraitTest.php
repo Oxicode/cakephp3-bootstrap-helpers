@@ -72,7 +72,7 @@ class EasyIconTraitTest extends TestCase {
             'expected' => [
                 'escape' => false,
                 'result' => [['i' => [
-                    'class' => 'glyphicon glyphicon-plus',
+                    'class' => 'fa fa-plus',
                     'aria-hidden' => 'true'
                 ]], '/i']
             ]
@@ -89,7 +89,7 @@ class EasyIconTraitTest extends TestCase {
             'expected' => [
                 'escape' => false,
                 'result' => [['i' => [
-                    'class' => 'glyphicon glyphicon-plus',
+                    'class' => 'fa fa-plus',
                     'aria-hidden' => 'true'
                 ]], '/i', ' Add']
             ]
@@ -99,7 +99,7 @@ class EasyIconTraitTest extends TestCase {
             'expected' => [
                 'escape' => false,
                 'result' => ['Add ', ['i' => [
-                    'class' => 'glyphicon glyphicon-plus',
+                    'class' => 'fa fa-plus',
                     'aria-hidden' => 'true'
                 ]], '/i']
             ]
@@ -129,7 +129,7 @@ class EasyIconTraitTest extends TestCase {
                 'class' => 'btn btn-default',
                 'type'  => 'submit'
             ]], ['i' => [
-                'class' => 'glyphicon glyphicon-plus',
+                'class' => 'fa fa-plus',
                 'aria-hidden' => 'true'
             ]], '/i', '/button'
         ], $result);
@@ -149,7 +149,7 @@ class EasyIconTraitTest extends TestCase {
                 'class' => 'input-group-addon'
             ]],
             ['i' => [
-                'class' => 'glyphicon glyphicon-home',
+                'class' => 'fa fa-home',
                 'aria-hidden' => 'true'
             ]], '/i',
             '/span',
@@ -163,7 +163,7 @@ class EasyIconTraitTest extends TestCase {
                 'class' => 'input-group-addon'
             ]],
             ['i' => [
-                'class' => 'glyphicon glyphicon-plus',
+                'class' => 'fa fa-plus',
                 'aria-hidden' => 'true'
             ]], '/i',
             '/span',
