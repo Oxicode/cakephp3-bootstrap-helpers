@@ -205,3 +205,12 @@ ul {
     width: auto;
     white-space: normal;
 }
+
+/* Anchor */
+
+*:target:before {
+    content:"";
+    display:block;
+    height: 50px; /* fixed header height*/
+    margin: -50px 0 0; /* negative fixed header height */
+}
