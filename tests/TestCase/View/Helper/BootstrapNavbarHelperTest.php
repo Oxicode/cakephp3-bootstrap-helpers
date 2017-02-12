@@ -187,19 +187,10 @@ class BootstrapNavbarHelperTest extends TestCase {
         ];
         $this->assertHtml($expected, $result);
 
-        // Custom tag test
-        $result = $this->navbar->text('Some text', ['tag' => 'em']);
-        $expected = [
-            ['em' => ['class' => 'navbar-text']],
-            'Some text',
-            '/em'
-        ];
-        $this->assertHtml($expected, $result);
-
         // Custom options
         $result = $this->navbar->text('Some text', ['class' => 'my-class']);
         $expected = [
-            ['span' => ['class' => 'my-class navbar-text']],
+            ['span' => ['class' => 'navbar-text my-class']],
             'Some text',
             '/span'
         ];
@@ -225,8 +216,8 @@ class BootstrapNavbarHelperTest extends TestCase {
         $result .= $this->navbar->endMenu();
         $result .= $this->navbar->endMenu();
         $expected = [
-            ['ul' => ['class' => 'my-menu navbar-nav']],
-            ['li' => ['class' => 'active nav-item']],
+            ['ul' => ['class' => 'navbar-nav my-menu']],
+            ['li' => ['class' => 'nav-item active']],
             ['a' => ['class' => 'nav-link', 'href' => '/']], 'Link', '/a', '/li',
             ['li' => ['class' => 'nav-item']],
             ['a' => ['class' => 'nav-link', 'href' => '/pages/test']], 'Blog', '/a', '/li',
@@ -259,7 +250,7 @@ class BootstrapNavbarHelperTest extends TestCase {
         $this->navbar->config('autoActiveLink', true);
         $result = $this->navbar->link('Link', '/');
         $expected = [
-            ['li' => ['class' => 'active nav-item']],
+            ['li' => ['class' => 'nav-item active']],
             ['a' => ['class' => 'nav-link', 'href' => '/']], 'Link', '/a',
             '/li'
         ];
