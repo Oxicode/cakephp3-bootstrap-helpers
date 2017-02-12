@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapPaginatorHelper</h1>
 
@@ -132,20 +133,24 @@
 <p>PaginationHelper encloses all methods needed when working with pagination.</p>
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\Helper\PaginatorHelper
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.PaginatorHelper.html" target="_blank">
+				<span>Cake\View\Helper\PaginatorHelper</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\Helper\BootstrapPaginatorHelper</span></b>			
+				<b><span>Bootstrap\View\Helper\BootstrapPaginatorHelper</span></b>
 			
 			 uses 
-					<a href="class-Bootstrap.View.Helper.EasyIconTrait.html"><span>Bootstrap\View\Helper\EasyIconTrait</span></a>, 
+					<a href="class-Bootstrap.View.Helper.EasyIconTrait.html"><span>Bootstrap\View\Helper\EasyIconTrait</span></a>
+				, 
 			
 					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html"><span>Bootstrap\View\Helper\BootstrapTrait</span></a>
+				
 			
 		</dd>
 	</dl>
@@ -157,7 +162,7 @@ Cake\View\Helper\PaginatorHelper
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
@@ -165,35 +170,398 @@ Cake\View\Helper\PaginatorHelper
 
 				<b>Link:</b>
 				<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html">http://book.cakephp.org/3.0/en/views/helpers/paginator.html</a><br>
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#19-354" title="Go to source code">View/Helper/BootstrapPaginatorHelper.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#19-354" title="Go to source code">View/Helper/BootstrapPaginatorHelper.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="numbers" id="_numbers">
 
-			<td class="attributes"><code>
-				 public 
-				string
+	<div class="section">
+		<h2>Properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#$_defaultConfig">$_defaultConfig</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Default config for this class.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#$helpers">$helpers</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Other helpers used by BootstrapPanelHelper.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>Magic properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#m$Html">$Html</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code><code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code></code></div>
+
+			<div class="description">
 				
-				</code>
-			</td>
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#m$Number">$Number</a></code>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_numbers">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#86-230" title="Go to source code">numbers</a>( <span>array <var>$options</var> = []</span> )</code>
+				<span class="attributes">
+					<span class="label">public</span>
 
-			<div class="description short">
+				</span>
+			</div>
+
+			<div class="property-type">
+					<code><code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.NumberHelper.html" target="_blank">\Cake\View\Helper\NumberHelper</a></code></code>
+
+			<div class="description">
+				
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#m$Url">$Url</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+					<code><code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.UrlHelper.html" target="_blank">\Cake\View\Helper\UrlHelper</a></code></code>
+
+			<div class="description">
+				
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+	<div class="section">
+		<h2>Inherited Properties</h2>
+		<ul class="member-summary used">
+			<li>
+					<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#$easyIcon"><!--
+					-->easyIcon<!--
+					--></a></code>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#_first">first()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Returns a first or set of numbers for the first pages.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#_last">last()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Returns a last or set of numbers for the last pages.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#_next">next()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Generates a "next" link for a set of paged records.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#_numbers">numbers()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
 				<p>Returns a set of numbers for the paged result set using a modulus to decide how
 many numbers to show on each side of the current page (default: 8).</p>
 			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#_prev">prev()</a>
 
-			<div class="description detailed hidden">
-				<p>Returns a set of numbers for the paged result set using a modulus to decide how
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Generates a "previous" link for a set of paged records.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="_first"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelperfirst"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#284-317" title="Go to source code">first()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_first" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>first($first = '&lt;&lt; first', $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Returns a first or set of numbers for the first pages.</p>
+
+<pre><code>echo $this-&gt;Paginator-&gt;first('&lt; first');
+</code></pre>
+
+<p>Creates a single link for the first page. Will output nothing if you are on the
+first page.</p>
+
+<pre><code>echo $this-&gt;Paginator-&gt;first(3);
+</code></pre>
+
+<p>Will create links for the first 3 pages, once you get to the third or greater page.
+Prior to that nothing will be output.</p>
+
+<h3>Options:</h3>
+
+<ul>
+<li><code>model</code> The model to use defaults to PaginatorHelper::defaultModel()</li>
+<li><code>escape</code> Whether or not to HTML escape the text.</li>
+<li><code>url</code> An array of additional URL options to use for link generation.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|int $first = '&lt;&lt; first'</code>
+					</dt>
+					<dd><p>if string use as label for the link. If numeric, the number
+of page links you want at the beginning of the range.</p></dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>An array of options.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>numbers string.<br>
+				</div>
+
+
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
+				</div>
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_last"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelperlast"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#319-352" title="Go to source code">last()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_last" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>last($last = 'last &gt;&gt;', $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Returns a last or set of numbers for the last pages.</p>
+
+<pre><code>echo $this-&gt;Paginator-&gt;last('last &gt;');
+</code></pre>
+
+<p>Creates a single link for the last page. Will output nothing if you are on the
+last page.</p>
+
+<pre><code>echo $this-&gt;Paginator-&gt;last(3);
+</code></pre>
+
+<p>Will create links for the last 3 pages. Once you enter the page range, no output
+will be created.</p>
+
+<h3>Options:</h3>
+
+<ul>
+<li><code>model</code> The model to use defaults to PaginatorHelper::defaultModel()</li>
+<li><code>escape</code> Whether or not to HTML escape the text.</li>
+<li><code>url</code> An array of additional URL options to use for link generation.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|int $last = 'last &gt;&gt;'</code>
+					</dt>
+					<dd><p>if string use as label for the link, if numeric print
+page numbers.</p></dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>numbers string.<br>
+				</div>
+
+
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
+				</div>
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_next"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelpernext"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#258-282" title="Go to source code">next()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_next" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>next($title = 'Next &gt;&gt;', $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Generates a "next" link for a set of paged records.</p>
+
+<h3>Options:</h3>
+
+<ul>
+<li><code>disabledTitle</code> The text to used when the link is disabled. This defaults to the same text at the active link. Setting to false will cause this method to return ''.</li>
+<li><code>escape</code> Whether you want the contents html entity encoded, defaults to true</li>
+<li><code>model</code> The model to use, defaults to <code>PaginatorHelper::defaultModel()</code>.</li>
+<li><code>url</code> An array of additional URL options to use for link generation.</li>
+<li><code>templates</code> An array of templates, or template file name containing the templates you'd like to use when generating the link for next page. The helper's original templates will be restored once next() is done.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string $title = 'Next &gt;&gt;'</code>
+					</dt>
+					<dd>Title for the link. Defaults to 'Next >>'.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Options for pagination link. See above for list of keys.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>A "next" link or $disabledTitle text if the link is disabled.<br>
+				</div>
+
+
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
+				</div>
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_numbers"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelpernumbers"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#86-230" title="Go to source code">numbers()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_numbers" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>numbers($options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Returns a set of numbers for the paged result set using a modulus to decide how
 many numbers to show on each side of the current page (default: 8).</p>
 
 <pre><code>$this-&gt;Paginator-&gt;numbers(['first' =&gt; 2, 'last' =&gt; 2]);
@@ -230,46 +598,45 @@ pages, and use the first/last options and a modulus of 8, ellipsis content will 
 inserted after the first and last link sets.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$options</var></dt>
-						<dd>Options for the numbers.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Options for the numbers.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>numbers string.
-					</div>
-
-
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-page-number-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-page-number-links</a><br>
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>numbers string.<br>
+				</div>
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="prev" id="_prev">
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-page-number-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-page-number-links</a><br>
+				</div>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_prev">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#232-256" title="Go to source code">prev</a>( <span>string <var>$title</var> = <span class="php-quote">'&lt;&lt; Previous'</span></span>, <span>array <var>$options</var> = []</span> )</code>
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_prev"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelperprev"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#232-256" title="Go to source code">prev()</a>
 
-			<div class="description short">
-				<p>Generates a "previous" link for a set of paged records.</p>
-			</div>
+		<span class="label">public</span>
 
-			<div class="description detailed hidden">
-				<p>Generates a "previous" link for a set of paged records.</p>
+			<a href="#_prev" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>prev($title = '&lt;&lt; Previous', $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Generates a "previous" link for a set of paged records.</p>
 
 <h3>Options:</h3>
 
@@ -282,289 +649,283 @@ inserted after the first and last link sets.</p>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$title</var></dt>
-						<dd>Title for the link. Defaults to '&lt;&lt; Previous'.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Options for pagination link. See above for list of keys.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string $title = '&lt;&lt; Previous'</code>
+					</dt>
+					<dd>Title for the link. Defaults to '&lt;&lt; Previous'.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Options for pagination link. See above for list of keys.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>A "previous" link or a disabled link.
-					</div>
-
-
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="next" id="_next">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_next">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#258-282" title="Go to source code">next</a>( <span>string <var>$title</var> = <span class="php-quote">'Next &gt;&gt;'</span></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Generates a "next" link for a set of paged records.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Generates a "next" link for a set of paged records.</p>
-
-<h3>Options:</h3>
-
-<ul>
-<li><code>disabledTitle</code> The text to used when the link is disabled. This defaults to the same text at the active link. Setting to false will cause this method to return ''.</li>
-<li><code>escape</code> Whether you want the contents html entity encoded, defaults to true</li>
-<li><code>model</code> The model to use, defaults to <code>PaginatorHelper::defaultModel()</code>.</li>
-<li><code>url</code> An array of additional URL options to use for link generation.</li>
-<li><code>templates</code> An array of templates, or template file name containing the templates you'd like to use when generating the link for next page. The helper's original templates will be restored once next() is done.</li>
-</ul>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>A "previous" link or a disabled link.<br>
+				</div>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$title</var></dt>
-						<dd>Title for the link. Defaults to 'Next >>'.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Options for pagination link. See above for list of keys.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>A "next" link or $disabledTitle text if the link is disabled.
-					</div>
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
+				</div>
 
 
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="first" id="_first">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_first">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#284-317" title="Go to source code">first</a>( <span>string|integer <var>$first</var> = <span class="php-quote">'&lt;&lt; first'</span></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Returns a first or set of numbers for the first pages.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns a first or set of numbers for the first pages.</p>
-
-<pre><code>echo $this-&gt;Paginator-&gt;first('&lt; first');
-</code></pre>
-
-<p>Creates a single link for the first page. Will output nothing if you are on the
-first page.</p>
-
-<pre><code>echo $this-&gt;Paginator-&gt;first(3);
-</code></pre>
-
-<p>Will create links for the first 3 pages, once you get to the third or greater page.
-Prior to that nothing will be output.</p>
-
-<h3>Options:</h3>
-
-<ul>
-<li><code>model</code> The model to use defaults to PaginatorHelper::defaultModel()</li>
-<li><code>escape</code> Whether or not to HTML escape the text.</li>
-<li><code>url</code> An array of additional URL options to use for link generation.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$first</var></dt>
-						<dd><p>if string use as label for the link. If numeric, the number
-of page links you want at the beginning of the range.</p></dd>
-						<dt><var>$options</var></dt>
-						<dd>An array of options.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>numbers string.
-					</div>
-
-
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="last" id="_last">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_last">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#319-352" title="Go to source code">last</a>( <span>string|integer <var>$last</var> = <span class="php-quote">'last &gt;&gt;'</span></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Returns a last or set of numbers for the last pages.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Returns a last or set of numbers for the last pages.</p>
-
-<pre><code>echo $this-&gt;Paginator-&gt;last('last &gt;');
-</code></pre>
-
-<p>Creates a single link for the last page. Will output nothing if you are on the
-last page.</p>
-
-<pre><code>echo $this-&gt;Paginator-&gt;last(3);
-</code></pre>
-
-<p>Will create links for the last 3 pages. Once you enter the page range, no output
-will be created.</p>
-
-<h3>Options:</h3>
-
-<ul>
-<li><code>model</code> The model to use defaults to PaginatorHelper::defaultModel()</li>
-<li><code>escape</code> Whether or not to HTML escape the text.</li>
-<li><code>url</code> An array of additional URL options to use for link generation.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$last</var></dt>
-						<dd><p>if string use as label for the link, if numeric print
-page numbers.</p></dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>numbers string.
-					</div>
-
-
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links">http://book.cakephp.org/3.0/en/views/helpers/paginator.html#creating-jump-links</a><br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-			</table>
 		</div>
-
-
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#methods">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__easyIcon">_easyIcon()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__makeIcon">_makeIcon()</a></code>
-			</p>
 		</div>
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__addButtonClasses">_addButtonClasses()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__isAssociativeArray">_isAssociativeArray()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#_addClass">addClass()</a></code>
-			</p>
+	</div>
+
+
+	<div class="section">
+		<h2>Methods used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#methods">Bootstrap\View\Helper\EasyIconTrait</a></h2>
+		<div class="method-detail">
+				<a id="__easyIcon"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelper_easyIcon"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#57-78" title="Go to source code">_easyIcon()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__easyIcon" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_easyIcon($callback, $title, $options)</code></pre>
+
+		<div class="description detailed">
+			<p>This method calls the given callback with the specified argument (<code>$title</code> and
+<code>$options</code>) after applying a filter on them.</p>
+
+<p><strong>Note:</strong> Currently this method only works for function that take
+two arguments ($title and $options).</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">callable $callback</code>
+					</dt>
+					<dd>The callback.</dd>
+					<dt>
+						<code class="language-php ">string $title</code>
+					</dt>
+					<dd>The first argument for the callback.</dd>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd>The second argument for the calback.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					mixed<br>Whatever might be returned by $callback.<br>
+				</div>
+
+
+
+
 		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__makeIcon"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelper_makeIcon"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#30-55" title="Go to source code">_makeIcon()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__makeIcon" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_makeIcon($text, $converted = false)</code></pre>
+
+		<div class="description detailed">
+			<p>Try to convert the specified string to a bootstrap icon. The string is converted if
+it matches a format <code>i:icon-name</code> (leading and trailing spaces or ignored) and if
+easy-icon is activated.</p>
+
+<p><strong>Note:</strong> This function will currently fail if the Html helper associated with the
+view is not BootstrapHtmlHelper.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The string to convert.</dd>
+					<dt>
+						<code class="language-php optional">bool $converted = false</code>
+					</dt>
+					<dd><p>If specified, will contains <code>true</code> if the text was converted,
+<code>false</code> otherwize.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The text after conversion.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
+	<div class="section">
+		<h2>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h2>
+		<div class="method-detail">
+				<a id="__addButtonClasses"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelper_addButtonClasses"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#52-78" title="Go to source code">_addButtonClasses()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__addButtonClasses" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_addButtonClasses($options)</code></pre>
+
+		<div class="description detailed">
+			<p>Add classes to options according to the default values of bootstrap-type
+and bootstrap-size for button (see configuration).</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd><p>The initial options with bootstrap-type and/or
+bootstrat-size values.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br><p>The new options with class values (btn, and btn-* according to
+initial options).</p><br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__isAssociativeArray"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelper_isAssociativeArray"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#80-89" title="Go to source code">_isAssociativeArray()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__isAssociativeArray" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_isAssociativeArray($array)</code></pre>
+
+		<div class="description detailed">
+			<p>Check weither the specified array is associative or not.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $array</code>
+					</dt>
+					<dd>The array to check.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if the array is associative, <code>false</code> otherwize.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_addClass"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPaginatorHelperaddClass"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#24-50" title="Go to source code">addClass()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_addClass" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>addClass($options = [], $class = null, $key = 'class')</code></pre>
+
+		<div class="description detailed">
+			<p>Adds the given class to the element options.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options/attributes to add a class to.</dd>
+					<dt>
+						<code class="language-php optional">string|array $class = null</code>
+					</dt>
+					<dd>The class names to be added.</dd>
+					<dt>
+						<code class="language-php optional">string $key = 'class'</code>
+					</dt>
+					<dd>The key to use for class (default to <code>'class'</code>).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br>Array of options with <code>$key</code> set or updated.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
 
 
 
 
 
+	<div class="section">
+		<h2>Properties detail</h2>
+	<div class="property-detail">
+		<a id="$_defaultConfig"></a>
 
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#46-84" title="Go to source code"><var>$_defaultConfig</var></a>
+				<a href="#$_defaultConfig" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="helpers" id="$helpers">
-			<td class="attributes"><code>
-				public  
+		<div class="attributes">
+				<span class="label">protected</span>
 				array
-			</code></td>
+		</div>
 
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#34-44" title="Go to source code"><var>$helpers</var></a>
-
-				<div class="description short">
-					<p>Other helpers used by BootstrapPanelHelper.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Other helpers used by BootstrapPanelHelper.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$helpers" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'Url'</span>, <span class="php-quote">'Number'</span>,
-    <span class="php-quote">'Html'</span> =&gt; [
-        <span class="php-quote">'className'</span> =&gt; <span class="php-quote">'Bootstrap.BootstrapHtml'</span>
-    ]
-]</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_defaultConfig" id="$_defaultConfig">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#46-84" title="Go to source code"><var>$_defaultConfig</var></a>
-
-				<div class="description short">
-					<p>Default config for this class.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Default config for this class.</p>
+		<div class="description detailed">
+			<p>Default config for this class.</p>
 
 <p>Options: Holds the default options for pagination links.</p>
 
@@ -581,128 +942,140 @@ page numbers.</p></dd>
 
 <p>Templates: the templates used by this class.</p>
 
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_defaultConfig" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'options'</span> =&gt; [],
-    <span class="php-quote">'templates'</span> =&gt; [
-        <span class="php-quote">'nextActive'</span> =&gt; <span class="php-quote">'&lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'nextDisabled'</span> =&gt; <span class="php-quote">'&lt;li class=&quot;disabled&quot;&gt;&lt;a&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'prevActive'</span> =&gt; <span class="php-quote">'&lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'prevDisabled'</span> =&gt; <span class="php-quote">'&lt;li class=&quot;disabled&quot;&gt;&lt;a&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'counterRange'</span> =&gt; <span class="php-quote">'{{start}} - {{end}} of {{count}}'</span>,
-        <span class="php-quote">'counterPages'</span> =&gt; <span class="php-quote">'{{page}} of {{pages}}'</span>,
-        <span class="php-quote">'first'</span> =&gt; <span class="php-quote">'&lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'last'</span> =&gt; <span class="php-quote">'&lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'number'</span> =&gt; <span class="php-quote">'&lt;li&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'current'</span> =&gt; <span class="php-quote">'&lt;li class=&quot;active&quot;&gt;&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'ellipsis'</span> =&gt; <span class="php-quote">'&lt;li class=&quot;ellipsis disabled&quot;&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'sort'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'sortAsc'</span> =&gt; <span class="php-quote">'&lt;a class=&quot;asc&quot; href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'sortDesc'</span> =&gt; <span class="php-quote">'&lt;a class=&quot;desc&quot; href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'sortAscLocked'</span> =&gt; <span class="php-quote">'&lt;a class=&quot;asc locked&quot; href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'sortDescLocked'</span> =&gt; <span class="php-quote">'&lt;a class=&quot;desc locked&quot; href=&quot;{{url}}&quot;&gt;{{text}}&lt;/a&gt;'</span>,
+
+			<div>
+				<pre class="language-php"><code>[
+    'options' =&gt; [],
+    'templates' =&gt; [
+        'nextActive' =&gt; '&lt;li&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'nextDisabled' =&gt; '&lt;li class="disabled"&gt;&lt;a&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'prevActive' =&gt; '&lt;li&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'prevDisabled' =&gt; '&lt;li class="disabled"&gt;&lt;a&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'counterRange' =&gt; '{{start}} - {{end}} of {{count}}',
+        'counterPages' =&gt; '{{page}} of {{pages}}',
+        'first' =&gt; '&lt;li&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'last' =&gt; '&lt;li&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'number' =&gt; '&lt;li&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'current' =&gt; '&lt;li class="active"&gt;&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;&lt;/li&gt;',
+        'ellipsis' =&gt; '&lt;li class="ellipsis disabled"&gt;&lt;a&gt;...&lt;/a&gt;&lt;/li&gt;',
+        'sort' =&gt; '&lt;a href="{{url}}"&gt;{{text}}&lt;/a&gt;',
+        'sortAsc' =&gt; '&lt;a class="asc" href="{{url}}"&gt;{{text}}&lt;/a&gt;',
+        'sortDesc' =&gt; '&lt;a class="desc" href="{{url}}"&gt;{{text}}&lt;/a&gt;',
+        'sortAscLocked' =&gt; '&lt;a class="asc locked" href="{{url}}"&gt;{{text}}&lt;/a&gt;',
+        'sortDescLocked' =&gt; '&lt;a class="desc locked" href="{{url}}"&gt;{{text}}&lt;/a&gt;',
     ]
-]</code>
-				</div>
-			</td>
-		</tr>
-			</table>
+]</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$helpers"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#34-44" title="Go to source code"><var>$helpers</var></a>
+				<a href="#$helpers" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
+				array
 		</div>
 
+		<div class="description detailed">
+			<p>Other helpers used by BootstrapPanelHelper.</p>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#properties">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#$easyIcon"><var>$easyIcon</var></a></code>
-			</p>
+
+			<div>
+				<pre class="language-php"><code>[
+    'Url', 'Number',
+    'Html' =&gt; [
+        'className' =&gt; 'Bootstrap.BootstrapHtml'
+    ]
+]</code></pre>
+			</div>
 		</div>
+	</div>
+	</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Magic properties</h3></div>
-			<table class="summary table table-bordered table-striped properties" id="magicProperties">
-		<tr data-order="Url" id="m$Url">
-			<td class="attributes"><code>
-				public  
-				Cake\View\Helper\UrlHelper
-			</code></td>
+	<div class="section">
+		<h2>Magic properties detail</h2>
+	<div class="property-detail">
+		<a id="m$Html"></a>
 
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#24" title="Go to source code"><var>$Url</var></a>
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#26" title="Go to source code"><var>$Html</var></a>
+				<a href="#m$Html" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-		<tr data-order="Number" id="m$Number">
-			<td class="attributes"><code>
-				public  
-				Cake\View\Helper\NumberHelper
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#25" title="Go to source code"><var>$Number</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-		<tr data-order="Html" id="m$Html">
-			<td class="attributes"><code>
-				public  
+		<div class="attributes">
+				<span class="label">public</span>
 				<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#26" title="Go to source code"><var>$Html</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
 
+		<div class="description detailed">
+			
 
 
-</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="m$Number"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#25" title="Go to source code"><var>$Number</var></a>
+				<a href="#m$Number" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
+				<code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.NumberHelper.html" target="_blank">\Cake\View\Helper\NumberHelper</a></code>
+		</div>
+
+		<div class="description detailed">
+			
+
+
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="m$Url"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html#24" title="Go to source code"><var>$Url</var></a>
+				<a href="#m$Url" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
+				<code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.UrlHelper.html" target="_blank">\Cake\View\Helper\UrlHelper</a></code>
+		</div>
+
+		<div class="description detailed">
+			
+
+
+		</div>
+	</div>
 	</div>
 
 </div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -711,5 +1084,17 @@ page numbers.</p></dd>
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapBreadcrumbsHelper</h1>
 
@@ -130,15 +131,17 @@
 	<p>BreadcrumbsHelper to register and display a breadcrumb trail for your views.</p>
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\Helper\BreadcrumbsHelper
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.BreadcrumbsHelper.html" target="_blank">
+				<span>Cake\View\Helper\BreadcrumbsHelper</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\Helper\BootstrapBreadcrumbsHelper</span></b>			
+				<b><span>Bootstrap\View\Helper\BootstrapBreadcrumbsHelper</span></b>
 			
 			
 		</dd>
@@ -151,14 +154,62 @@ Cake\View\Helper\BreadcrumbsHelper
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#19-42" title="Go to source code">View/Helper/BootstrapBreadcrumbsHelper.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#19-42" title="Go to source code">View/Helper/BootstrapBreadcrumbsHelper.php</a><br>
+	</div>
+
+
+
+
+	<div class="section">
+		<h2>Properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#$_defaultConfig">$_defaultConfig</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Default config for the helper.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>Magic properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#m$Url">$Url</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+					<code><code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.UrlHelper.html" target="_blank">\Cake\View\Helper\UrlHelper</a></code></code>
+
+			<div class="description">
+				
+			</div>
+		</li>
+		</ul>
 	</div>
 
 
@@ -168,95 +219,94 @@ Cake\View\Helper\BreadcrumbsHelper
 
 
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="_defaultConfig" id="$_defaultConfig">
-			<td class="attributes"><code>
-				protected  
+
+
+
+
+
+
+
+
+
+	<div class="section">
+		<h2>Properties detail</h2>
+	<div class="property-detail">
+		<a id="$_defaultConfig"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#26-40" title="Go to source code"><var>$_defaultConfig</var></a>
+				<a href="#$_defaultConfig" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
 				array
-			</code></td>
+		</div>
 
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#26-40" title="Go to source code"><var>$_defaultConfig</var></a>
+		<div class="description detailed">
+			<p>Default config for the helper.</p>
 
-				<div class="description short">
-					<p>Default config for the helper.</p>
+				<h6>Link</h6>
+				<div class="list">
+						<a href="https://api.cakephp.org/3.3/class-Cake.View.Helper.BreadcrumbsHelper.html">https://api.cakephp.org/3.3/class-Cake.View.Helper.BreadcrumbsHelper.html</a><br>
 				</div>
 
-				<div class="description detailed hidden">
-					<p>Default config for the helper.</p>
-
-						<h4>Link</h4>
-						<div class="list">
-								<a href="https://api.cakephp.org/3.3/class-Cake.View.Helper.BreadcrumbsHelper.html">https://api.cakephp.org/3.3/class-Cake.View.Helper.BreadcrumbsHelper.html</a><br>
-						</div>
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_defaultConfig" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'templates'</span> =&gt; [
-        <span class="php-quote">'wrapper'</span> =&gt; <span class="php-quote">'&lt;ol class=&quot;breadcrumb{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/ol&gt;'</span>,
-        <span class="php-quote">'item'</span> =&gt; <span class="php-quote">'&lt;li{{attrs}}&gt;&lt;a href=&quot;{{url}}&quot;{{innerAttrs}}&gt;{{title}}&lt;/a&gt;&lt;/li&gt;'</span>,
-        <span class="php-quote">'itemWithoutLink'</span> =&gt; <span class="php-quote">'&lt;li class=&quot;active{{attrs.class}}&quot;{{attrs}}&gt;{{title}}&lt;/li&gt;'</span>,
-        <span class="php-quote">'separator'</span> =&gt; <span class="php-quote">''</span>
+			<div>
+				<pre class="language-php"><code>[
+    'templates' =&gt; [
+        'wrapper' =&gt; '&lt;ol class="breadcrumb{{attrs.class}}"{{attrs}}&gt;{{content}}&lt;/ol&gt;',
+        'item' =&gt; '&lt;li{{attrs}}&gt;&lt;a href="{{url}}"{{innerAttrs}}&gt;{{title}}&lt;/a&gt;&lt;/li&gt;',
+        'itemWithoutLink' =&gt; '&lt;li class="active{{attrs.class}}"{{attrs}}&gt;{{title}}&lt;/li&gt;',
+        'separator' =&gt; ''
     ],
-    <span class="php-quote">'templateClass'</span> =&gt; <span class="php-quote">'Bootstrap\View\BootstrapStringTemplate'</span>
-]</code>
-				</div>
-			</td>
-		</tr>
-			</table>
+    'templateClass' =&gt; 'Bootstrap\View\BootstrapStringTemplate'
+]</code></pre>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="section">
+		<h2>Magic properties detail</h2>
+	<div class="property-detail">
+		<a id="m$Url"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#22" title="Go to source code"><var>$Url</var></a>
+				<a href="#m$Url" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
+				<code><a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.UrlHelper.html" target="_blank">\Cake\View\Helper\UrlHelper</a></code>
 		</div>
 
+		<div class="description detailed">
+			
 
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Magic properties</h3></div>
-			<table class="summary table table-bordered table-striped properties" id="magicProperties">
-		<tr data-order="Url" id="m$Url">
-			<td class="attributes"><code>
-				public  
-				Cake\View\Helper\UrlHelper
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html#22" title="Go to source code"><var>$Url</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
-
-
-
-</div>
+	</div>
 	</div>
 
 </div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -265,5 +315,17 @@ Cake\View\Helper\BreadcrumbsHelper
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

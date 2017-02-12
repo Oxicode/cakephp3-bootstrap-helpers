@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li class="active"><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Trait UrlComparerTrait</h1>
 
@@ -136,115 +137,159 @@
 
 
 
-	<div>
-		<h3>Direct Known Users</h3>
-		<p class="elementList">
-			<code><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">Bootstrap\View\Helper\BootstrapNavbarHelper</a></code>
-		</p>
+	<div class="section description">
+		<h4>Direct Users</h4>
+		<ul>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">
+					Bootstrap\View\Helper\BootstrapNavbarHelper
+				</a>
+			</li>
+		</ul>
 	</div>
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#20-63" title="Go to source code">View/Helper/UrlComparerTrait.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#20-63" title="Go to source code">View/Helper/UrlComparerTrait.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="_normalize" id="__normalize">
 
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#__normalize">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#25-45" title="Go to source code">_normalize</a>( <span>string <var>$url</var></span>, <span>boolean <var>$query</var> = <span class="php-keyword1">true</span></span>, <span>boolean <var>$hash</var> = <span class="php-keyword1">true</span></span> )</code>
 
-			<div class="description short">
-				<p>Normalize an URL.</p>
+
+
+
+
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.UrlComparerTrait.html#__normalize">_normalize()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Normalize an URL.
 			</div>
-
-			<div class="description detailed hidden">
-				<p>Normalize an URL.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$url</var></dt>
-						<dd>URL to normalize.</dd>
-						<dt><var>$query</var></dt>
-						<dd>Remove query parameters. Default is <code>true</code>.</dd>
-						<dt><var>$hash</var></dt>
-						<dd>Remove hash. Default is <code>true</code>.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>Normalized URL.
-					</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.UrlComparerTrait.html#_compareUrls">compareUrls()</a>
 
 
+		<span class="label">public</span>
 
-
+			</h3>
+			<div class="description detailed">
+				Compare URL without regards to query parameters or hash.
 			</div>
-			</div></td>
-		</tr>
-		<tr data-order="compareUrls" id="_compareUrls">
-
-			<td class="attributes"><code>
-				 public 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_compareUrls">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#47-62" title="Go to source code">compareUrls</a>( <span>string|array <var>$lhs</var></span>, <span>string|array <var>$rhs</var> = <span class="php-keyword1">null</span></span> )</code>
-
-			<div class="description short">
-				<p>Compare URL without regards to query parameters or hash.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Compare URL without regards to query parameters or hash.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$lhs</var></dt>
-						<dd>First URL to compare.</dd>
-						<dt><var>$rhs</var></dt>
-						<dd>Second URL to compare. Default is current URL (<code>Router::url()</code>).</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br><code>true</code> if both URL match, <code>false</code> otherwise.
-					</div>
+		</li>
+		</ul>
+	</div>
 
 
 
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="__normalize"></a>
+		<a id="method-Bootstrap\View\Helper\UrlComparerTrait_normalize"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#25-45" title="Go to source code">_normalize()</a>
 
-			</div>
-			</div></td>
-		</tr>
-			</table>
+		<span class="label">protected</span>
+
+			<a href="#__normalize" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_normalize($url, $query = true, $hash = true)</code></pre>
+
+		<div class="description detailed">
+			<p>Normalize an URL.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $url</code>
+					</dt>
+					<dd>URL to normalize.</dd>
+					<dt>
+						<code class="language-php optional">bool $query = true</code>
+					</dt>
+					<dd>Remove query parameters. Default is <code>true</code>.</dd>
+					<dt>
+						<code class="language-php optional">bool $hash = true</code>
+					</dt>
+					<dd>Remove hash. Default is <code>true</code>.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>Normalized URL.<br>
+				</div>
+
+
+
+
 		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_compareUrls"></a>
+		<a id="method-Bootstrap\View\Helper\UrlComparerTraitcompareUrls"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.UrlComparerTrait.html#47-62" title="Go to source code">compareUrls()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_compareUrls" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>compareUrls($lhs, $rhs = null)</code></pre>
+
+		<div class="description detailed">
+			<p>Compare URL without regards to query parameters or hash.</p>
 
 
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string|array $lhs</code>
+					</dt>
+					<dd>First URL to compare.</dd>
+					<dt>
+						<code class="language-php optional">string|array $rhs = null</code>
+					</dt>
+					<dd>Second URL to compare. Default is current URL (<code>Router::url()</code>).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if both URL match, <code>false</code> otherwise.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
 
 
 
@@ -255,22 +300,23 @@
 
 
 </div>
-	</div>
-
-</div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -279,5 +325,17 @@
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

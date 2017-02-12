@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapFlashHelper</h1>
 
@@ -133,15 +134,17 @@
 this class to output your flash messages in your views.</p>
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\Helper\FlashHelper
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.FlashHelper.html" target="_blank">
+				<span>Cake\View\Helper\FlashHelper</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\Helper\BootstrapFlashHelper</span></b>			
+				<b><span>Bootstrap\View\Helper\BootstrapFlashHelper</span></b>
 			
 			
 		</dd>
@@ -154,73 +157,122 @@ Cake\View\Helper\FlashHelper
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#19-69" title="Go to source code">View/Helper/BootstrapFlashHelper.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#19-69" title="Go to source code">View/Helper/BootstrapFlashHelper.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="render" id="_render">
 
-			<td class="attributes"><code>
-				 public 
-				string|
-				
-				</code>
-			</td>
+	<div class="section">
+		<h2>Properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html#$_bootstrapTemplates">$_bootstrapTemplates</a></code>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_render">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#34-67" title="Go to source code">render</a>( <span>string <var>$key</var> = <span class="php-quote">'flash'</span></span>, <span>array <var>$options</var> = []</span> )</code>
+				<span class="attributes">
+					<span class="label">protected</span>
 
-			<div class="description short">
-				<p>Used to render the message set in FlashComponent::set().</p>
+				</span>
 			</div>
 
-			<div class="description detailed hidden">
-				<p>Used to render the message set in FlashComponent::set().</p>
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Available bootstrap templates for alert.
+			</div>
+		</li>
+		</ul>
+	</div>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$key</var></dt>
-						<dd>The [Flash.]key you are rendering in the view.</dd>
-						<dt><var>$options</var></dt>
-						<dd><p>Additional options to use for the creation of this
+
+
+
+
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html#_render">render()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Used to render the message set in FlashComponent::set().
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="_render"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapFlashHelperrender"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#34-67" title="Go to source code">render()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_render" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>render($key = 'flash', $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Used to render the message set in FlashComponent::set().</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string $key = 'flash'</code>
+					</dt>
+					<dd>The [Flash.]key you are rendering in the view.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd><p>Additional options to use for the creation of this
 flash message. Supports the 'params', and 'element' keys that are used in the helper.</p></dd>
-					</dl></div>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string|<br><p>Rendered flash message or null if flash key does not exist
-  in session.</p>
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string|<br><p>Rendered flash message or null if flash key does not exist
+  in session.</p><br>
+				</div>
 
-					<h4>Throws</h4>
-					<div class="list">
-						UnexpectedValueException<br>If value for flash settings key is not an array.
-					</div>
+				<h6>Throws</h6>
+				<div class="list">
+					UnexpectedValueException<br>If value for flash settings key is not an array.<br>
+				</div>
 
-					<h4>Link</h4>
-					<div class="list">
-							<a href="https://book.cakephp.org/3.0/en/views/helpers/flash.html">https://book.cakephp.org/3.0/en/views/helpers/flash.html</a><br>
-					</div>
+				<h6>Link</h6>
+				<div class="list">
+						<a href="https://book.cakephp.org/3.0/en/views/helpers/flash.html">https://book.cakephp.org/3.0/en/views/helpers/flash.html</a><br>
+				</div>
 
 
-			</div>
-			</div></td>
-		</tr>
-			</table>
 		</div>
+		</div>
+	</div>
 
 
 
@@ -228,63 +280,51 @@ flash message. Supports the 'params', and 'element' keys that are used in the he
 
 
 
+	<div class="section">
+		<h2>Properties detail</h2>
+	<div class="property-detail">
+		<a id="$_bootstrapTemplates"></a>
 
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#27-32" title="Go to source code"><var>$_bootstrapTemplates</var></a>
+				<a href="#$_bootstrapTemplates" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="_bootstrapTemplates" id="$_bootstrapTemplates">
-			<td class="attributes"><code>
-				protected  
+		<div class="attributes">
+				<span class="label">protected</span>
 				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapFlashHelper.html#27-32" title="Go to source code"><var>$_bootstrapTemplates</var></a>
-
-				<div class="description short">
-					<p>Available bootstrap templates for alert.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Available bootstrap templates for alert.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_bootstrapTemplates" class="anchor">#</a>
-					<code>[<span class="php-quote">'info'</span>, <span class="php-quote">'error'</span>, <span class="php-quote">'success'</span>, <span class="php-quote">'warning'</span>]</code>
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
 
+		<div class="description detailed">
+			<p>Available bootstrap templates for alert.</p>
 
 
-
+			<div>
+				<pre class="language-php"><code>['info', 'error', 'success', 'warning']</code></pre>
+			</div>
+		</div>
+	</div>
+	</div>
 
 
 </div>
-	</div>
-
-</div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -293,5 +333,17 @@ flash message. Supports the 'params', and 'element' keys that are used in the he
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

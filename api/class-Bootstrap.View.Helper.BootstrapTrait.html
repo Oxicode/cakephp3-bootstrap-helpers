@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Trait BootstrapTrait</h1>
 
@@ -137,160 +138,233 @@ code.</p>
 
 
 
-	<div>
-		<h3>Direct Known Users</h3>
-		<p class="elementList">
-			<code><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">Bootstrap\View\Helper\BootstrapFormHelper</a></code>, 
-			<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code>, 
-			<code><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">Bootstrap\View\Helper\BootstrapModalHelper</a></code>, 
-			<code><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">Bootstrap\View\Helper\BootstrapNavbarHelper</a></code>, 
-			<code><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">Bootstrap\View\Helper\BootstrapPaginatorHelper</a></code>, 
-			<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">Bootstrap\View\Helper\BootstrapPanelHelper</a></code>
-		</p>
+	<div class="section description">
+		<h4>Direct Users</h4>
+		<ul>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">
+					Bootstrap\View\Helper\BootstrapFormHelper
+				</a>
+			</li>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">
+					Bootstrap\View\Helper\BootstrapHtmlHelper
+				</a>
+			</li>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">
+					Bootstrap\View\Helper\BootstrapModalHelper
+				</a>
+			</li>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">
+					Bootstrap\View\Helper\BootstrapNavbarHelper
+				</a>
+			</li>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">
+					Bootstrap\View\Helper\BootstrapPaginatorHelper
+				</a>
+			</li>
+			<li>
+				<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">
+					Bootstrap\View\Helper\BootstrapPanelHelper
+				</a>
+			</li>
+		</ul>
 	</div>
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#18-91" title="Go to source code">View/Helper/BootstrapTrait.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#18-91" title="Go to source code">View/Helper/BootstrapTrait.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="addClass" id="_addClass">
-
-			<td class="attributes"><code>
-				 public 
-				array
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_addClass">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#24-50" title="Go to source code">addClass</a>( <span>array <var>$options</var> = []</span>, <span>string|array <var>$class</var> = <span class="php-keyword1">null</span></span>, <span>string <var>$key</var> = <span class="php-quote">'class'</span></span> )</code>
-
-			<div class="description short">
-				<p>Adds the given class to the element options.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Adds the given class to the element options.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$options</var></dt>
-						<dd>Array of options/attributes to add a class to.</dd>
-						<dt><var>$class</var></dt>
-						<dd>The class names to be added.</dd>
-						<dt><var>$key</var></dt>
-						<dd>The key to use for class (default to <code>'class'</code>).</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						array<br>Array of options with <code>$key</code> set or updated.
-					</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_addButtonClasses" id="__addButtonClasses">
 
-			<td class="attributes"><code>
-				 protected 
-				array
-				
-				</code>
-			</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#__addButtonClasses">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#52-78" title="Go to source code">_addButtonClasses</a>( <span>array <var>$options</var></span> )</code>
 
-			<div class="description short">
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__addButtonClasses">_addButtonClasses()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
 				<p>Add classes to options according to the default values of bootstrap-type
 and bootstrap-size for button (see configuration).</p>
 			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__isAssociativeArray">_isAssociativeArray()</a>
 
-			<div class="description detailed hidden">
-				<p>Add classes to options according to the default values of bootstrap-type
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Check weither the specified array is associative or not.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html#_addClass">addClass()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Adds the given class to the element options.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="__addButtonClasses"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapTrait_addButtonClasses"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#52-78" title="Go to source code">_addButtonClasses()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__addButtonClasses" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_addButtonClasses($options)</code></pre>
+
+		<div class="description detailed">
+			<p>Add classes to options according to the default values of bootstrap-type
 and bootstrap-size for button (see configuration).</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$options</var></dt>
-						<dd><p>The initial options with bootstrap-type and/or
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd><p>The initial options with bootstrap-type and/or
 bootstrat-size values.</p></dd>
-					</dl></div>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						array<br><p>The new options with class values (btn, and btn-* according to
-initial options).</p>
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_isAssociativeArray" id="__isAssociativeArray">
-
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#__isAssociativeArray">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#80-89" title="Go to source code">_isAssociativeArray</a>( <span>array <var>$array</var></span> )</code>
-
-			<div class="description short">
-				<p>Check weither the specified array is associative or not.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Check weither the specified array is associative or not.</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$array</var></dt>
-						<dd>The array to check.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br><code>true</code> if the array is associative, <code>false</code> otherwize.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					array<br><p>The new options with class values (btn, and btn-* according to
+initial options).</p><br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-			</table>
 		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__isAssociativeArray"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapTrait_isAssociativeArray"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#80-89" title="Go to source code">_isAssociativeArray()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__isAssociativeArray" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_isAssociativeArray($array)</code></pre>
+
+		<div class="description detailed">
+			<p>Check weither the specified array is associative or not.</p>
 
 
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $array</code>
+					</dt>
+					<dd>The array to check.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if the array is associative, <code>false</code> otherwize.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_addClass"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapTraitaddClass"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapTrait.html#24-50" title="Go to source code">addClass()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_addClass" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>addClass($options = [], $class = null, $key = 'class')</code></pre>
+
+		<div class="description detailed">
+			<p>Adds the given class to the element options.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options/attributes to add a class to.</dd>
+					<dt>
+						<code class="language-php optional">string|array $class = null</code>
+					</dt>
+					<dd>The class names to be added.</dd>
+					<dt>
+						<code class="language-php optional">string $key = 'class'</code>
+					</dt>
+					<dd>The key to use for class (default to <code>'class'</code>).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br>Array of options with <code>$key</code> set or updated.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
 
 
 
@@ -301,22 +375,23 @@ initial options).</p>
 
 
 </div>
-	</div>
-
-</div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -325,5 +400,17 @@ initial options).</p>
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

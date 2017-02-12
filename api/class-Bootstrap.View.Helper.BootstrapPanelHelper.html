@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapPanelHelper</h1>
 
@@ -132,23 +133,27 @@
 <p>Automatic generation of Bootstrap HTML panels.</p>
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\Helper
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.html" target="_blank">
+				<span>Cake\View\Helper</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\Helper\BootstrapPanelHelper</span></b>			
+				<b><span>Bootstrap\View\Helper\BootstrapPanelHelper</span></b>
 			
 			 uses 
-					Cake\View\StringTemplateTrait (not available)
-
+					Cake\View\StringTemplateTrait
+, 
 			
-					<a href="class-Bootstrap.View.Helper.EasyIconTrait.html"><span>Bootstrap\View\Helper\EasyIconTrait</span></a>, 
+					<a href="class-Bootstrap.View.Helper.EasyIconTrait.html"><span>Bootstrap\View\Helper\EasyIconTrait</span></a>
+				, 
 			
 					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html"><span>Bootstrap\View\Helper\BootstrapTrait</span></a>
+				
 			
 		</dd>
 	</dl>
@@ -160,126 +165,743 @@ Cake\View\Helper
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#19-665" title="Go to source code">View/Helper/BootstrapPanelHelper.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#19-665" title="Go to source code">View/Helper/BootstrapPanelHelper.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="startGroup" id="_startGroup">
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+	<div class="section">
+		<h2>Properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_autoCloseOnCreate">$_autoCloseOnCreate</a></code>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_startGroup">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#159-197" title="Go to source code">startGroup</a>( <span>array <var>$options</var> = []</span> )</code>
+				<span class="attributes">
+					<span class="label">protected</span>
 
-			<div class="description short">
-				<p>Open a panel group.</p>
+				</span>
 			</div>
 
-			<div class="description detailed hidden">
-				<p>Open a panel group.</p>
+			<div class="property-type">
+				<code>boolean</code></div>
+
+			<div class="description">
+				Determine if previous panel should be automatically closed when calling <code>create()</code>.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_bodyId">$_bodyId</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>string</code></div>
+
+			<div class="description">
+				Body HTML id (for collapsible panel).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_collapsible">$_collapsible</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>boolean</code></div>
+
+			<div class="description">
+				Indicate if panel should be collapsible or not.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_current">$_current</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>string</code></div>
+
+			<div class="description">
+				Current part of the panel (<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_defaultConfig">$_defaultConfig</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Default configuration for the helper.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_groupCount">$_groupCount</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>integer</code></div>
+
+			<div class="description">
+				Panel groups counter (for panel groups).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_groupId">$_groupId</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>mixed</code></div>
+
+			<div class="description">
+				Panel group HTML id.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_groupInGroup">$_groupInGroup</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>boolean</code></div>
+
+			<div class="description">
+				Indicate if in group mode or not.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_groupPanelCount">$_groupPanelCount</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>integer</code></div>
+
+			<div class="description">
+				Panel counter inside a group (count the number of panels in a group).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_groupPanelOpen">$_groupPanelOpen</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>mixed</code></div>
+
+			<div class="description">
+				Panel to open inside a group.
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_headId">$_headId</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>string</code></div>
+
+			<div class="description">
+				Header HTML id (for collapsible panel).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_lastPanelClosed">$_lastPanelClosed</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>boolean</code></div>
+
+			<div class="description">
+				Indicate if the last panel was closed (in a group).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$_panelCount">$_panelCount</a></code>
+
+				<span class="attributes">
+					<span class="label">protected</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>integer</code></div>
+
+			<div class="description">
+				Panel counter (for collapsible groups).
+			</div>
+		</li>
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#$helpers">$helpers</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code>array</code></div>
+
+			<div class="description">
+				Other helpers used by BootstrapPanelHelper.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+	<div class="section">
+		<h2>Magic properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#m$Html">$Html</a></code>
+
+				<span class="attributes">
+					<span class="label">public</span>
+
+				</span>
+			</div>
+
+			<div class="property-type">
+				<code><code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code></code></div>
+
+			<div class="description">
+				
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+	<div class="section">
+		<h2>Inherited Properties</h2>
+		<ul class="member-summary used">
+			<li>
+					<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#$easyIcon"><!--
+					-->easyIcon<!--
+					--></a></code>
+			</li>
+		</ul>
+	</div>
+
+
+
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#__cleanCurrent">_cleanCurrent()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Cleans the current panel part and return necessary HTML closing elements.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#__createBody">_createBody()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel body.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#__createFooter">_createFooter()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel footer.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#__createHeader">_createHeader()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel header.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#__isOpen">_isOpen()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Check if the current panel should be open or not.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_body">body()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel body.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_create">create()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Open a panel.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_end">end()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				<p>Closes a panel, cleans part that have not been closed correctly and optionaly adds a
+footer to the panel.</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_endGroup">endGroup()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Closes a panel group, closes the last panel if it has not already been closed.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_footer">footer()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel footer.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_header">header()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create or open a panel header.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html#_startGroup">startGroup()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Open a panel group.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="__cleanCurrent"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_cleanCurrent"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#346-366" title="Go to source code">_cleanCurrent()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__cleanCurrent" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_cleanCurrent()</code></pre>
+
+		<div class="description detailed">
+			<p>Cleans the current panel part and return necessary HTML closing elements.</p>
+
+
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>An HTML string containing closing elements.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__createBody"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_createBody"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#447-488" title="Go to source code">_createBody()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__createBody" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_createBody($text = null, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create or open a panel body.</p>
 
 <h3>Options</h3>
 
 <ul>
-<li><code>collapsible</code> Set to <code>false</code> if panels should not be collapsible. Default is <code>true</code>.</li>
-<li><code>id</code> Identifier for the group. Default is automatically generated.</li>
-<li><p><code>open</code> If <code>collapsible</code> is <code>true</code>, indicate the panel that should be open by default.
-Set to <code>false</code> to have no panels open. You can also indicate if a panel should be open
-in the <code>create()</code> method. Default is <code>0</code>.</p></li>
-<li><p>Other attributes will be passed to the <code>Html::div()</code> method.</p></li>
+<li><code>templateVars</code> Provide template variables for the body template.</li>
+<li>Other attributes will be assigned to the body element.</li>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|null $text = null</code>
+					</dt>
+					<dd>The panel body content, or null to only open the body.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options for the body <code>&lt;div&gt;</code>.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>A formated opening HTML tag for panel groups.
-					</div>
-
-
-					<h4>Link</h4>
-					<div class="list">
-							<a href="http://getbootstrap.com/javascript/#collapse-example-accordion">http://getbootstrap.com/javascript/#collapse-example-accordion</a><br>
-					</div>
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="endGroup" id="_endGroup">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_endGroup">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#199-216" title="Go to source code">endGroup</a>( )</code>
-
-			<div class="description short">
-				<p>Closes a panel group, closes the last panel if it has not already been closed.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Closes a panel group, closes the last panel if it has not already been closed.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>An HTML string containing closing tags.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br><p>A formated opening tag for the panel body or the complete panel
+body.</p><br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="create" id="_create">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__createFooter"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_createFooter"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#490-519" title="Go to source code">_createFooter()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">protected</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_create">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#218-317" title="Go to source code">create</a>( <span>array|string <var>$title</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#__createFooter" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_createFooter($text = null, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Open a panel.</p>
-			</div>
+		<div class="description detailed">
+			<p>Create or open a panel footer.</p>
 
-			<div class="description detailed hidden">
-				<p>Open a panel.</p>
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the footer template.</li>
+<li>Other attributes will be assigned to the footer element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string $text = null</code>
+					</dt>
+					<dd>The panel footer content, or null to only open the footer.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options for the footer <code>&lt;div&gt;</code>.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br><p>A formated opening tag for the panel footer or the complete panel
+footer.</p><br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__createHeader"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_createHeader"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#379-445" title="Go to source code">_createHeader()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__createHeader" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_createHeader($title, $options = [], $titleOptions = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create or open a panel header.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>title</code> See <code>header()</code>.</li>
+<li><code>templateVars</code> Provide template variables for the header template.</li>
+<li>Other attributes will be assigned to the header element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $title</code>
+					</dt>
+					<dd>$text The panel header content, or null to only open the header.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+					<dt>
+						<code class="language-php optional"> $titleOptions = []</code>
+					</dt>
+					<dd></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br><p>A formated opening tag for the panel header or the complete panel
+header.</p><br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__isOpen"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_isOpen"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#368-377" title="Go to source code">_isOpen()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__isOpen" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_isOpen()</code></pre>
+
+		<div class="description detailed">
+			<p>Check if the current panel should be open or not.</p>
+
+
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if the current panel should be open, <code>false</code> otherwize.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_body"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperbody"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#579-620" title="Go to source code">body()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_body" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>body($content = null, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create or open a panel body.</p>
+
+<p>If <code>$content</code> is a string, create a panel body using the specified content and
+<code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body(<span class="php-quote">'Panel Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$content</code> is <code>null</code>, create a formated opening tag for a panel body using the
+specified <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$content</code> is an array, used it as <code>$options</code> and create a formated opening tag for
+a panel body.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the body template.</li>
+<li>Other attributes will be assigned to the body element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array|string $content = null</code>
+					</dt>
+					<dd><p>$info The body content, or <code>null</code>, or an array of options.
+<code>$options</code>.</p></dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options for the panel body <code>&lt;div&gt;</code>.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_create"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelpercreate"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#218-317" title="Go to source code">create()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_create" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>create($title = null, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Open a panel.</p>
 
 <p>If <code>$title</code> is a string, the panel header is created using <code>$title</code> as its
 content and default options (except for the <code>title</code> options that can be specified
@@ -317,45 +939,45 @@ panel <code>&lt;div&gt;</code>.</li>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$title</var></dt>
-						<dd>The panel title or an array of options.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array|string $title = null</code>
+					</dt>
+					<dd>The panel title or an array of options.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>An HTML string containing opening elements for a panel.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>An HTML string containing opening elements for a panel.<br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="end" id="_end">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_end"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperend"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#319-344" title="Go to source code">end()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_end">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#319-344" title="Go to source code">end</a>( <span>string|null <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#_end" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>end($content = null, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Closes a panel, cleans part that have not been closed correctly and optionaly adds a
-footer to the panel.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Closes a panel, cleans part that have not been closed correctly and optionaly adds a
+		<div class="description detailed">
+			<p>Closes a panel, cleans part that have not been closed correctly and optionaly adds a
 footer to the panel.</p>
 
 <p>If <code>$content</code> is not null, the <code>footer()</code> methods will be used to create the panel
@@ -364,209 +986,88 @@ footer using <code>$content</code> and <code>$options</code>.</p>
 <pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;<span class="php-keyword2">end</span>(<span class="php-quote">'Footer Content'</span>, [<span class="php-quote">'my-class'</span> =&gt; <span class="php-quote">'my-footer-class'</span>]);</pre>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$content</var></dt>
-						<dd>Footer content, or <code>null</code>.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options for the footer.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|null $content = null</code>
+					</dt>
+					<dd>Footer content, or <code>null</code>.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options for the footer.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>An HTML string containing closing tags.
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_cleanCurrent" id="__cleanCurrent">
-
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#__cleanCurrent">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#346-366" title="Go to source code">_cleanCurrent</a>( )</code>
-
-			<div class="description short">
-				<p>Cleans the current panel part and return necessary HTML closing elements.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Cleans the current panel part and return necessary HTML closing elements.</p>
-
-
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>An HTML string containing closing elements.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>An HTML string containing closing tags.<br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_isOpen" id="__isOpen">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_endGroup"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperendGroup"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#199-216" title="Go to source code">endGroup()</a>
 
-			<td class="attributes"><code>
-				 protected 
-				boolean
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#__isOpen">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#368-377" title="Go to source code">_isOpen</a>( )</code>
+			<a href="#_endGroup" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>endGroup()</code></pre>
 
-			<div class="description short">
-				<p>Check if the current panel should be open or not.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Check if the current panel should be open or not.</p>
+		<div class="description detailed">
+			<p>Closes a panel group, closes the last panel if it has not already been closed.</p>
 
 
 
-					<h4>Returns</h4>
-					<div class="list">
-						boolean<br><code>true</code> if the current panel should be open, <code>false</code> otherwize.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>An HTML string containing closing tags.<br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_createHeader" id="__createHeader">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_footer"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperfooter"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#622-663" title="Go to source code">footer()</a>
 
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#__createHeader">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#379-445" title="Go to source code">_createHeader</a>( <span>string <var>$title</var></span>, <span>array <var>$options</var> = []</span>, <span> <var>$titleOptions</var> = []</span> )</code>
+			<a href="#_footer" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>footer($text = null, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Create or open a panel header.</p>
-			</div>
+		<div class="description detailed">
+			<p>Create or open a panel footer.</p>
 
-			<div class="description detailed hidden">
-				<p>Create or open a panel header.</p>
+<p>If <code>$text</code> is a string, create a panel footer using the specified content
+and <code>$options</code>.</p>
 
-<h3>Options</h3>
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer(<span class="php-quote">'Footer Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
 
-<ul>
-<li><code>title</code> See <code>header()</code>.</li>
-<li><code>templateVars</code> Provide template variables for the header template.</li>
-<li>Other attributes will be assigned to the header element.</li>
-</ul>
+<p>If <code>$text</code> is <code>null</code>, create a formated opening tag for a panel footer using the
+specified <code>$options</code>.</p>
 
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$title</var></dt>
-						<dd>$text The panel header content, or null to only open the header.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-						<dt><var>$titleOptions</var></dt>
-						<dd></dd>
-					</dl></div>
+<p>If <code>$text</code> is an array, used it as <code>$options</code> and create a formated opening tag for
+a panel footer.</p>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br><p>A formated opening tag for the panel header or the complete panel
-header.</p>
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_createBody" id="__createBody">
-
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#__createBody">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#447-488" title="Go to source code">_createBody</a>( <span>string|null <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Create or open a panel body.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create or open a panel body.</p>
-
-<h3>Options</h3>
-
-<ul>
-<li><code>templateVars</code> Provide template variables for the body template.</li>
-<li>Other attributes will be assigned to the body element.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The panel body content, or null to only open the body.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options for the body <code>&lt;div&gt;</code>.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br><p>A formated opening tag for the panel body or the complete panel
-body.</p>
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="_createFooter" id="__createFooter">
-
-			<td class="attributes"><code>
-				 protected 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#__createFooter">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#490-519" title="Go to source code">_createFooter</a>( <span>string <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Create or open a panel footer.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create or open a panel footer.</p>
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
 
 <h3>Options</h3>
 
@@ -576,45 +1077,46 @@ body.</p>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The panel footer content, or null to only open the footer.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options for the footer <code>&lt;div&gt;</code>.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|array $text = null</code>
+					</dt>
+					<dd>The footer content, or <code>null</code>, or an array of options.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options for the panel footer <code>&lt;div&gt;</code>.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br><p>A formated opening tag for the panel footer or the complete panel
-footer.</p>
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br><p>A formated opening tag for the panel footer or the complete panel
+footer.</p><br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="header" id="_header">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_header"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperheader"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#521-577" title="Go to source code">header()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_header">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#521-577" title="Go to source code">header</a>( <span>string|array <var>$info</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#_header" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>header($info = null, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Create or open a panel header.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create or open a panel header.</p>
+		<div class="description detailed">
+			<p>Create or open a panel header.</p>
 
 <p>If <code>$text</code> is a string, create a panel header using the specified content
 and <code>$options</code>.</p>
@@ -646,618 +1148,689 @@ a panel header.</p>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$info</var></dt>
-						<dd>$text The header content, or <code>null</code>, or an array of options.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">string|array $info = null</code>
+					</dt>
+					<dd>$text The header content, or <code>null</code>, or an array of options.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br><p>A formated opening tag for the panel header or the complete panel
-header.</p>
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br><p>A formated opening tag for the panel header or the complete panel
+header.</p><br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="body" id="_body">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_startGroup"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperstartGroup"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#159-197" title="Go to source code">startGroup()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_body">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#579-620" title="Go to source code">body</a>( <span>array|string <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#_startGroup" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>startGroup($options = [])</code></pre>
 
-			<div class="description short">
-				<p>Create or open a panel body.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create or open a panel body.</p>
-
-<p>If <code>$content</code> is a string, create a panel body using the specified content and
-<code>$options</code>.</p>
-
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body(<span class="php-quote">'Panel Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
-
-<p>If <code>$content</code> is <code>null</code>, create a formated opening tag for a panel body using the
-specified <code>$options</code>.</p>
-
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
-
-<p>If <code>$content</code> is an array, used it as <code>$options</code> and create a formated opening tag for
-a panel body.</p>
-
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;body([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+		<div class="description detailed">
+			<p>Open a panel group.</p>
 
 <h3>Options</h3>
 
 <ul>
-<li><code>templateVars</code> Provide template variables for the body template.</li>
-<li>Other attributes will be assigned to the body element.</li>
+<li><code>collapsible</code> Set to <code>false</code> if panels should not be collapsible. Default is <code>true</code>.</li>
+<li><code>id</code> Identifier for the group. Default is automatically generated.</li>
+<li><p><code>open</code> If <code>collapsible</code> is <code>true</code>, indicate the panel that should be open by default.
+Set to <code>false</code> to have no panels open. You can also indicate if a panel should be open
+in the <code>create()</code> method. Default is <code>0</code>.</p></li>
+<li><p>Other attributes will be passed to the <code>Html::div()</code> method.</p></li>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$content</var></dt>
-						<dd><p>$info The body content, or <code>null</code>, or an array of options.
-<code>$options</code>.</p></dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options for the panel body <code>&lt;div&gt;</code>.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>A formated opening HTML tag for panel groups.<br>
+				</div>
+
+
+				<h6>Link</h6>
+				<div class="list">
+						<a href="http://getbootstrap.com/javascript/#collapse-example-accordion">http://getbootstrap.com/javascript/#collapse-example-accordion</a><br>
+				</div>
+
+
+		</div>
+		</div>
+	</div>
+
+
+	<div class="section">
+		<h2>Methods used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#methods">Bootstrap\View\Helper\EasyIconTrait</a></h2>
+		<div class="method-detail">
+				<a id="__easyIcon"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_easyIcon"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#57-78" title="Go to source code">_easyIcon()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__easyIcon" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_easyIcon($callback, $title, $options)</code></pre>
+
+		<div class="description detailed">
+			<p>This method calls the given callback with the specified argument (<code>$title</code> and
+<code>$options</code>) after applying a filter on them.</p>
+
+<p><strong>Note:</strong> Currently this method only works for function that take
+two arguments ($title and $options).</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">callable $callback</code>
+					</dt>
+					<dd>The callback.</dd>
+					<dt>
+						<code class="language-php ">string $title</code>
+					</dt>
+					<dd>The first argument for the callback.</dd>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd>The second argument for the calback.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					mixed<br>Whatever might be returned by $callback.<br>
+				</div>
 
 
 
 
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__makeIcon"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_makeIcon"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#30-55" title="Go to source code">_makeIcon()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__makeIcon" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_makeIcon($text, $converted = false)</code></pre>
+
+		<div class="description detailed">
+			<p>Try to convert the specified string to a bootstrap icon. The string is converted if
+it matches a format <code>i:icon-name</code> (leading and trailing spaces or ignored) and if
+easy-icon is activated.</p>
+
+<p><strong>Note:</strong> This function will currently fail if the Html helper associated with the
+view is not BootstrapHtmlHelper.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The string to convert.</dd>
+					<dt>
+						<code class="language-php optional">bool $converted = false</code>
+					</dt>
+					<dd><p>If specified, will contains <code>true</code> if the text was converted,
+<code>false</code> otherwize.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The text after conversion.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
+	<div class="section">
+		<h2>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h2>
+		<div class="method-detail">
+				<a id="__addButtonClasses"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_addButtonClasses"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#52-78" title="Go to source code">_addButtonClasses()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__addButtonClasses" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_addButtonClasses($options)</code></pre>
+
+		<div class="description detailed">
+			<p>Add classes to options according to the default values of bootstrap-type
+and bootstrap-size for button (see configuration).</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd><p>The initial options with bootstrap-type and/or
+bootstrat-size values.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br><p>The new options with class values (btn, and btn-* according to
+initial options).</p><br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__isAssociativeArray"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelper_isAssociativeArray"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#80-89" title="Go to source code">_isAssociativeArray()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__isAssociativeArray" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_isAssociativeArray($array)</code></pre>
+
+		<div class="description detailed">
+			<p>Check weither the specified array is associative or not.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $array</code>
+					</dt>
+					<dd>The array to check.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if the array is associative, <code>false</code> otherwize.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_addClass"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapPanelHelperaddClass"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#24-50" title="Go to source code">addClass()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_addClass" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>addClass($options = [], $class = null, $key = 'class')</code></pre>
+
+		<div class="description detailed">
+			<p>Adds the given class to the element options.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options/attributes to add a class to.</dd>
+					<dt>
+						<code class="language-php optional">string|array $class = null</code>
+					</dt>
+					<dd>The class names to be added.</dd>
+					<dt>
+						<code class="language-php optional">string $key = 'class'</code>
+					</dt>
+					<dd>The key to use for class (default to <code>'class'</code>).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br>Array of options with <code>$key</code> set or updated.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="section">
+		<h2>Properties detail</h2>
+	<div class="property-detail">
+		<a id="$_autoCloseOnCreate"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#145-150" title="Go to source code"><var>$_autoCloseOnCreate</var></a>
+				<a href="#$_autoCloseOnCreate" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				boolean
+		</div>
+
+		<div class="description detailed">
+			<p>Determine if previous panel should be automatically closed when calling <code>create()</code>.</p>
+
+
+			<div>
+				<pre class="language-php"><code>false</code></pre>
 			</div>
-			</div></td>
-		</tr>
-		<tr data-order="footer" id="_footer">
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_bodyId"></a>
 
-			<td class="attributes"><code>
-				 public 
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#88-93" title="Go to source code"><var>$_bodyId</var></a>
+				<a href="#$_bodyId" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
 				string
-				
-				</code>
-			</td>
+		</div>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_footer">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#622-663" title="Go to source code">footer</a>( <span>string|array <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+		<div class="description detailed">
+			<p>Body HTML id (for collapsible panel).</p>
 
-			<div class="description short">
-				<p>Create or open a panel footer.</p>
+
+			<div>
+				<pre class="language-php"><code>null</code></pre>
 			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_collapsible"></a>
 
-			<div class="description detailed hidden">
-				<p>Create or open a panel footer.</p>
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#152-157" title="Go to source code"><var>$_collapsible</var></a>
+				<a href="#$_collapsible" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-<p>If <code>$text</code> is a string, create a panel footer using the specified content
-and <code>$options</code>.</p>
+		<div class="attributes">
+				<span class="label">protected</span>
+				boolean
+		</div>
 
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer(<span class="php-quote">'Footer Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
-
-<p>If <code>$text</code> is <code>null</code>, create a formated opening tag for a panel footer using the
-specified <code>$options</code>.</p>
-
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
-
-<p>If <code>$text</code> is an array, used it as <code>$options</code> and create a formated opening tag for
-a panel footer.</p>
-
-<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Panel-&gt;footer([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
-
-<h3>Options</h3>
-
-<ul>
-<li><code>templateVars</code> Provide template variables for the footer template.</li>
-<li>Other attributes will be assigned to the footer element.</li>
-</ul>
+		<div class="description detailed">
+			<p>Indicate if panel should be collapsible or not.</p>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The footer content, or <code>null</code>, or an array of options.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options for the panel footer <code>&lt;div&gt;</code>.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br><p>A formated opening tag for the panel footer or the complete panel
-footer.</p>
-					</div>
-
-
-
-
+			<div>
+				<pre class="language-php"><code>false</code></pre>
 			</div>
-			</div></td>
-		</tr>
-			</table>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_current"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#74-79" title="Go to source code"><var>$_current</var></a>
+				<a href="#$_current" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				string
 		</div>
 
+		<div class="description detailed">
+			<p>Current part of the panel (<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</p>
 
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#methods">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__easyIcon">_easyIcon()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__makeIcon">_makeIcon()</a></code>
-			</p>
+
+			<div>
+				<pre class="language-php"><code>NULL</code></pre>
+			</div>
 		</div>
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__addButtonClasses">_addButtonClasses()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__isAssociativeArray">_isAssociativeArray()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#_addClass">addClass()</a></code>
-			</p>
-		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_defaultConfig"></a>
 
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#43-72" title="Go to source code"><var>$_defaultConfig</var></a>
+				<a href="#$_defaultConfig" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-
-
-
-
-
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="helpers" id="$helpers">
-			<td class="attributes"><code>
-				public  
+		<div class="attributes">
+				<span class="label">protected</span>
 				array
-			</code></td>
+		</div>
 
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#32-41" title="Go to source code"><var>$helpers</var></a>
-
-				<div class="description short">
-					<p>Other helpers used by BootstrapPanelHelper.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Other helpers used by BootstrapPanelHelper.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$helpers" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'Html'</span> =&gt; [
-        <span class="php-quote">'className'</span> =&gt; <span class="php-quote">'Bootstrap.BootstrapHtml'</span>
-    ]
-]</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_defaultConfig" id="$_defaultConfig">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#43-72" title="Go to source code"><var>$_defaultConfig</var></a>
-
-				<div class="description short">
-					<p>Default configuration for the helper.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Default configuration for the helper.</p>
+		<div class="description detailed">
+			<p>Default configuration for the helper.</p>
 
 <ul>
 <li><code>collapsible</code> Default behavior for collapsible panel.</li>
 </ul>
 
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_defaultConfig" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'templates'</span> =&gt; [
-        <span class="php-quote">'panelGroupStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel-group{{attrs.class}}&quot; role=&quot;tablist&quot; aria-multiselectable=&quot;true&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'panelGroupEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
-        <span class="php-quote">'panelStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel panel-{{type}}{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'panelEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
-        <span class="php-quote">'headerStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel-heading{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'headerCollapsibleStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel-heading{{attrs.class}}&quot; role=&quot;tab&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'headerTitle'</span> =&gt; <span class="php-quote">'&lt;h4 class=&quot;panel-title{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/h4&gt;'</span>,
-        <span class="php-quote">'headerCollapsibleLink'</span> =&gt; 
-<span class="php-quote">'&lt;a role=&quot;button&quot; data-toggle=&quot;collapse&quot; href=&quot;#{{target}}&quot; aria-expanded=&quot;{{expanded}}&quot; aria-controls=&quot;{{target}}&quot;{{attrs}}&gt;{{content}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'headerEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
-        <span class="php-quote">'bodyStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel-body{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'bodyEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
-        <span class="php-quote">'bodyCollapsibleStart'</span> =&gt; 
-            <span class="php-quote">'&lt;div class=&quot;panel-collapse collapse{{attrs.class}}&quot; role=&quot;tabpanel&quot; aria-labelledby=&quot;{{headId}}&quot;{{attrs}}&gt;{{bodyStart}}'</span>,
-        <span class="php-quote">'bodyCollapsibleEnd'</span> =&gt; <span class="php-quote">'{{bodyEnd}}&lt;/div&gt;'</span>,
-        <span class="php-quote">'footerStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;panel-footer{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
-        <span class="php-quote">'footerEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>
+
+			<div>
+				<pre class="language-php"><code>[
+    'templates' =&gt; [
+        'panelGroupStart' =&gt; '&lt;div class="panel-group{{attrs.class}}" role="tablist" aria-multiselectable="true"{{attrs}}&gt;',
+        'panelGroupEnd' =&gt; '&lt;/div&gt;',
+        'panelStart' =&gt; '&lt;div class="panel panel-{{type}}{{attrs.class}}"{{attrs}}&gt;',
+        'panelEnd' =&gt; '&lt;/div&gt;',
+        'headerStart' =&gt; '&lt;div class="panel-heading{{attrs.class}}"{{attrs}}&gt;',
+        'headerCollapsibleStart' =&gt; '&lt;div class="panel-heading{{attrs.class}}" role="tab"{{attrs}}&gt;',
+        'headerTitle' =&gt; '&lt;h4 class="panel-title{{attrs.class}}"{{attrs}}&gt;{{content}}&lt;/h4&gt;',
+        'headerCollapsibleLink' =&gt; 
+'&lt;a role="button" data-toggle="collapse" href="#{{target}}" aria-expanded="{{expanded}}" aria-controls="{{target}}"{{attrs}}&gt;{{content}}&lt;/a&gt;',
+        'headerEnd' =&gt; '&lt;/div&gt;',
+        'bodyStart' =&gt; '&lt;div class="panel-body{{attrs.class}}"{{attrs}}&gt;',
+        'bodyEnd' =&gt; '&lt;/div&gt;',
+        'bodyCollapsibleStart' =&gt; 
+            '&lt;div class="panel-collapse collapse{{attrs.class}}" role="tabpanel" aria-labelledby="{{headId}}"{{attrs}}&gt;{{bodyStart}}',
+        'bodyCollapsibleEnd' =&gt; '{{bodyEnd}}&lt;/div&gt;',
+        'footerStart' =&gt; '&lt;div class="panel-footer{{attrs.class}}"{{attrs}}&gt;',
+        'footerEnd' =&gt; '&lt;/div&gt;'
     ],
-    <span class="php-quote">'templateClass'</span> =&gt; <span class="php-quote">'Bootstrap\View\BootstrapStringTemplate'</span>,
-    <span class="php-quote">'collapsible'</span> =&gt; <span class="php-keyword1">false</span>
-]</code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_current" id="$_current">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
+    'templateClass' =&gt; 'Bootstrap\View\BootstrapStringTemplate',
+    'collapsible' =&gt; false
+]</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_groupCount"></a>
 
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#74-79" title="Go to source code"><var>$_current</var></a>
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#102-107" title="Go to source code"><var>$_groupCount</var></a>
+				<a href="#$_groupCount" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-				<div class="description short">
-					<p>Current part of the panel (<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Current part of the panel (<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_current" class="anchor">#</a>
-					<code><span class="php-keyword1">NULL</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_panelCount" id="$_panelCount">
-			<td class="attributes"><code>
-				protected  
+		<div class="attributes">
+				<span class="label">protected</span>
 				integer
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#81-86" title="Go to source code"><var>$_panelCount</var></a>
-
-				<div class="description short">
-					<p>Panel counter (for collapsible groups).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Panel counter (for collapsible groups).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_panelCount" class="anchor">#</a>
-					<code><span class="php-num">0</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_bodyId" id="$_bodyId">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#88-93" title="Go to source code"><var>$_bodyId</var></a>
-
-				<div class="description short">
-					<p>Body HTML id (for collapsible panel).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Body HTML id (for collapsible panel).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_bodyId" class="anchor">#</a>
-					<code><span class="php-keyword1">null</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_headId" id="$_headId">
-			<td class="attributes"><code>
-				protected  
-				string
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#95-100" title="Go to source code"><var>$_headId</var></a>
-
-				<div class="description short">
-					<p>Header HTML id (for collapsible panel).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Header HTML id (for collapsible panel).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_headId" class="anchor">#</a>
-					<code><span class="php-keyword1">null</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_groupCount" id="$_groupCount">
-			<td class="attributes"><code>
-				protected  
-				integer
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#102-107" title="Go to source code"><var>$_groupCount</var></a>
-
-				<div class="description short">
-					<p>Panel groups counter (for panel groups).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Panel groups counter (for panel groups).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_groupCount" class="anchor">#</a>
-					<code><span class="php-num">0</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_groupId" id="$_groupId">
-			<td class="attributes"><code>
-				protected  
-				mixed
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#109-114" title="Go to source code"><var>$_groupId</var></a>
-
-				<div class="description short">
-					<p>Panel group HTML id.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Panel group HTML id.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_groupId" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_groupPanelCount" id="$_groupPanelCount">
-			<td class="attributes"><code>
-				protected  
-				integer
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#116-121" title="Go to source code"><var>$_groupPanelCount</var></a>
-
-				<div class="description short">
-					<p>Panel counter inside a group (count the number of panels in a group).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Panel counter inside a group (count the number of panels in a group).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_groupPanelCount" class="anchor">#</a>
-					<code><span class="php-num">0</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_groupPanelOpen" id="$_groupPanelOpen">
-			<td class="attributes"><code>
-				protected  
-				mixed
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#123-128" title="Go to source code"><var>$_groupPanelOpen</var></a>
-
-				<div class="description short">
-					<p>Panel to open inside a group.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Panel to open inside a group.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_groupPanelOpen" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_groupInGroup" id="$_groupInGroup">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#131-136" title="Go to source code"><var>$_groupInGroup</var></a>
-
-				<div class="description short">
-					<p>Indicate if in group mode or not.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Indicate if in group mode or not.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_groupInGroup" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_lastPanelClosed" id="$_lastPanelClosed">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#138-143" title="Go to source code"><var>$_lastPanelClosed</var></a>
-
-				<div class="description short">
-					<p>Indicate if the last panel was closed (in a group).</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Indicate if the last panel was closed (in a group).</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_lastPanelClosed" class="anchor">#</a>
-					<code><span class="php-keyword1">true</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_autoCloseOnCreate" id="$_autoCloseOnCreate">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#145-150" title="Go to source code"><var>$_autoCloseOnCreate</var></a>
-
-				<div class="description short">
-					<p>Determine if previous panel should be automatically closed when calling <code>create()</code>.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Determine if previous panel should be automatically closed when calling <code>create()</code>.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_autoCloseOnCreate" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
-				</div>
-			</td>
-		</tr>
-		<tr data-order="_collapsible" id="$_collapsible">
-			<td class="attributes"><code>
-				protected  
-				boolean
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#152-157" title="Go to source code"><var>$_collapsible</var></a>
-
-				<div class="description short">
-					<p>Indicate if panel should be collapsible or not.</p>
-				</div>
-
-				<div class="description detailed hidden">
-					<p>Indicate if panel should be collapsible or not.</p>
-
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_collapsible" class="anchor">#</a>
-					<code><span class="php-keyword1">false</span></code>
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
 
+		<div class="description detailed">
+			<p>Panel groups counter (for panel groups).</p>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Properties used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#properties">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#$easyIcon"><var>$easyIcon</var></a></code>
-			</p>
+
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_groupId"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#109-114" title="Go to source code"><var>$_groupId</var></a>
+				<a href="#$_groupId" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				mixed
 		</div>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Magic properties</h3></div>
-			<table class="summary table table-bordered table-striped properties" id="magicProperties">
-		<tr data-order="Html" id="m$Html">
-			<td class="attributes"><code>
-				public  
+		<div class="description detailed">
+			<p>Panel group HTML id.</p>
+
+
+			<div>
+				<pre class="language-php"><code>false</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_groupInGroup"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#131-136" title="Go to source code"><var>$_groupInGroup</var></a>
+				<a href="#$_groupInGroup" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				boolean
+		</div>
+
+		<div class="description detailed">
+			<p>Indicate if in group mode or not.</p>
+
+
+			<div>
+				<pre class="language-php"><code>false</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_groupPanelCount"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#116-121" title="Go to source code"><var>$_groupPanelCount</var></a>
+				<a href="#$_groupPanelCount" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				integer
+		</div>
+
+		<div class="description detailed">
+			<p>Panel counter inside a group (count the number of panels in a group).</p>
+
+
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_groupPanelOpen"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#123-128" title="Go to source code"><var>$_groupPanelOpen</var></a>
+				<a href="#$_groupPanelOpen" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				mixed
+		</div>
+
+		<div class="description detailed">
+			<p>Panel to open inside a group.</p>
+
+
+			<div>
+				<pre class="language-php"><code>false</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_headId"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#95-100" title="Go to source code"><var>$_headId</var></a>
+				<a href="#$_headId" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				string
+		</div>
+
+		<div class="description detailed">
+			<p>Header HTML id (for collapsible panel).</p>
+
+
+			<div>
+				<pre class="language-php"><code>null</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_lastPanelClosed"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#138-143" title="Go to source code"><var>$_lastPanelClosed</var></a>
+				<a href="#$_lastPanelClosed" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				boolean
+		</div>
+
+		<div class="description detailed">
+			<p>Indicate if the last panel was closed (in a group).</p>
+
+
+			<div>
+				<pre class="language-php"><code>true</code></pre>
+			</div>
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$_panelCount"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#81-86" title="Go to source code"><var>$_panelCount</var></a>
+				<a href="#$_panelCount" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				integer
+		</div>
+
+		<div class="description detailed">
+			<p>Panel counter (for collapsible groups).</p>
+
+
+		</div>
+	</div>
+	<div class="property-detail">
+		<a id="$helpers"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#32-41" title="Go to source code"><var>$helpers</var></a>
+				<a href="#$helpers" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
+				array
+		</div>
+
+		<div class="description detailed">
+			<p>Other helpers used by BootstrapPanelHelper.</p>
+
+
+			<div>
+				<pre class="language-php"><code>[
+    'Html' =&gt; [
+        'className' =&gt; 'Bootstrap.BootstrapHtml'
+    ]
+]</code></pre>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div class="section">
+		<h2>Magic properties detail</h2>
+	<div class="property-detail">
+		<a id="m$Html"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#24" title="Go to source code"><var>$Html</var></a>
+				<a href="#m$Html" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">public</span>
 				<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code>
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapPanelHelper.html#24" title="Go to source code"><var>$Html</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
 
+		<div class="description detailed">
+			
 
 
-</div>
+		</div>
+	</div>
 	</div>
 
 </div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -1266,5 +1839,17 @@ footer.</p>
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

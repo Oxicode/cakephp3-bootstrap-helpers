@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,63 +69,63 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li>
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li class="active"><a href="class-Bootstrap.View.BootstrapStringTemplate.html">BootstrapStringTemplate</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li>
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li class="active"><a href="class-Bootstrap.View.BootstrapStringTemplate.html">BootstrapStringTemplate</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
 
-<div id="splitter"></div>
 
-<div id="right">
-	<div id="rightInner">
+				</div>
+			</div>
+
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapStringTemplate</h1>
 
 
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\StringTemplate
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.StringTemplate.html" target="_blank">
+				<span>Cake\View\StringTemplate</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\BootstrapStringTemplate</span></b>			
+				<b><span>Bootstrap\View\BootstrapStringTemplate</span></b>
 			
 			
 		</dd>
@@ -135,100 +138,136 @@ Cake\View\StringTemplate
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a><br>
 		
 
-			<b>Located at</b> <a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#20-99" title="Go to source code">View/BootstrapStringTemplate.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#20-99" title="Go to source code">View/BootstrapStringTemplate.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="_compileTemplates" id="__compileTemplates">
 
-			<td class="attributes"><code>
-				 protected 
-				
-				
-				</code>
-			</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#__compileTemplates">#</a>
-			<code><a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#22-45" title="Go to source code">_compileTemplates</a>( <span>array <var>$templates</var> = []</span> )</code>
 
-			<div class="description short">
-				<p>Compile templates into a more efficient printf() compatible format.</p>
+
+
+
+
+
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.BootstrapStringTemplate.html#__compileTemplates">_compileTemplates()</a>
+
+
+		<span class="label">protected</span>
+
+			</h3>
+			<div class="description detailed">
+				Compile templates into a more efficient printf() compatible format.
 			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.BootstrapStringTemplate.html#_format">format()</a>
 
-			<div class="description detailed hidden">
-				<p>Compile templates into a more efficient printf() compatible format.</p>
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Format a template string with $data
+			</div>
+		</li>
+		</ul>
+	</div>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$templates</var></dt>
-						<dd><p>The template names to compile. If empty all templates will
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="__compileTemplates"></a>
+		<a id="method-Bootstrap\View\BootstrapStringTemplate_compileTemplates"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#22-45" title="Go to source code">_compileTemplates()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__compileTemplates" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_compileTemplates($templates = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Compile templates into a more efficient printf() compatible format.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $templates = []</code>
+					</dt>
+					<dd><p>The template names to compile. If empty all templates will
 be compiled.</p></dd>
-					</dl></div>
+				</dl>
+				</div>
 
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="format" id="_format">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_format">#</a>
-			<code><a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#47-97" title="Go to source code">format</a>( <span>string <var>$name</var></span>, <span>array <var>$data</var></span> )</code>
-
-			<div class="description short">
-				<p>Format a template string with $data</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Format a template string with $data</p>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$name</var></dt>
-						<dd>The template name.</dd>
-						<dt><var>$data</var></dt>
-						<dd>The data to insert.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-			</table>
 		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_format"></a>
+		<a id="method-Bootstrap\View\BootstrapStringTemplateformat"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#47-97" title="Go to source code">format()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_format" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>format($name, $data)</code></pre>
+
+		<div class="description detailed">
+			<p>Format a template string with $data</p>
 
 
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $name</code>
+					</dt>
+					<dd>The template name.</dd>
+					<dt>
+						<code class="language-php ">array $data</code>
+					</dt>
+					<dd>The data to insert.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
 
 
 
@@ -239,22 +278,23 @@ be compiled.</p></dd>
 
 
 </div>
-	</div>
-
-</div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -263,5 +303,17 @@ be compiled.</p></dd>
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>

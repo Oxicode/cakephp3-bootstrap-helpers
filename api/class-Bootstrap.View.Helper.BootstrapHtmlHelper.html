@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,7 +11,9 @@
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
 		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+	<link rel="stylesheet" href="resources/prism.min.css?eaa834aa8cd05ab0fbe72e75f1c5294e8a9b8193">
+	<link rel="stylesheet" href="resources/custom-prism.css?27969d02802a18e7e9a6b2bd4556f011b458677b">
+	<link rel="stylesheet" href="resources/style.css?383d3907a155f0f22605c60de89a47b857673cd6">
 
 </head>
 
@@ -66,62 +69,60 @@
 		</div>
 	</nav>
 
-	<div id="left">
-	<div id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 hidden-sm hidden-xs">
 
-		<div id="groups">
-				<h3>Namespaces</h3>
-			<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.html">
-							Bootstrap<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.html">
-							View<span></span>
-						</a>
-							<ul>
-					<li class="active">
-						<a href="namespace-Bootstrap.View.Helper.html">
-							Helper						</a>
-							</li>
-								</ul></li></ul></li>
-			</ul>
-		</div>
-
-
-		<div id="elements">
-			<h3>Classes</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
-				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
-			</ul>
+				<div id="groups">
+						<h3 class="nav-title">Namespaces</h3>
+					<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.html">
+									Bootstrap<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.html">
+									View<span></span>
+								</a>
+									<ul>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Helper.html">
+									Helper								</a>
+									</li>
+										</ul></li></ul></li>
+					</ul>
+				</div>
 
 
-			<h3>Traits</h3>
-			<ul>
-				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
-				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
-			</ul>
+				<div id="elements">
+					<h3 class="nav-title">Classes</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+						<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+					</ul>
+
+
+					<h3 class="nav-title">Traits</h3>
+					<ul class="nav-list">
+						<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+						<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+					</ul>
 
 
 
-		</div>
-	</div>
-</div>
+				</div>
+			</div>
 
-<div id="splitter"></div>
-
-<div id="right">
-	<div id="rightInner">
+			<div class="col-md-9">
+				<div id="rightInner">
 <div id="content" class="class">
 	<h1>Class BootstrapHtmlHelper</h1>
 
@@ -132,18 +133,21 @@
 <p>HtmlHelper encloses all methods needed while working with HTML pages.</p>
 	</div>
 
-	<dl class="tree well">
+	<dl class="tree">
 		<dd style="padding-left:0px">
-Cake\View\Helper\HtmlHelper
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Helper.HtmlHelper.html" target="_blank">
+				<span>Cake\View\Helper\HtmlHelper</span>
+			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-<b><span>Bootstrap\View\Helper\BootstrapHtmlHelper</span></b>			
+				<b><span>Bootstrap\View\Helper\BootstrapHtmlHelper</span></b>
 			
 			 uses 
 					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html"><span>Bootstrap\View\Helper\BootstrapTrait</span></a>
+				
 			
 		</dd>
 	</dl>
@@ -155,7 +159,7 @@ Cake\View\Helper\HtmlHelper
 
 
 
-	<div class="alert alert-info">
+	<div class="info">
 		
 		
 		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
@@ -163,214 +167,200 @@ Cake\View\Helper\HtmlHelper
 
 				<b>Link:</b>
 				<a href="http://book.cakephp.org/3.0/en/views/helpers/html.html">http://book.cakephp.org/3.0/en/views/helpers/html.html</a><br>
-			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#19-436" title="Go to source code">View/Helper/BootstrapHtmlHelper.php</a>
-		<br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#19-436" title="Go to source code">View/Helper/BootstrapHtmlHelper.php</a><br>
 	</div>
 
 
 
-		<div class="panel panel-default">
-			<div class="panel-heading"><h2>Methods summary</h2></div>
-			<table class="summary table table-bordered table-striped methods" id="methods">
-		<tr data-order="icon" id="_icon">
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+	<div class="section">
+		<h2>Properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#$_defaultConfig">$_defaultConfig</a></code>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_icon">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#109-131" title="Go to source code">icon</a>( <span>string <var>$icon</var></span>, <span>array <var>$options</var> = []</span> )</code>
+				<span class="attributes">
+					<span class="label">protected</span>
 
-			<div class="description short">
-				<p>Create an icon using the template <code>icon</code>.</p>
+				</span>
 			</div>
 
-			<div class="description detailed hidden">
-				<p>Create an icon using the template <code>icon</code>.</p>
+			<div class="property-type">
+				<code>array</code></div>
 
-<h3>Options</h3>
-
-<ul>
-<li><code>templateVars</code> Provide template variables for the <code>icon</code> template.</li>
-<li>Other attributes will be assigned to the wrapper element.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$icon</var></dt>
-						<dd>Name of the icon.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The HTML icon.
-					</div>
-
-
-
-
+			<div class="description">
+				Default config for the helper.
 			</div>
-			</div></td>
-		</tr>
-		<tr data-order="label" id="_label">
+		</li>
+		</ul>
+	</div>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+	<div class="section">
+		<h2>Magic properties summary</h2>
+		<ul class="member-summary properties">
+		<li class="clearfix">
+			<div class="name">
+					<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#m$Url">$Url</a></code>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_label">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#133-172" title="Go to source code">label</a>( <span>string <var>$text</var></span>, <span>string|array <var>$type</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+				<span class="attributes">
+					<span class="label">public</span>
 
-			<div class="description short">
-				<p>Create a Twitter Bootstrap span label.</p>
+				</span>
 			</div>
 
-			<div class="description detailed hidden">
-				<p>Create a Twitter Bootstrap span label.</p>
+			<div class="property-type">
+				<code>UrlHelper</code></div>
 
-<p>The second parameter may either be <code>$type</code> or <code>$options</code> (in which case
-the third parameter is not used, and the label type can be specified in the
-<code>$options</code> array).</p>
-
-<h3>Options</h3>
-
-<ul>
-<li><code>tag</code> The HTML tag to use.</li>
-<li><code>type</code> The type of the label.</li>
-<li><code>templateVars</code> Provide template variables for the <code>label</code> template.</li>
-<li>Other attributes will be assigned to the wrapper element.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The label text</dd>
-						<dt><var>$type</var></dt>
-						<dd><p>The label type (default, primary, success, warning,
-info, danger) or the array of options (see <code>$options</code>).</p></dd>
-						<dt><var>$options</var></dt>
-						<dd><p>Array of options. See above. Default values are retrieved
-from the configuration.</p></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The HTML label element.
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="badge" id="_badge">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_badge">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#174-195" title="Go to source code">badge</a>( <span>string <var>$text</var></span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Create a Twitter Bootstrap badge.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create a Twitter Bootstrap badge.</p>
-
-<h3>Options</h3>
-
-<ul>
-<li><code>templateVars</code> Provide template variables for the <code>badge</code> template.</li>
-<li>Other attributes will be assigned to the wrapper element.</li>
-</ul>
-
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The badge text.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of attributes for the span element.</dd>
-					</dl></div>
-
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="getCrumbList" id="_getCrumbList">
-
-			<td class="attributes"><code>
-				 public 
-				
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_getCrumbList">#</a>
-			<code class="deprecated"><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#198-205" title="Go to source code">getCrumbList</a>( <span>array <var>$options</var> = []</span>, <span> <var>$startText</var> = <span class="php-keyword1">false</span></span> )</code>
-
-			<div class="description short">
+			<div class="description">
 				
 			</div>
-
-			<div class="description detailed hidden">
-				
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							3.3.6 (CakePHP) Use the BreadcrumbsHelper instead.<br>
-					</div>
+		</li>
+		</ul>
+	</div>
 
 
 
 
 
 
+
+	<div class="section">
+		<h2>Method Summary</h2>
+		<ul class="member-summary">
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_alert">alert()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create a Twitter Bootstrap style alert block, containing text.
 			</div>
-			</div></td>
-		</tr>
-		<tr data-order="alert" id="_alert">
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_badge">badge()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_alert">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#207-257" title="Go to source code">alert</a>( <span>string <var>$text</var></span>, <span>string|array <var>$type</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+		<span class="label">public</span>
 
-			<div class="description short">
-				<p>Create a Twitter Bootstrap style alert block, containing text.</p>
+			</h3>
+			<div class="description detailed">
+				Create a Twitter Bootstrap badge.
 			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_dropdown">dropdown()</a>
 
-			<div class="description detailed hidden">
-				<p>Create a Twitter Bootstrap style alert block, containing text.</p>
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create &amp; return a twitter bootstrap dropdown menu.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_getCrumbList">getCrumbList()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_icon">icon()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create an icon using the template <code>icon</code>.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_label">label()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create a Twitter Bootstrap span label.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_progress">progress()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create a Twitter Bootstrap style progress bar.
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_splicedRows">splicedRows()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				<p>Create a formatted collection of elements while
+maintaining proper bootstrappy markup. Useful when
+displaying, for example, a list of products that would require
+more than the maximum number of columns per row.</p>
+			</div>
+		</li>
+		<li class="clearfix">
+			<h3 class="method-name">
+					<a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#_tooltip">tooltip()</a>
+
+
+		<span class="label">public</span>
+
+			</h3>
+			<div class="description detailed">
+				Create a Twitter Bootstrap style tooltip.
+			</div>
+		</li>
+		</ul>
+	</div>
+
+
+
+	<div class="section">
+		<h2>Method Detail</h2>
+		<div class="method-detail">
+				<a id="_alert"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperalert"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#207-257" title="Go to source code">alert()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_alert" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>alert($text, $type = null, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create a Twitter Bootstrap style alert block, containing text.</p>
 
 <p>The second parameter may either be <code>$type</code> or <code>$options</code> (in this case,
 the third parameter is not used, and the alert type can be specified in the
@@ -386,99 +376,275 @@ the third parameter is not used, and the alert type can be specified in the
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The alert text.</dd>
-						<dt><var>$type</var></dt>
-						<dd>The type of the alert.</dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The alert text.</dd>
+					<dt>
+						<code class="language-php optional">string|array $type = null</code>
+					</dt>
+					<dd>The type of the alert.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>A HTML bootstrap alert element.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>A HTML bootstrap alert element.<br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="tooltip" id="_tooltip">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_badge"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperbadge"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#174-195" title="Go to source code">badge()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_tooltip">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#259-287" title="Go to source code">tooltip</a>( <span>string <var>$text</var></span>, <span>string <var>$tooltip</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#_badge" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>badge($text, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Create a Twitter Bootstrap style tooltip.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create a Twitter Bootstrap style tooltip.</p>
+		<div class="description detailed">
+			<p>Create a Twitter Bootstrap badge.</p>
 
 <h3>Options</h3>
 
 <ul>
-<li><code>toggle</code> The 'data-toggle' HTML attribute.</li>
-<li><code>placement</code> The <code>data-placement</code> HTML attribute.</li>
-<li><code>tag</code> The tag to use.</li>
-<li><code>templateVars</code> Provide template variables for the <code>tooltip</code> template.</li>
+<li><code>templateVars</code> Provide template variables for the <code>badge</code> template.</li>
 <li>Other attributes will be assigned to the wrapper element.</li>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$text</var></dt>
-						<dd>The HTML tag inner text.</dd>
-						<dt><var>$tooltip</var></dt>
-						<dd>The tooltip text.</dd>
-						<dt><var>$options</var></dt>
-						<dd><p>An array of options. See above. Default values are retrieved
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The badge text.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of attributes for the span element.</dd>
+				</dl>
+				</div>
+
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_dropdown"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperdropdown"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#355-400" title="Go to source code">dropdown()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_dropdown" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>dropdown($menu = [], $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create &amp; return a twitter bootstrap dropdown menu.</p>
+
+				<h6>Deprecated</h6>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $menu = []</code>
+					</dt>
+					<dd><p>HTML tags corresponding to menu options (which will be wrapped
+             into <code>&lt;li&gt;</code> tag). To add separator, pass <code>'divider'</code>.</p></dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Attributes for the wrapper (change it with tag).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_getCrumbList"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelpergetCrumbList"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#198-205" title="Go to source code">getCrumbList()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_getCrumbList" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>getCrumbList($options = [], $startText = false)</code></pre>
+
+		<div class="description detailed">
+			
+
+				<h6>Deprecated</h6>
+				<div class="list">
+						3.3.6 (CakePHP) Use the BreadcrumbsHelper instead.<br>
+				</div>
+
+
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_icon"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelpericon"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#109-131" title="Go to source code">icon()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_icon" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>icon($icon, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create an icon using the template <code>icon</code>.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the <code>icon</code> template.</li>
+<li>Other attributes will be assigned to the wrapper element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $icon</code>
+					</dt>
+					<dd>Name of the icon.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The HTML icon.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_label"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperlabel"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#133-172" title="Go to source code">label()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_label" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>label($text, $type = null, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create a Twitter Bootstrap span label.</p>
+
+<p>The second parameter may either be <code>$type</code> or <code>$options</code> (in which case
+the third parameter is not used, and the label type can be specified in the
+<code>$options</code> array).</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>tag</code> The HTML tag to use.</li>
+<li><code>type</code> The type of the label.</li>
+<li><code>templateVars</code> Provide template variables for the <code>label</code> template.</li>
+<li>Other attributes will be assigned to the wrapper element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The label text</dd>
+					<dt>
+						<code class="language-php optional">string|array $type = null</code>
+					</dt>
+					<dd><p>The label type (default, primary, success, warning,
+info, danger) or the array of options (see <code>$options</code>).</p></dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd><p>Array of options. See above. Default values are retrieved
 from the configuration.</p></dd>
-					</dl></div>
+				</dl>
+				</div>
 
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The text wrapped in the specified HTML tag with a tooltip.
-					</div>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The HTML label element.<br>
+				</div>
 
 
 
 
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="progress" id="_progress">
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_progress"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperprogress"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#289-353" title="Go to source code">progress()</a>
 
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
+		<span class="label">public</span>
 
-			<td class="name"><div>
-			<a class="anchor" href="#_progress">#</a>
-			<code><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#289-353" title="Go to source code">progress</a>( <span>integer|array <var>$widths</var></span>, <span>array <var>$options</var> = []</span> )</code>
+			<a href="#_progress" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>progress($widths, $options = [])</code></pre>
 
-			<div class="description short">
-				<p>Create a Twitter Bootstrap style progress bar.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create a Twitter Bootstrap style progress bar.</p>
+		<div class="description detailed">
+			<p>Create a Twitter Bootstrap style progress bar.</p>
 
 <h3>Bar options:</h3>
 
@@ -494,10 +660,13 @@ success, warning). Default to <code>'primary'</code>.</li>
 </ul>
 
 
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$widths</var></dt>
-						<dd><ul>
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">int|array $widths</code>
+					</dt>
+					<dd><ul>
 <li><code>int</code> The width (in %) of the bar.
 
 <ul>
@@ -509,158 +678,282 @@ success, warning). Default to <code>'primary'</code>.</li>
 </ul></li>
 </ul></li>
 </ul></dd>
-						<dt><var>$options</var></dt>
-						<dd>Array of options. See above.</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string<br>The HTML bootstrap progress bar.
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="dropdown" id="_dropdown">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_dropdown">#</a>
-			<code class="deprecated"><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#355-400" title="Go to source code">dropdown</a>( <span>array <var>$menu</var> = []</span>, <span>array <var>$options</var> = []</span> )</code>
-
-			<div class="description short">
-				<p>Create &amp; return a twitter bootstrap dropdown menu.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create &amp; return a twitter bootstrap dropdown menu.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							3.1.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$menu</var></dt>
-						<dd><p>HTML tags corresponding to menu options (which will be wrapped
-             into <code>&lt;li&gt;</code> tag). To add separator, pass <code>'divider'</code>.</p></dd>
-						<dt><var>$options</var></dt>
-						<dd>Attributes for the wrapper (change it with tag).</dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-		<tr data-order="splicedRows" id="_splicedRows">
-
-			<td class="attributes"><code>
-				 public 
-				string
-				
-				</code>
-			</td>
-
-			<td class="name"><div>
-			<a class="anchor" href="#_splicedRows">#</a>
-			<code class="deprecated"><a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#402-434" title="Go to source code">splicedRows</a>( <span>integer|string <var>$breakIndex</var></span>, <span>array <var>$data</var></span>, <span>callable <var>$determineContent</var></span> )</code>
-
-			<div class="description short">
-				<p>Create a formatted collection of elements while
-maintaining proper bootstrappy markup. Useful when
-displaying, for example, a list of products that would require
-more than the maximum number of columns per row.</p>
-			</div>
-
-			<div class="description detailed hidden">
-				<p>Create a formatted collection of elements while
-maintaining proper bootstrappy markup. Useful when
-displaying, for example, a list of products that would require
-more than the maximum number of columns per row.</p>
-
-					<h4>Deprecated</h4>
-					<div class="list">
-							3.1.0<br>
-					</div>
-
-					<h4>Parameters</h4>
-					<div class="list"><dl>
-						<dt><var>$breakIndex</var></dt>
-						<dd>Divisible index that will trigger a new row</dd>
-						<dt><var>$data</var></dt>
-						<dd>Collection of data used to render each column</dd>
-						<dt><var>$determineContent</var></dt>
-						<dd><p>A callback that will be called with the
-data required to render an individual column</p></dd>
-					</dl></div>
-
-					<h4>Returns</h4>
-					<div class="list">
-						string
-					</div>
-
-
-
-
-			</div>
-			</div></td>
-		</tr>
-			</table>
-		</div>
-
-
-		<div class="panel panel-default">
-	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h3></div>
-			<p class="elementList">
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__addButtonClasses">_addButtonClasses()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__isAssociativeArray">_isAssociativeArray()</a></code>, 
-				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#_addClass">addClass()</a></code>
-			</p>
-		</div>
-
-
-
-
-
-
-
-
-
-		<div class="panel panel-default">
-            <div class="panel-heading"><h2>Properties summary</h2></div>
-			<table class="summary table table-bordered table-striped properties" id="properties">
-		<tr data-order="_defaultConfig" id="$_defaultConfig">
-			<td class="attributes"><code>
-				protected  
-				array
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#32-107" title="Go to source code"><var>$_defaultConfig</var></a>
-
-				<div class="description short">
-					<p>Default config for the helper.</p>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options. See above.</dd>
+				</dl>
 				</div>
 
-				<div class="description detailed hidden">
-					<p>Default config for the helper.</p>
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The HTML bootstrap progress bar.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_splicedRows"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelpersplicedRows"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#402-434" title="Go to source code">splicedRows()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_splicedRows" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>splicedRows($breakIndex, $data, $determineContent)</code></pre>
+
+		<div class="description detailed">
+			<p>Create a formatted collection of elements while
+maintaining proper bootstrappy markup. Useful when
+displaying, for example, a list of products that would require
+more than the maximum number of columns per row.</p>
+
+				<h6>Deprecated</h6>
+				<div class="list">
+						3.1.0<br>
+				</div>
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">int|string $breakIndex</code>
+					</dt>
+					<dd>Divisible index that will trigger a new row</dd>
+					<dt>
+						<code class="language-php ">array $data</code>
+					</dt>
+					<dd>Collection of data used to render each column</dd>
+					<dt>
+						<code class="language-php ">callable $determineContent</code>
+					</dt>
+					<dd><p>A callback that will be called with the
+data required to render an individual column</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_tooltip"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelpertooltip"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#259-287" title="Go to source code">tooltip()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_tooltip" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>tooltip($text, $tooltip, $options = [])</code></pre>
+
+		<div class="description detailed">
+			<p>Create a Twitter Bootstrap style tooltip.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>toggle</code> The 'data-toggle' HTML attribute.</li>
+<li><code>placement</code> The <code>data-placement</code> HTML attribute.</li>
+<li><code>tag</code> The tag to use.</li>
+<li><code>templateVars</code> Provide template variables for the <code>tooltip</code> template.</li>
+<li>Other attributes will be assigned to the wrapper element.</li>
+</ul>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">string $text</code>
+					</dt>
+					<dd>The HTML tag inner text.</dd>
+					<dt>
+						<code class="language-php ">string $tooltip</code>
+					</dt>
+					<dd>The tooltip text.</dd>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd><p>An array of options. See above. Default values are retrieved
+from the configuration.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					string<br>The text wrapped in the specified HTML tag with a tooltip.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
+
+
+	<div class="section">
+		<h2>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h2>
+		<div class="method-detail">
+				<a id="__addButtonClasses"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelper_addButtonClasses"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#52-78" title="Go to source code">_addButtonClasses()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__addButtonClasses" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_addButtonClasses($options)</code></pre>
+
+		<div class="description detailed">
+			<p>Add classes to options according to the default values of bootstrap-type
+and bootstrap-size for button (see configuration).</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $options</code>
+					</dt>
+					<dd><p>The initial options with bootstrap-type and/or
+bootstrat-size values.</p></dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br><p>The new options with class values (btn, and btn-* according to
+initial options).</p><br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="__isAssociativeArray"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelper_isAssociativeArray"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#80-89" title="Go to source code">_isAssociativeArray()</a>
+
+		<span class="label">protected</span>
+
+			<a href="#__isAssociativeArray" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>_isAssociativeArray($array)</code></pre>
+
+		<div class="description detailed">
+			<p>Check weither the specified array is associative or not.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php ">array $array</code>
+					</dt>
+					<dd>The array to check.</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					boolean<br><code>true</code> if the array is associative, <code>false</code> otherwize.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+		<div class="method-detail">
+				<a id="_addClass"></a>
+		<a id="method-Bootstrap\View\Helper\BootstrapHtmlHelperaddClass"></a>
+		<h3 class="method-name">
+<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#24-50" title="Go to source code">addClass()</a>
+
+		<span class="label">public</span>
+
+			<a href="#_addClass" class="permalink" title="Permalink to this method">¶</a>
+		</h3>
+		<pre class="language-php method-signature">
+<code>addClass($options = [], $class = null, $key = 'class')</code></pre>
+
+		<div class="description detailed">
+			<p>Adds the given class to the element options.</p>
+
+
+				<h6>Parameters</h6>
+				<div class="parameter-list list">
+				<dl>
+					<dt>
+						<code class="language-php optional">array $options = []</code>
+					</dt>
+					<dd>Array of options/attributes to add a class to.</dd>
+					<dt>
+						<code class="language-php optional">string|array $class = null</code>
+					</dt>
+					<dd>The class names to be added.</dd>
+					<dt>
+						<code class="language-php optional">string $key = 'class'</code>
+					</dt>
+					<dd>The key to use for class (default to <code>'class'</code>).</dd>
+				</dl>
+				</div>
+
+				<h6>Returns</h6>
+				<div class="list">
+					array<br>Array of options with <code>$key</code> set or updated.<br>
+				</div>
+
+
+
+
+		</div>
+		</div>
+	</div>
+
+
+
+
+
+	<div class="section">
+		<h2>Properties detail</h2>
+	<div class="property-detail">
+		<a id="$_defaultConfig"></a>
+
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#32-107" title="Go to source code"><var>$_defaultConfig</var></a>
+				<a href="#$_defaultConfig" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
+
+		<div class="attributes">
+				<span class="label">protected</span>
+				array
+		</div>
+
+		<div class="description detailed">
+			<p>Default config for the helper.</p>
 
 <h3>Options:</h3>
 
@@ -672,126 +965,117 @@ data required to render an individual column</p></dd>
 <li>See <a href="https://api.cakephp.org/3.3/class-Cake.View.Helper.HtmlHelper.html#$_defaultConfig">CakePHP documentation</a> for extra configuration options.</li>
 </ul>
 
-				</div>
-			</td>
-			<td class="value">
-				<div>
-					<a href="#$_defaultConfig" class="anchor">#</a>
-					<code>[
-    <span class="php-quote">'templates'</span> =&gt; [
-        <span class="php-quote">'meta'</span> =&gt; <span class="php-quote">'&lt;meta{{attrs}}/&gt;'</span>,
-        <span class="php-quote">'metalink'</span> =&gt; <span class="php-quote">'&lt;link href=&quot;{{url}}&quot;{{attrs}}/&gt;'</span>,
-        <span class="php-quote">'link'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;{{url}}&quot;{{attrs}}&gt;{{content}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'mailto'</span> =&gt; <span class="php-quote">'&lt;a href=&quot;mailto:{{url}}&quot;{{attrs}}&gt;{{content}}&lt;/a&gt;'</span>,
-        <span class="php-quote">'image'</span> =&gt; <span class="php-quote">'&lt;img src=&quot;{{url}}&quot;{{attrs}}/&gt;'</span>,
-        <span class="php-quote">'tableheader'</span> =&gt; <span class="php-quote">'&lt;th{{attrs}}&gt;{{content}}&lt;/th&gt;'</span>,
-        <span class="php-quote">'tableheaderrow'</span> =&gt; <span class="php-quote">'&lt;tr{{attrs}}&gt;{{content}}&lt;/tr&gt;'</span>,
-        <span class="php-quote">'tablecell'</span> =&gt; <span class="php-quote">'&lt;td{{attrs}}&gt;{{content}}&lt;/td&gt;'</span>,
-        <span class="php-quote">'tablerow'</span> =&gt; <span class="php-quote">'&lt;tr{{attrs}}&gt;{{content}}&lt;/tr&gt;'</span>,
-        <span class="php-quote">'block'</span> =&gt; <span class="php-quote">'&lt;div{{attrs}}&gt;{{content}}&lt;/div&gt;'</span>,
-        <span class="php-quote">'blockstart'</span> =&gt; <span class="php-quote">'&lt;div{{attrs}}&gt;'</span>,
-        <span class="php-quote">'blockend'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
-        <span class="php-quote">'tag'</span> =&gt; <span class="php-quote">'&lt;{{tag}}{{attrs}}&gt;{{content}}&lt;/{{tag}}&gt;'</span>,
-        <span class="php-quote">'tagstart'</span> =&gt; <span class="php-quote">'&lt;{{tag}}{{attrs}}&gt;'</span>,
-        <span class="php-quote">'tagend'</span> =&gt; <span class="php-quote">'&lt;/{{tag}}&gt;'</span>,
-        <span class="php-quote">'tagselfclosing'</span> =&gt; <span class="php-quote">'&lt;{{tag}}{{attrs}}/&gt;'</span>,
-        <span class="php-quote">'para'</span> =&gt; <span class="php-quote">'&lt;p{{attrs}}&gt;{{content}}&lt;/p&gt;'</span>,
-        <span class="php-quote">'parastart'</span> =&gt; <span class="php-quote">'&lt;p{{attrs}}&gt;'</span>,
-        <span class="php-quote">'css'</span> =&gt; <span class="php-quote">'&lt;link rel=&quot;{{rel}}&quot; href=&quot;{{url}}&quot;{{attrs}}/&gt;'</span>,
-        <span class="php-quote">'style'</span> =&gt; <span class="php-quote">'&lt;style{{attrs}}&gt;{{content}}&lt;/style&gt;'</span>,
-        <span class="php-quote">'charset'</span> =&gt; <span class="php-quote">'&lt;meta charset=&quot;{{charset}}&quot;/&gt;'</span>,
-        <span class="php-quote">'ul'</span> =&gt; <span class="php-quote">'&lt;ul{{attrs}}&gt;{{content}}&lt;/ul&gt;'</span>,
-        <span class="php-quote">'ol'</span> =&gt; <span class="php-quote">'&lt;ol{{attrs}}&gt;{{content}}&lt;/ol&gt;'</span>,
-        <span class="php-quote">'li'</span> =&gt; <span class="php-quote">'&lt;li{{attrs}}&gt;{{content}}&lt;/li&gt;'</span>,
-        <span class="php-quote">'javascriptblock'</span> =&gt; <span class="php-quote">'&lt;script{{attrs}}&gt;{{content}}&lt;/script&gt;'</span>,
-        <span class="php-quote">'javascriptstart'</span> =&gt; <span class="php-quote">'&lt;script&gt;'</span>,
-        <span class="php-quote">'javascriptlink'</span> =&gt; <span class="php-quote">'&lt;script src=&quot;{{url}}&quot;{{attrs}}&gt;&lt;/script&gt;'</span>,
-        <span class="php-quote">'javascriptend'</span> =&gt; <span class="php-quote">'&lt;/script&gt;'</span>,
 
-        <span class="php-comment">// New templates for Bootstrap</span>
-        <span class="php-quote">'icon'</span> =&gt; <span class="php-quote">'&lt;i aria-hidden=&quot;true&quot; class=&quot;glyphicon glyphicon-{{type}}{{attrs.class}}&quot;{{attrs}}&gt;&lt;/i&gt;'</span>,
-        <span class="php-quote">'label'</span> =&gt; <span class="php-quote">'&lt;span class=&quot;label label-{{type}}{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/span&gt;'</span>,
-        <span class="php-quote">'badge'</span> =&gt; <span class="php-quote">'&lt;span class=&quot;badge{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/span&gt;'</span>,
-        <span class="php-quote">'alert'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;alert alert-{{type}}{{attrs.class}}&quot; role=&quot;alert&quot;{{attrs}}&gt;{{close}}{{content}}&lt;/div&gt;'</span>,
-        <span class="php-quote">'alertCloseButton'</span> =&gt; 
-            <span class="php-quote">'&lt;button type=&quot;button&quot; class=&quot;close{{attrs.class}}&quot; data-dismiss=&quot;alert&quot; aria-label=&quot;{{label}}&quot;{{attrs}}&gt;{{content}}&lt;/button&gt;'</span>,
-        <span class="php-quote">'alertCloseContent'</span> =&gt; <span class="php-quote">'&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;'</span>,
-        <span class="php-quote">'tooltip'</span> =&gt; <span class="php-quote">'&lt;{{tag}} data-toggle=&quot;{{toggle}}&quot; data-placement=&quot;{{placement}}&quot; title=&quot;{{tooltip}}&quot;&gt;{{content}}&lt;/{{tag}}&gt;'</span>,
-        <span class="php-quote">'progressBar'</span> =&gt; 
-<span class="php-quote">'&lt;div class=&quot;progress-bar progress-bar-{{type}}{{attrs.class}}&quot; role=&quot;progressbar&quot; 
-aria-valuenow=&quot;{{width}}&quot; aria-valuemin=&quot;{{min}}&quot; aria-valuemax=&quot;{{max}}&quot; style=&quot;width: {{width}}%%;&quot;{{attrs}}&gt;{{inner}}&lt;/div&gt;'</span>,
-        <span class="php-quote">'progressBarInner'</span> =&gt; <span class="php-quote">'&lt;span class=&quot;sr-only&quot;&gt;{{width}}%%&lt;/span&gt;'</span>,
-        <span class="php-quote">'progressBarContainer'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;progress{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/div&gt;'</span>
+			<div>
+				<pre class="language-php"><code>[
+    'templates' =&gt; [
+        'meta' =&gt; '&lt;meta{{attrs}}/&gt;',
+        'metalink' =&gt; '&lt;link href="{{url}}"{{attrs}}/&gt;',
+        'link' =&gt; '&lt;a href="{{url}}"{{attrs}}&gt;{{content}}&lt;/a&gt;',
+        'mailto' =&gt; '&lt;a href="mailto:{{url}}"{{attrs}}&gt;{{content}}&lt;/a&gt;',
+        'image' =&gt; '&lt;img src="{{url}}"{{attrs}}/&gt;',
+        'tableheader' =&gt; '&lt;th{{attrs}}&gt;{{content}}&lt;/th&gt;',
+        'tableheaderrow' =&gt; '&lt;tr{{attrs}}&gt;{{content}}&lt;/tr&gt;',
+        'tablecell' =&gt; '&lt;td{{attrs}}&gt;{{content}}&lt;/td&gt;',
+        'tablerow' =&gt; '&lt;tr{{attrs}}&gt;{{content}}&lt;/tr&gt;',
+        'block' =&gt; '&lt;div{{attrs}}&gt;{{content}}&lt;/div&gt;',
+        'blockstart' =&gt; '&lt;div{{attrs}}&gt;',
+        'blockend' =&gt; '&lt;/div&gt;',
+        'tag' =&gt; '&lt;{{tag}}{{attrs}}&gt;{{content}}&lt;/{{tag}}&gt;',
+        'tagstart' =&gt; '&lt;{{tag}}{{attrs}}&gt;',
+        'tagend' =&gt; '&lt;/{{tag}}&gt;',
+        'tagselfclosing' =&gt; '&lt;{{tag}}{{attrs}}/&gt;',
+        'para' =&gt; '&lt;p{{attrs}}&gt;{{content}}&lt;/p&gt;',
+        'parastart' =&gt; '&lt;p{{attrs}}&gt;',
+        'css' =&gt; '&lt;link rel="{{rel}}" href="{{url}}"{{attrs}}/&gt;',
+        'style' =&gt; '&lt;style{{attrs}}&gt;{{content}}&lt;/style&gt;',
+        'charset' =&gt; '&lt;meta charset="{{charset}}"/&gt;',
+        'ul' =&gt; '&lt;ul{{attrs}}&gt;{{content}}&lt;/ul&gt;',
+        'ol' =&gt; '&lt;ol{{attrs}}&gt;{{content}}&lt;/ol&gt;',
+        'li' =&gt; '&lt;li{{attrs}}&gt;{{content}}&lt;/li&gt;',
+        'javascriptblock' =&gt; '&lt;script{{attrs}}&gt;{{content}}&lt;/script&gt;',
+        'javascriptstart' =&gt; '&lt;script&gt;',
+        'javascriptlink' =&gt; '&lt;script src="{{url}}"{{attrs}}&gt;&lt;/script&gt;',
+        'javascriptend' =&gt; '&lt;/script&gt;',
+
+        // New templates for Bootstrap
+        'icon' =&gt; '&lt;i aria-hidden="true" class="glyphicon glyphicon-{{type}}{{attrs.class}}"{{attrs}}&gt;&lt;/i&gt;',
+        'label' =&gt; '&lt;span class="label label-{{type}}{{attrs.class}}"{{attrs}}&gt;{{content}}&lt;/span&gt;',
+        'badge' =&gt; '&lt;span class="badge{{attrs.class}}"{{attrs}}&gt;{{content}}&lt;/span&gt;',
+        'alert' =&gt; '&lt;div class="alert alert-{{type}}{{attrs.class}}" role="alert"{{attrs}}&gt;{{close}}{{content}}&lt;/div&gt;',
+        'alertCloseButton' =&gt; 
+            '&lt;button type="button" class="close{{attrs.class}}" data-dismiss="alert" aria-label="{{label}}"{{attrs}}&gt;{{content}}&lt;/button&gt;',
+        'alertCloseContent' =&gt; '&lt;span aria-hidden="true"&gt;&amp;times;&lt;/span&gt;',
+        'tooltip' =&gt; '&lt;{{tag}} data-toggle="{{toggle}}" data-placement="{{placement}}" title="{{tooltip}}"&gt;{{content}}&lt;/{{tag}}&gt;',
+        'progressBar' =&gt; 
+'&lt;div class="progress-bar progress-bar-{{type}}{{attrs.class}}" role="progressbar" 
+aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style="width: {{width}}%%;"{{attrs}}&gt;{{inner}}&lt;/div&gt;',
+        'progressBarInner' =&gt; '&lt;span class="sr-only"&gt;{{width}}%%&lt;/span&gt;',
+        'progressBarContainer' =&gt; '&lt;div class="progress{{attrs.class}}"{{attrs}}&gt;{{content}}&lt;/div&gt;'
     ],
-    <span class="php-quote">'templateClass'</span> =&gt; <span class="php-quote">'Bootstrap\View\BootstrapStringTemplate'</span>,
-    <span class="php-quote">'tooltip'</span> =&gt; [
-        <span class="php-quote">'tag'</span>       =&gt; <span class="php-quote">'span'</span>,
-        <span class="php-quote">'placement'</span> =&gt; <span class="php-quote">'right'</span>,
-        <span class="php-quote">'toggle'</span>    =&gt; <span class="php-quote">'tooltip'</span>
+    'templateClass' =&gt; 'Bootstrap\View\BootstrapStringTemplate',
+    'tooltip' =&gt; [
+        'tag'       =&gt; 'span',
+        'placement' =&gt; 'right',
+        'toggle'    =&gt; 'tooltip'
     ],
-    <span class="php-quote">'label'</span> =&gt; [
-        <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'default'</span>
+    'label' =&gt; [
+        'type' =&gt; 'default'
     ],
-    <span class="php-quote">'alert'</span> =&gt; [
-        <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'warning'</span>,
-        <span class="php-quote">'close'</span> =&gt; <span class="php-keyword1">true</span>
+    'alert' =&gt; [
+        'type' =&gt; 'warning',
+        'close' =&gt; true
     ],
-    <span class="php-quote">'progress'</span> =&gt; [
-        <span class="php-quote">'type'</span> =&gt; <span class="php-quote">'primary'</span>
+    'progress' =&gt; [
+        'type' =&gt; 'primary'
     ]
-]</code>
-				</div>
-			</td>
-		</tr>
-			</table>
+]</code></pre>
+			</div>
 		</div>
+	</div>
+	</div>
 
+	<div class="section">
+		<h2>Magic properties detail</h2>
+	<div class="property-detail">
+		<a id="m$Url"></a>
 
+		<h3 class="property-name">
+				<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#24" title="Go to source code"><var>$Url</var></a>
+				<a href="#m$Url" class="permalink" title="Permalink to this property">¶</a>
+		</h3>
 
-		<div class="panel panel-default">
-            <div class="panel-heading"><h3>Magic properties</h3></div>
-			<table class="summary table table-bordered table-striped properties" id="magicProperties">
-		<tr data-order="Url" id="m$Url">
-			<td class="attributes"><code>
-				public  
+		<div class="attributes">
+				<span class="label">public</span>
 				UrlHelper
-			</code></td>
-
-			<td class="name">
-					<a href="source-class-Bootstrap.View.Helper.BootstrapHtmlHelper.html#24" title="Go to source code"><var>$Url</var></a>
-
-				<div class="description short">
-					
-				</div>
-
-				<div class="description detailed hidden">
-					
-
-				</div>
-			</td>
-		</tr>
-			</table>
 		</div>
 
+		<div class="description detailed">
+			
 
 
-</div>
+		</div>
+	</div>
 	</div>
 
 </div>
-
-<footer>
-	<div class="container">
-		<div class="col-md-12">
-			<p>&copy; 2017, Mikaël Capelle (@Holt59)
-			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
-			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
-			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
-			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
-			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+				</div>
+			</div>
 		</div>
 	</div>
-</footer>
+
+	<footer>
+		<div class="container">
+			<div class="col-md-12">
+				<p>&copy; 2017, Mikaël Capelle (@Holt59)
+				- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+				<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+				<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+				<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+				<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+			</div>
+		</div>
+	</footer>
 
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"
 		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
@@ -800,5 +1084,17 @@ aria-valuenow=&quot;{{width}}&quot; aria-valuemin=&quot;{{min}}&quot; aria-value
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="resources/combined.js"></script>
 <script src="elementlist.js"></script>
+<script type="text/javascript">
+	delete Prism.languages.php.markup;
+
+	Prism.hooks.add("after-highlight", function() {
+		$('.optional .token.operator').each(function () {
+			if ($(this).text() == '=') {
+				$(this).addClass('default-assign');
+			}
+		});
+	});
+	Prism.highlightAll();
+</script>
 </body>
 </html>
