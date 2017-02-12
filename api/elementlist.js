@@ -1,0 +1,3 @@
+
+var ApiGen = ApiGen || {};
+ApiGen.elements = [["c","Bootstrap\\View\\BootstrapStringTemplate"],["c","Bootstrap\\View\\Helper\\BootstrapBreadcrumbsHelper"],["c","Bootstrap\\View\\Helper\\BootstrapFlashHelper"],["c","Bootstrap\\View\\Helper\\BootstrapFormHelper"],["c","Bootstrap\\View\\Helper\\BootstrapHtmlHelper"],["c","Bootstrap\\View\\Helper\\BootstrapModalHelper"],["c","Bootstrap\\View\\Helper\\BootstrapNavbarHelper"],["c","Bootstrap\\View\\Helper\\BootstrapPaginatorHelper"],["c","Bootstrap\\View\\Helper\\BootstrapPanelHelper"],["c","Bootstrap\\View\\Helper\\BootstrapTrait"],["c","Bootstrap\\View\\Helper\\EasyIconTrait"],["c","Bootstrap\\View\\Helper\\UrlComparerTrait"]];

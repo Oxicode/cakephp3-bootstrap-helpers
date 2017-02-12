@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class Bootstrap\View\Helper\BootstrapModalHelper | CakePHP 3 Bootstrap Helpers</title>
+
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="resources/style.css?bf8dbe8de25bb1045680dbd10b299d543c1d4017">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<!-- Expander button -->
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand">CakePHP 3 Bootstrap Helpers</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="/">Getting Started</a>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">The helpers <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+<li> <a href="/html-helper/icons/">Html Helper</a> </li>
+<li> <a href="/form-helper/basics/">Form Helper</a> </li>
+<li> <a href="/navbar-helper/basics/">Navbar Helper</a> </li>
+<li> <a href="/modal-helper/basics/">Modal Helper</a> </li>
+<li> <a href="/panel-helper/basics/">Panel Helper</a> </li>
+						</ul>
+					</li>
+					<li class="active"><a href="/api">API</a></li>
+				</ul>
+
+				<!-- Search, Navigation and Repo links -->
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<a href="https://github.com/holt59/cakephp3-bootstrap-helpers">
+							<i class="fa fa-github"></i> Github
+						</a>
+					</li>
+				</ul>
+                <form id="search" class="navbar-form navbar-right" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-Bootstrap.html">
+							Bootstrap<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Bootstrap.View.html">
+							View<span></span>
+						</a>
+							<ul>
+					<li class="active">
+						<a href="namespace-Bootstrap.View.Helper.html">
+							Helper						</a>
+							</li>
+								</ul></li></ul></li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapBreadcrumbsHelper.html">BootstrapBreadcrumbsHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapFlashHelper.html">BootstrapFlashHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapFormHelper.html">BootstrapFormHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">BootstrapHtmlHelper</a></li>
+				<li class="active"><a href="class-Bootstrap.View.Helper.BootstrapModalHelper.html">BootstrapModalHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapNavbarHelper.html">BootstrapNavbarHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapPaginatorHelper.html">BootstrapPaginatorHelper</a></li>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapPanelHelper.html">BootstrapPanelHelper</a></li>
+			</ul>
+
+
+			<h3>Traits</h3>
+			<ul>
+				<li><a href="class-Bootstrap.View.Helper.BootstrapTrait.html">BootstrapTrait</a></li>
+				<li><a href="class-Bootstrap.View.Helper.EasyIconTrait.html">EasyIconTrait</a></li>
+				<li><a href="class-Bootstrap.View.Helper.UrlComparerTrait.html">UrlComparerTrait</a></li>
+			</ul>
+
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class BootstrapModalHelper</h1>
+
+
+	<div class="description">
+	<p>Modal helper library.</p>
+
+<p>Automatic generation of Bootstrap HTML modals.</p>
+	</div>
+
+	<dl class="tree well">
+		<dd style="padding-left:0px">
+Cake\View\Helper
+			
+			
+		</dd>
+		<dd style="padding-left:30px">
+			<img src="resources/inherit.png" alt="Extended by">
+<b><span>Bootstrap\View\Helper\BootstrapModalHelper</span></b>			
+			
+			 uses 
+					Cake\View\StringTemplateTrait (not available)
+
+			
+					<a href="class-Bootstrap.View.Helper.EasyIconTrait.html"><span>Bootstrap\View\Helper\EasyIconTrait</span></a>, 
+			
+					<a href="class-Bootstrap.View.Helper.BootstrapTrait.html"><span>Bootstrap\View\Helper\BootstrapTrait</span></a>
+			
+		</dd>
+	</dl>
+
+
+
+
+
+
+
+
+	<div class="alert alert-info">
+		
+		
+		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Helper.html">Helper</a><br>
+		
+
+			<b>Located at</b> <a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#19-481" title="Go to source code">View/Helper/BootstrapModalHelper.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#85-178" title="Go to source code">create</a>( <span>array|string <var>$title</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Open a modal</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Open a modal</p>
+
+<p>If <code>$title</code> is a string, the modal header is created using <code>$title</code> as its
+content and default options.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;create(<span class="php-quote">'My Modal Title'</span>);</pre>
+
+<p>If the modal header is created, the modal body is automatically opened after
+it, except if the <code>body</code> options is specified(see below).</p>
+
+<p>If <code>$title</code> is an array, it is used as <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;create([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-modal-class'</span>]);</pre>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>body</code> If <code>$title</code> is a string, set to <code>false</code> to not open the body after
+the panel header. Default is <code>true</code>.</li>
+<li><code>close</code> Set to <code>false</code> to not add a close button to the modal. Default is <code>true</code>.</li>
+<li><code>id</code> Identifier of the modal. If specified, a <code>aria-labelledby</code> HTML attribute
+will be added to the modal and the header will be set accordingly.</li>
+<li><code>size</code> Size of the modal. Either a shortcut(<code>'lg'</code>/<code>'large'</code>/<code>'modal-lg'</code> or
+(<code>'sm'</code>/<code>'small'</code>/<code>'modal-sm'</code>) or <code>false</code>(no size specified) or a custom class.
+Other options will be passed to the <code>Html::div</code> method for creating the
+outer modal <code>&lt;div&gt;</code>.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$title</var></dt>
+						<dd>The modal title or an array of options.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>An HTML string containing opening elements for a modal.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="end" id="_end">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_end">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#180-206" title="Go to source code">end</a>( <span>array <var>$buttons</var> = <span class="php-keyword1">NULL</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Closes a modal, cleans part that have not been closed correctly and optionaly
+adds a footer with buttons to the modal.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Closes a modal, cleans part that have not been closed correctly and optionaly
+adds a footer with buttons to the modal.</p>
+
+<p>If <code>$buttons</code> is not null, the <code>footer()</code> method will be used to create the modal
+footer using <code>$buttons</code> and <code>$options</code>:</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;<span class="php-keyword2">end</span>([<span class="php-var">$this</span>-&gt;Form-&gt;button(<span class="php-quote">'Save'</span>), <span class="php-var">$this</span>-&gt;Form-&gt;button(<span class="php-quote">'Close'</span>)]);</pre>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$buttons</var></dt>
+						<dd>Array of buttons for the <code>footer()</code> method or <code>null</code>.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options for the <code>footer()</code> method.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>An HTML string containing closing tags for the modal.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_cleanCurrent" id="__cleanCurrent">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__cleanCurrent">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#208-220" title="Go to source code">_cleanCurrent</a>( )</code>
+
+			<div class="description short">
+				<p>Cleans the current modal part and return necessary HTML closing elements.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Cleans the current modal part and return necessary HTML closing elements.</p>
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br>An HTML string containing closing elements.
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_part" id="__part">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__part">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#222-247" title="Go to source code">_part</a>( <span>string <var>$part</var></span>, <span>string <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Cleans the current modal part, create a new ones with the given content, and
+update the internal <code>_current</code> variable if necessary.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Cleans the current modal part, create a new ones with the given content, and
+update the internal <code>_current</code> variable if necessary.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$part</var></dt>
+						<dd>The name of the part(<code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</dd>
+						<dt><var>$content</var></dt>
+						<dd>The content of the part or <code>null</code>.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options for the <code>Html::tag</code> method.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_createHeader" id="__createHeader">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__createHeader">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#249-287" title="Go to source code">_createHeader</a>( <span>string <var>$title</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal header.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>close</code> Set to <code>false</code> to not add a close button to the modal. Default is <code>true</code>.</li>
+<li><code>templateVars</code> Provide template variables for the <code>headerStart</code> template.</li>
+<li>Other attributes will be assigned to the modal header element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$title</var></dt>
+						<dd>$text The modal header content, or null to only open the header.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal header or the complete modal
+header.</p>
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code>BootstrapModalHelper::header</code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_createBody" id="__createBody">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__createBody">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#288-305" title="Go to source code">_createBody</a>( <span>string <var>$text</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal body.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal body.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the <code>bodyStart</code> template.</li>
+<li>Other attributes will be assigned to the modal body element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$text</var></dt>
+						<dd>The modal body content, or <code>null</code> to only open the body.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal body or the complete modal
+body.</p>
+					</div>
+
+
+					<h4>See</h4>
+					<div class="list">
+							<code>BootstrapModalHelper::body</code><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="_createFooter" id="__createFooter">
+
+			<td class="attributes"><code>
+				 protected 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#__createFooter">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#307-336" title="Go to source code">_createFooter</a>( <span>string <var>$content</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal footer.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal footer.</p>
+
+<p>If <code>$content</code> is <code>null</code> and the <code>'close'</code> option(see below) is <code>true</code>, a close
+button is created inside the footer.</p>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>close</code> Set to <code>true</code> to add a close button to the footer if <code>$content</code> is
+empty. Default is <code>true</code>.</li>
+<li><code>templateVars</code> Provide template variables for the <code>footerStart</code> template.</li>
+<li>Other attributes will be assigned to the modal footer element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$content</var></dt>
+						<dd>The modal footer content, or <code>null</code> to only open the footer.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal footer or the complete modal
+footer.</p>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="header" id="_header">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_header">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#338-380" title="Go to source code">header</a>( <span>string|array <var>$info</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal header.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal header.</p>
+
+<p>If <code>$text</code> is a string, create a modal header using the specified content
+and <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;<span class="php-keyword2">header</span>(<span class="php-quote">'Header Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$text</code> is <code>null</code>, create a formated opening tag for a modal header using the
+specified <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;<span class="php-keyword2">header</span>(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$text</code> is an array, used it as <code>$options</code> and create a formated opening tag for
+a modal header.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;<span class="php-keyword2">header</span>([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>close</code> Set to <code>false</code> to not add a close button to the modal. Default is <code>true</code>.</li>
+<li><code>templateVars</code> Provide template variables for the <code>headerStart</code> template.</li>
+<li>Other attributes will be assigned to the modal header element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$info</var></dt>
+						<dd>$text The modal header content, or an array of options.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal header or the complete modal
+header.</p>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="body" id="_body">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_body">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#382-424" title="Go to source code">body</a>( <span>array|string <var>$info</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal body.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal body.</p>
+
+<p>If <code>$content</code> is a string, create a modal body using the specified content and
+<code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;body(<span class="php-quote">'Modal Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$content</code> is <code>null</code>, create a formated opening tag for a modal body using the
+specified <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;body(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$content</code> is an array, used it as <code>$options</code> and create a formated opening tag for
+a modal body.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;body([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the <code>bodyStart</code> template.</li>
+<li>Other attributes will be assigned to the modal body element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$info</var></dt>
+						<dd><p>The body content, or <code>null</code>, or an array of options.
+<code>$options</code>.</p></dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal body or the complete modal
+body.</p>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="footer" id="_footer">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_footer">#</a>
+			<code><a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#426-479" title="Go to source code">footer</a>( <span>string|array <var>$buttons</var> = <span class="php-keyword1">null</span></span>, <span>array <var>$options</var> = []</span> )</code>
+
+			<div class="description short">
+				<p>Create or open a modal footer.</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Create or open a modal footer.</p>
+
+<p>If <code>$buttons</code> is a string, create a modal footer using the specified content
+and <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;footer(<span class="php-quote">'Footer Content'</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$buttons</code> is <code>null</code>, create a <strong>formated opening tag</strong> for a modal footer using the
+specified <code>$options</code>.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;footer(<span class="php-keyword1">null</span>, [<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$buttons</code> is an associative array, used it as <code>$options</code> and create a
+<strong>formated opening tag</strong> for a modal footer.</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;footer([<span class="php-quote">'class'</span> =&gt; <span class="php-quote">'my-class'</span>]);</pre>
+
+<p>If <code>$buttons</code> is a non-associative array, its elements are glued together to
+create the content. This can be used to generate a footer with buttons:</p>
+
+<pre><span class="php-keyword1">echo</span> <span class="php-var">$this</span>-&gt;Modal-&gt;footer([<span class="php-var">$this</span>-&gt;Form-&gt;button(<span class="php-quote">'Close'</span>), <span class="php-var">$this</span>-&gt;Form-&gt;button(<span class="php-quote">'Save'</span>)]);</pre>
+
+<h3>Options</h3>
+
+<ul>
+<li><code>templateVars</code> Provide template variables for the <code>footerStart</code> template.</li>
+<li>Other attributes will be assigned to the modal footer element.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$buttons</var></dt>
+						<dd>The footer content, or <code>null</code>, or an array of options.</dd>
+						<dt><var>$options</var></dt>
+						<dd>Array of options. See above.</dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						string<br><p>A formated opening tag for the modal footer or the complete modal
+footer.</p>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#methods">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__easyIcon">_easyIcon()</a></code>, 
+				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#__makeIcon">_makeIcon()</a></code>
+			</p>
+		</div>
+		<div class="panel panel-default">
+	        <div class="panel-heading"><h3>Methods used from <a href="class-Bootstrap.View.Helper.BootstrapTrait.html#methods">Bootstrap\View\Helper\BootstrapTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__addButtonClasses">_addButtonClasses()</a></code>, 
+				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#__isAssociativeArray">_isAssociativeArray()</a></code>, 
+				<code><a href="class-Bootstrap.View.Helper.BootstrapTrait.html#_addClass">addClass()</a></code>
+			</p>
+		</div>
+
+
+
+
+
+
+
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h2>Properties summary</h2></div>
+			<table class="summary table table-bordered table-striped properties" id="properties">
+		<tr data-order="helpers" id="$helpers">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#32-41" title="Go to source code"><var>$helpers</var></a>
+
+				<div class="description short">
+					<p>Other helpers used by BootstrapModalHelper.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Other helpers used by BootstrapModalHelper.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$helpers" class="anchor">#</a>
+					<code>[
+    <span class="php-quote">'Html'</span> =&gt; [
+        <span class="php-quote">'className'</span> =&gt; <span class="php-quote">'BootstrapBootstrapHtml'</span>
+    ]
+]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="_defaultConfig" id="$_defaultConfig">
+			<td class="attributes"><code>
+				public  
+				array
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#43-69" title="Go to source code"><var>$_defaultConfig</var></a>
+
+				<div class="description short">
+					<p>Default configuration for the BootstrapModalHelper.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Default configuration for the BootstrapModalHelper.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$_defaultConfig" class="anchor">#</a>
+					<code>[
+    <span class="php-quote">'templates'</span> =&gt; [
+        <span class="php-quote">'modalStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal fade{{attrs.class}}&quot; tabindex=&quot;-1&quot; role=&quot;dialog&quot;{{attrs}}&gt;{{dialogStart}}{{contentStart}}'</span>,
+        <span class="php-quote">'modalEnd'</span> =&gt; <span class="php-quote">'{{contentEnd}}{{dialogEnd}}&lt;/div&gt;'</span>,
+        <span class="php-quote">'modalDialogStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal-dialog{{attrs.class}}&quot; role=&quot;document&quot;{{attrs}}&gt;'</span>,
+        <span class="php-quote">'modalDialogEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
+        <span class="php-quote">'modalContentStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal-content{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
+        <span class="php-quote">'modalContentEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
+        <span class="php-quote">'headerStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal-header{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
+        <span class="php-quote">'headerEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
+        <span class="php-quote">'modalHeaderCloseButton'</span> =&gt;
+            <span class="php-quote">'&lt;button type=&quot;button&quot; class=&quot;close{{attrs.class}}&quot; data-dismiss=&quot;modal&quot; aria-label=&quot;{{label}}&quot;{{attrs}}&gt;{{content}}&lt;/button&gt;'</span>,
+        <span class="php-quote">'modalHeaderCloseContent'</span> =&gt; <span class="php-quote">'&lt;span aria-hidden=&quot;true&quot;&gt;&amp;times;&lt;/span&gt;'</span>,
+        <span class="php-quote">'modalTitle'</span> =&gt; <span class="php-quote">'&lt;h4 class=&quot;modal-title{{attrs.class}}&quot;{{attrs}}&gt;{{content}}&lt;/h4&gt;'</span>,
+        <span class="php-quote">'bodyStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal-body{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
+        <span class="php-quote">'bodyEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
+        <span class="php-quote">'footerStart'</span> =&gt; <span class="php-quote">'&lt;div class=&quot;modal-footer{{attrs.class}}&quot;{{attrs}}&gt;'</span>,
+        <span class="php-quote">'footerEnd'</span> =&gt; <span class="php-quote">'&lt;/div&gt;'</span>,
+        <span class="php-quote">'modalFooterCloseButton'</span> =&gt; <span class="php-quote">'&lt;button type=&quot;button&quot; class=&quot;btn btn-default{{attrs.class}}&quot; data-dismiss=&quot;modal&quot;{{attrs}}&gt;{{content}}&lt;/button&gt;'</span>
+    ],
+    <span class="php-quote">'templateClass'</span> =&gt; <span class="php-quote">'Bootstrap\View\BootstrapStringTemplate'</span>
+]</code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="_current" id="$_current">
+			<td class="attributes"><code>
+				protected  
+				string
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#71-76" title="Go to source code"><var>$_current</var></a>
+
+				<div class="description short">
+					<p>Current part of the modal(<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Current part of the modal(<code>null</code>, <code>'header'</code>, <code>'body'</code>, <code>'footer'</code>).</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$_current" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+		<tr data-order="_currentId" id="$_currentId">
+			<td class="attributes"><code>
+				protected  
+				mixed
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#78-83" title="Go to source code"><var>$_currentId</var></a>
+
+				<div class="description short">
+					<p>Current id of the modal.</p>
+				</div>
+
+				<div class="description detailed hidden">
+					<p>Current id of the modal.</p>
+
+				</div>
+			</td>
+			<td class="value">
+				<div>
+					<a href="#$_currentId" class="anchor">#</a>
+					<code><span class="php-keyword1">null</span></code>
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Properties used from <a href="class-Bootstrap.View.Helper.EasyIconTrait.html#properties">Bootstrap\View\Helper\EasyIconTrait</a></h3></div>
+			<p class="elementList">
+				<code><a href="class-Bootstrap.View.Helper.EasyIconTrait.html#$easyIcon"><var>$easyIcon</var></a></code>
+			</p>
+		</div>
+
+		<div class="panel panel-default">
+            <div class="panel-heading"><h3>Magic properties</h3></div>
+			<table class="summary table table-bordered table-striped properties" id="magicProperties">
+		<tr data-order="Html" id="m$Html">
+			<td class="attributes"><code>
+				public  
+				<code><a href="class-Bootstrap.View.Helper.BootstrapHtmlHelper.html">Bootstrap\View\Helper\BootstrapHtmlHelper</a></code>
+			</code></td>
+
+			<td class="name">
+					<a href="source-class-Bootstrap.View.Helper.BootstrapModalHelper.html#24" title="Go to source code"><var>$Html</var></a>
+
+				<div class="description short">
+					
+				</div>
+
+				<div class="description detailed hidden">
+					
+
+				</div>
+			</td>
+		</tr>
+			</table>
+		</div>
+
+
+
+</div>
+	</div>
+
+</div>
+
+<footer>
+	<div class="container">
+		<div class="col-md-12">
+			<p>&copy; 2017, Mikaël Capelle (@Holt59)
+			- Designed and built by <a href="https://github.com/Holt59" target="_blank">Holt59</a> &amp;
+			<a href="https://github.com/Holt59/cakephp3-bootstrap-helpers/graphs/contributors" target="_blank">contributors</a>.</p>
+			<p>Code licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License, Version 2.0</a>.</p>
+			<p>Code &amp; Documentation hosted by <a href="https://github.com" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+			<p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a> and <a href="http://www.apigen.org/">Apigen</a>.
+		</div>
+	</div>
+</footer>
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"
+		integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+		crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
