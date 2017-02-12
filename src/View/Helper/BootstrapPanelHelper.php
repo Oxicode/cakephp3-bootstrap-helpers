@@ -16,8 +16,17 @@ namespace Bootstrap\View\Helper;
 
 use Cake\View\Helper;
 
+/**
+ * Panel helper library.
+ *
+ * Automatic generation of Bootstrap HTML panels.
+ *
+ * @property \Bootstrap\View\Helper\BootstrapHtmlHelper $Html
+ */
 class BootstrapPanelHelper extends Helper {
 
+    use \Cake\View\StringTemplateTrait;
+    use EasyIconTrait;
     use BootstrapTrait;
 
     /**
@@ -39,6 +48,26 @@ class BootstrapPanelHelper extends Helper {
      * @var array
      */
     protected $_defaultConfig = [
+        'templates' => [
+            'panelGroupStart' => '<div class="panel-group{{attrs.class}}" role="tablist" aria-multiselectable="true"{{attrs}}>',
+            'panelGroupEnd' => '</div>',
+            'panelStart' => '<div class="panel panel-{{type}}{{attrs.class}}"{{attrs}}>',
+            'panelEnd' => '</div>',
+            'headerStart' => '<div class="panel-heading{{attrs.class}}"{{attrs}}>',
+            'headerCollapsibleStart' => '<div class="panel-heading{{attrs.class}}" role="tab"{{attrs}}>',
+            'headerTitle' => '<h4 class="panel-title{{attrs.class}}"{{attrs}}>{{content}}</h4>',
+            'headerCollapsibleLink' => 
+'<a role="button" data-toggle="collapse" href="#{{target}}" aria-expanded="{{expanded}}" aria-controls="{{target}}"{{attrs}}>{{content}}</a>',
+            'headerEnd' => '</div>',
+            'bodyStart' => '<div class="panel-body{{attrs.class}}"{{attrs}}>',
+            'bodyEnd' => '</div>',
+            'bodyCollapsibleStart' => 
+                '<div class="panel-collapse collapse{{attrs.class}}" role="tabpanel" aria-labelledby="{{headId}}"{{attrs}}>{{bodyStart}}',
+            'bodyCollapsibleEnd' => '{{bodyEnd}}</div>',
+            'footerStart' => '<div class="panel-footer{{attrs.class}}"{{attrs}}>',
+            'footerEnd' => '</div>'
+        ],
+        'templateClass' => 'Bootstrap\View\BootstrapStringTemplate',
         'collapsible' => false
     ];
 
@@ -47,7 +76,7 @@ class BootstrapPanelHelper extends Helper {
      *
      * @var string
      */
-    protected $_current = NULL ;
+    protected $_current = NULL;
 
     /**
      * Panel counter (for collapsible groups).
@@ -132,13 +161,11 @@ class BootstrapPanelHelper extends Helper {
      *
      * ### Options
      *
-     * - `aria-multiselectable` HTML attribute. Default is `true`.
      * - `collapsible` Set to `false` if panels should not be collapsible. Default is `true`.
      * - `id` Identifier for the group. Default is automatically generated.
      * - `open` If `collapsible` is `true`, indicate the panel that should be open by default.
      * Set to `false` to have no panels open. You can also indicate if a panel should be open
      * in the `create()` method. Default is `0`.
-     * - `role` HTML attribute. Default is `'tablist'`.
      *
      * - Other attributes will be passed to the `Html::div()` method.
      *
@@ -150,11 +177,10 @@ class BootstrapPanelHelper extends Helper {
      */
     public function startGroup($options = []) {
         $options += [
-            'role'                 => 'tablist',
-            'aria-multiselectable' => true,
             'id'                   => 'panelGroup-'.(++$this->_groupCount),
             'collapsible'          => true,
-            'open'                 => 0
+            'open'                 => 0,
+            'templateVars' => []
         ];
         $this->config('saved.collapsible', $this->config('collapsible'));
         $this->config('collapsible', $options['collapsible']);
@@ -164,9 +190,10 @@ class BootstrapPanelHelper extends Helper {
         $this->_groupPanelOpen     = $options['open'];
         $this->_groupId            = $options['id'];
         $this->_groupInGroup       = true;
-        $options = $this->addClass($options, 'panel-group');
-        unset($options['open'], $options['collapsible']);
-        return $this->Html->tag('div', null, $options);
+        return $this->formatTemplate('panelGroupStart', [
+            'attrs' => $this->templater()->formatAttributes($options, ['open', 'collapsible']),
+            'templateVars' => $options['templateVars']
+        ]);
     }
 
     /**
@@ -184,7 +211,8 @@ class BootstrapPanelHelper extends Helper {
         if (!$this->_lastPanelClosed) {
             $out = $this->end();
         }
-        return $out.'</div>';
+        $out .= $this->formatTemplate('panelGroupEnd', []);
+        return $out;
     }
 
     /**
@@ -214,14 +242,15 @@ class BootstrapPanelHelper extends Helper {
      *
      * - `collapsible` Set to `true` if the panel should be collapsible. Default is fetch
      * from configuration/
-     * - `no-body` If `$title` is a string, set to `true` to not open the body after the
-     * panel header. Default is `false`.
+     * - `body` If `$title` is a string, set to `false` to not open the body after the
+     * panel header. Default is `true`.
      * - `open` Indicate if the panel should be open. If the panel is not inside a group, the
      * default is `true`, otherwize the default is `false` and the panel is open if its
      * count matches the specified value in `startGroup()` (set to `true` inside a group to
      * force the panel to be open).
      * - `panel-count` Panel counter, can be used to override the default counter when inside
      * a group. This value is used to generate the panel, header and body ID attribute.
+     * - `title` Array of options for the title. Default is [].
      * - `type` Type of the panel (`'default'`, `'primary'`, ...). Default is `'default'`.
      * - Other options will be passed to the `Html::div` method for creating the
      * panel `<div>`.
@@ -239,28 +268,22 @@ class BootstrapPanelHelper extends Helper {
         }
 
         $options += [
-            'no-body'     => false,
+            'body'     => true,
             'type'        => 'default',
             'collapsible' => $this->config('collapsible'),
             'open'        => !$this->_groupInGroup,
-            'panel-count' => $this->_panelCount
+            'panel-count' => $this->_panelCount,
+            'title' => [],
+            'templateVars' => []
         ];
 
-        $nobody = $options['no-body'];
-        $type   = $options['type'];
-        $open   = $options['open'];
         $this->_collapsible = $options['collapsible'];
-        $panelCount = $options['panel-count'];
-        unset ($options['no-body'], $options['collapsible'],
-               $options['type'], $options['open'], $options['panel-count']);
-
-        $options = $this->addClass($options, ['panel', 'panel-'.$type]);
 
         if ($this->_collapsible) {
-            $this->_headId = 'heading-'.$panelCount;
-            $this->_bodyId = 'collapse-'.$panelCount;
-            $this->_panelCount = intval($panelCount) + 1;
-            if ($open) {
+            $this->_headId = 'heading-'.$options['panel-count'];
+            $this->_bodyId = 'collapse-'.$options['panel-count'];
+            $this->_panelCount = intval($options['panel-count']) + 1;
+            if ($options['open']) {
                 $this->_groupPanelOpen = $this->_bodyId;
             }
         }
@@ -275,17 +298,22 @@ class BootstrapPanelHelper extends Helper {
         /* Increment panel counter for the current group. */
         $this->_groupPanelCount++;
 
-        $out .= $this->Html->tag('div', null, $options);
+        $out .= $this->formatTemplate('panelStart', [
+            'type' => $options['type'],
+            'attrs' => $this->templater()->formatAttributes(
+                $options, ['body', 'type', 'collapsible', 'open', 'panel-count', 'title']),
+            'templateVars' => $options['templateVars']
+        ]);
         if (is_string($title) && $title) {
             $out .= $this->_createHeader($title, [
-                'title' => isset($options['title']) ? $options['title'] : true
-            ]) ;
-            if (!$nobody) {
+                'title' => $options['title']
+            ]);
+            if ($options['body']) {
                 $out .= $this->_createBody();
             }
         }
 
-        return $out ;
+        return $out;
     }
 
     /**
@@ -306,13 +334,13 @@ class BootstrapPanelHelper extends Helper {
      */
     public function end($content = null, $options = []) {
         $this->_lastPanelClosed = true;
-        $res = '' ;
+        $res = '';
         $res .= $this->_cleanCurrent();
         if ($content !== null) {
-            $res .= $this->footer($content, $options) ;
+            $res .= $this->footer($content, $options);
         }
-        $res .= '</div>' ;
-        return $res ;
+        $res .= $this->formatTemplate('panelEnd', []);
+        return $res;
     }
 
     /**
@@ -321,15 +349,20 @@ class BootstrapPanelHelper extends Helper {
      * @return string An HTML string containing closing elements.
      */
     protected function _cleanCurrent() {
-        $res = '';
-        if ($this->_current) {
-            $res .= '</div>';
-            if ($this->_collapsible && $this->_current == 'body') {
-                $res .= '</div>';
-            }
-            $this->_current = null ;
+        if (!$this->_current) {
+            return '';
         }
-        return $res;
+        $out = $this->formatTemplate($this->_current.'End', []);
+        if ($this->_collapsible) {
+            $ctplt = $this->_current.'CollapsibleEnd';
+            if ($this->templates($ctplt)) {
+                $out = $this->formatTemplate($ctplt, [
+                    $this->_current.'End' => $out
+                ]);
+            }
+        }
+        $this->_current = null;
+        return $out;
     }
 
     /**
@@ -349,96 +382,140 @@ class BootstrapPanelHelper extends Helper {
      * ### Options
      *
      * - `title` See `header()`.
-     * - Other attributes for the panel header `<div>`.
+     * - `templateVars` Provide template variables for the header template.
+     * - Other attributes will be assigned to the header element.
      *
-     * @param string|null $text The panel header content, or null to only open the header.
-     * @param array       $options Array of options. See above.
+     * @param string $text The panel header content, or null to only open the header.
+     * @param array $options Array of options. See above.
      *
      * @return string A formated opening tag for the panel header or the complete panel
      * header.
      */
     protected function _createHeader($title, $options = [], $titleOptions = []) {
-        if (empty($titleOptions)) {
-            $titleOptions = $options['title'] ;
-        }
-        unset($options['title']);
-        $title   = $this->_makeIcon($title, $converted);
+        $title = $this->_makeIcon($title, $converted);
         $options += [
-            'escape' => !$converted
+            'escape' => !$converted,
+            'templateVars' => []
         ];
-        $options = $this->addClass($options, 'panel-heading');
-        if ($this->_collapsible) {
-            $options += [
-                'role' => 'tab',
-                'id'   => $this->_headId,
-                'open' => $this->_isOpen()
-            ];
-            $this->_headId = $options['id'];
-            $title = $this->Html->link($title, '#'.$this->_bodyId, [
-                'data-toggle'   => 'collapse',
-                'data-parent'   => $this->_groupId ? '#'.$this->_groupId : false,
-                'aria-expanded' => json_encode($options['open']),
-                'aria-controls' => '#'.$this->_bodyId,
-                'escape'        => $options['escape']
-            ]);
-            $options['escape'] = false; // Should not escape after
+        if (empty($titleOptions)) {
+            $titleOptions = $options['title'];
         }
-        if ($titleOptions !== false) {
+        $out = $this->formatTemplate('headerStart', [
+            'attrs' => $this->templater()->formatAttributes($options, ['title']),
+            'templateVars' => $options['templateVars']
+        ]);
+        if ($this->_collapsible) {
+            $out = $this->formatTemplate('headerCollapsibleStart', [
+                'attrs' => $this->templater()->formatAttributes(['id' => $this->_headId]),
+                'templateVars' => $options['templateVars']
+            ]);
+            if ($title) {
+                $title = $this->formatTemplate('headerCollapsibleLink', [
+                    'expanded' => json_encode($this->_isOpen()),
+                    'target' => $this->_bodyId,
+                    'content' => $options['escape'] ? h($title) : $title,
+                    'attrs' => $this->templater()->formatAttributes($this->_groupId ? [
+                        'data-parent' => '#'.$this->_groupId
+                    ] : []),
+                    'templateVars' => $options['templateVars']
+                ]);
+            }
+            $options['escape'] = false;
+        }
+        $out = $this->_cleanCurrent().$out;
+        $this->_current = 'header';
+        if ($titleOptions === false) {
+            $title = null;
+        }
+        if ($title) {
             if (!is_array($titleOptions)) {
                 $titleOptions = [];
             }
             $titleOptions += [
-                'tag'    => 'h4',
-                'escape' => $options['escape']
+                'templateVars' => []
             ];
-            $titleOptions = $this->addClass($titleOptions, 'panel-title');
-            $tag = $titleOptions['tag'];
-            unset($titleOptions['tag']);
-            $title = $this->Html->tag($tag, $title, $titleOptions);
+            $out .= $this->formatTemplate('headerTitle', [
+                'content' => $options['escape'] ? h($title) : $title,
+                'attrs' => $this->templater()->formatAttributes($titleOptions),
+                'templateVars' => $titleOptions['templateVars']
+            ]);
+            $out .= $this->_cleanCurrent();
         }
-        unset($options['escape'], $options['open']);
-        return $this->_cleanCurrent().$this->Html->tag('div', $title, $options);
+        return $out;
     }
 
     /**
      * Create or open a panel body.
      *
+     * ### Options
+     *
+     * - `templateVars` Provide template variables for the body template.
+     * - Other attributes will be assigned to the body element.
+     *
      * @param string|null $text The panel body content, or null to only open the body.
-     * @param array       $options Array of options for the body `<div>`.
+     * @param array $options Array of options for the body `<div>`.
      *
      * @return string A formated opening tag for the panel body or the complete panel
      * body.
      */
     protected function _createBody($text = null, $options = []) {
-        $options = $this->addClass($options, 'panel-body');
-        $body = $this->Html->tag('div', $text, $options);
+        $options += [
+            'templateVars' => []
+        ];
+
+        $out = $this->formatTemplate('bodyStart', [
+            'attrs' => $this->templater()->formatAttributes($options),
+            'templateVars' => $options['templateVars']
+        ]);
         if ($this->_collapsible) {
-            $open = $this->_isOpen() ? ' in' : '';
-            $body = $this->Html->div('panel-collapse collapse'.$open, $text ? $body : null, [
-                'role' => 'tabpanel',
-                'aria-labelledby' => $this->_headId,
-                'id' => $this->_bodyId
-            ]).($text ? '' : $body);
+            $out = $this->formatTemplate('bodyCollapsibleStart', [
+                'bodyStart' => $out,
+                'headId' => $this->_headId,
+                'attrs' => $this->templater()->formatAttributes([
+                    'id' => $this->_bodyId,
+                    'class' => $this->_isOpen() ? 'in' : ''
+                ]),
+                'templateVars' => $options['templateVars']
+            ]);
         }
-        $body = $this->_cleanCurrent().$body;
-        if (!$text) {
-            $this->_current = 'body';
+        $out = $this->_cleanCurrent().$out;
+        $this->_current = 'body';
+        if ($text) {
+            $out .= $text;
+            $out .= $this->_cleanCurrent();
         }
-        return $body;
+        return $out;
     }
 
     /**
      * Create or open a panel footer.
      *
-     * @param string|null $text The panel footer content, or null to only open the footer.
-     * @param array       $options Array of options for the footer `<div>`.
+     * ### Options
+     *
+     * - `templateVars` Provide template variables for the footer template.
+     * - Other attributes will be assigned to the footer element.
+     *
+     * @param string $text The panel footer content, or null to only open the footer.
+     * @param array $options Array of options for the footer `<div>`.
      *
      * @return string A formated opening tag for the panel footer or the complete panel
      * footer.
      */
     protected function _createFooter($text = null, $options = []) {
-        $options = $this->addClass($options, 'panel-footer');
-        return $this->_cleanCurrent().$this->Html->tag('div', $text, $options) ;
+        $options += [
+            'templateVars' => []
+        ];
+        $out = $this->_cleanCurrent();
+        $this->_current = 'body';
+        $out .= $this->formatTemplate('footerStart', [
+            'attrs' => $this->templater()->formatAttributes($options),
+            'templateVars' => $options['templateVars']
+        ]);
+        if ($text) {
+            $out .= $text;
+            $out .= $this->_cleanCurrent();
+        }
+        return $out;
     }
 
     /**
@@ -479,7 +556,8 @@ class BootstrapPanelHelper extends Helper {
      *   - If `true`, wraps the content into a `<h4>` tag. You can specify an array instead
      *     of `true` to control the `tag`. See example above.
      *   - If `false`, does not wrap the content.
-     * - Other attributes for the panel header `<div>`.
+     * - `templateVars` Provide template variables for the header template.
+     * - Other attributes will be assigned to the header element.
      *
      * @param string|array $text The header content, or `null`, or an array of options.
      * @param array        $options Array of options. See above.
@@ -495,7 +573,7 @@ class BootstrapPanelHelper extends Helper {
         $options += [
             'title' => true
         ];
-        return $this->_createHeader($info, $options) ;
+        return $this->_createHeader($info, $options);
     }
 
     /**
@@ -521,6 +599,11 @@ class BootstrapPanelHelper extends Helper {
      * ```php
      * echo $this->Panel->body(['class' => 'my-class']);
      * ```
+     *
+     * ### Options
+     *
+     * - `templateVars` Provide template variables for the body template.
+     * - Other attributes will be assigned to the body element.
      *
      * @param array|string $info The body content, or `null`, or an array of options.
      * `$options`.
@@ -560,18 +643,23 @@ class BootstrapPanelHelper extends Helper {
      * echo $this->Panel->footer(['class' => 'my-class']);
      * ```
      *
+     * ### Options
+     *
+     * - `templateVars` Provide template variables for the footer template.
+     * - Other attributes will be assigned to the footer element.
+     *
      * @param string|array $text The footer content, or `null`, or an array of options.
      * @param array        $options Array of options for the panel footer `<div>`.
      *
      * @return string A formated opening tag for the panel footer or the complete panel
      * footer.
      */
-    public function footer ($text = null, $options = []) {
+    public function footer($text = null, $options = []) {
         if (is_array($text)) {
             $options = $text;
             $text    = null;
         }
-        return $this->_createFooter($text, $options) ;
+        return $this->_createFooter($text, $options);
     }
 
 }

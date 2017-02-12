@@ -16,9 +16,13 @@ namespace Bootstrap\View\Helper;
 
 use Cake\View\Helper\FlashHelper;
 
+/**
+ * FlashHelper class to render flash messages.
+ *
+ * After setting messages in your controllers with FlashComponent, you can use
+ * this class to output your flash messages in your views.
+ */
 class BootstrapFlashHelper extends FlashHelper {
-
-    use BootstrapTrait;
 
     /**
      * Available bootstrap templates for alert.

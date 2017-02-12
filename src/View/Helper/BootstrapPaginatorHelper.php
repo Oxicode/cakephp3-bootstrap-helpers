@@ -16,9 +16,32 @@ namespace Bootstrap\View\Helper;
 
 use Cake\View\Helper\PaginatorHelper;
 
+/**
+ * Pagination Helper class for easy generation of pagination links.
+ *
+ * PaginationHelper encloses all methods needed when working with pagination.
+ *
+ * @property \Cake\View\Helper\UrlHelper $Url
+ * @property \Cake\View\Helper\NumberHelper $Number
+ * @property \Bootstrap\View\Helper\BootstrapHtmlHelper $Html
+ * @link http://book.cakephp.org/3.0/en/views/helpers/paginator.html
+ */
 class BootstrapPaginatorHelper extends PaginatorHelper {
 
-    use BootstrapTrait ;
+    use EasyIconTrait;
+    use BootstrapTrait;
+
+    /**
+     * Other helpers used by BootstrapPanelHelper.
+     *
+     * @var array
+     */
+    public $helpers = [
+        'Url', 'Number',
+        'Html' => [
+            'className' => 'Bootstrap.BootstrapHtml'
+        ]
+    ];
 
     /**
      * Default config for this class.
@@ -28,7 +51,7 @@ class BootstrapPaginatorHelper extends PaginatorHelper {
      * The values that may be specified are:
      *
      * - `url` Url of the action. See Router::url().
-     * - `url['sort']`  the key that the recordset is sorted.
+     * - `url['sort']` the key that the recordset is sorted.
      * - `url['direction']` Direction of the sorting (default: 'asc').
      * - `url['page']` Page number to use in links.
      * - `model` The name of the model.
@@ -114,16 +137,16 @@ class BootstrapPaginatorHelper extends PaginatorHelper {
 
         switch ($options['size']) {
         case 'small':
-            $options = $this->addClass($options, 'pagination-sm') ;
-            break ;
+            $options = $this->addClass($options, 'pagination-sm');
+            break;
         case 'large':
-            $options = $this->addClass($options, 'pagination-lg') ;
-            break ;
+            $options = $this->addClass($options, 'pagination-lg');
+            break;
         }
-        unset($options['size']) ;
+        unset($options['size']);
 
         $options['before'] .= $this->Html->tag('ul', null, ['class' => $options['class']]);
-        $options['after'] = '</ul>'.$options['after'] ;
+        $options['after'] = '</ul>'.$options['after'];
         unset($options['class']);
 
         $params = (array)$this->params($options['model']) + ['page' => 1];
@@ -143,20 +166,20 @@ class BootstrapPaginatorHelper extends PaginatorHelper {
         /* Previous and Next buttons (addition from standard PaginatorHelper). */
 
         if ($options['prev']) {
-            $title = $options['prev'] ;
-            $opts  = [] ;
+            $title = $options['prev'];
+            $opts  = [];
             if (is_array($title)) {
-                $title = $title['title'] ;
-                unset ($options['prev']['title']) ;
-                $opts  = $options['prev'] ;
+                $title = $title['title'];
+                unset ($options['prev']['title']);
+                $opts  = $options['prev'];
             }
-            $prev = $this->prev($title, $opts) ;
+            $prev = $this->prev($title, $opts);
         }
         unset($options['prev']);
 
         if ($options['next']) {
-            $title = $options['next'] ;
-            $opts  = [] ;
+            $title = $options['next'];
+            $opts  = [];
             if (is_array($title)) {
                 $title = $title['title'];
                 unset ($options['next']['title']);
