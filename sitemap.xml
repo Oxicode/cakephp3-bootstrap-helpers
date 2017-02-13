@@ -12,34 +12,6 @@
     
         
     <url>
-     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/icons/</loc>
-     <lastmod>2017-02-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/labels-badges/</loc>
-     <lastmod>2017-02-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/alerts/</loc>
-     <lastmod>2017-02-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/getcrumblist/</loc>
-     <lastmod>2017-02-13</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
      <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/form-helper/basics/</loc>
      <lastmod>2017-02-13</lastmod>
      <changefreq>daily</changefreq>
@@ -74,7 +46,25 @@
     
         
     <url>
-     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/navbar-helper/basics/</loc>
+     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/icons/</loc>
+     <lastmod>2017-02-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/labels-badges/</loc>
+     <lastmod>2017-02-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/alerts/</loc>
+     <lastmod>2017-02-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/html-helper/getcrumblist/</loc>
      <lastmod>2017-02-13</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -97,6 +87,16 @@
         
     <url>
      <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/modal-helper/custom/</loc>
+     <lastmod>2017-02-13</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>https://holt59.github.io/cakephp3-bootstrap-helpers/navbar-helper/basics/</loc>
      <lastmod>2017-02-13</lastmod>
      <changefreq>daily</changefreq>
     </url>

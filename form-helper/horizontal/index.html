@@ -9,8 +9,7 @@
         <link rel="canonical" href="https://holt59.github.io/cakephp3-bootstrap-helpers/form-helper/horizontal/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Horizontal forms - CakePHP 3 Bootstrap Helpers</title>
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
             integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
         <link href="../../css/prism.css" rel="stylesheet">
@@ -33,7 +32,7 @@
         <!-- Collapsed navigation -->
         <div class="navbar-header">
             <!-- Expander button -->
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -43,7 +42,7 @@
         </div>
 
         <!-- Expanded navigation -->
-        <div class="navbar-collapse collapse">
+        <div class="navbar-collapse collapse" id="main-navbar">
             <!-- Main navigation -->
             <ul class="nav navbar-nav">
             
@@ -73,12 +72,6 @@
                 
                 
                 
-                    <li>
-                        <a href="../../html-helper/icons/">Html Helper</a>
-                    </li>
-                
-                
-                
                     <li class="active">
                         <a href="../basics/">Form Helper</a>
                     </li>
@@ -86,13 +79,19 @@
                 
                 
                     <li>
-                        <a href="../../navbar-helper/basics/">Navbar Helper</a>
+                        <a href="../../html-helper/icons/">Html Helper</a>
                     </li>
                 
                 
                 
                     <li>
                         <a href="../../modal-helper/basics/">Modal Helper</a>
+                    </li>
+                
+                
+                
+                    <li>
+                        <a href="../../navbar-helper/basics/">Navbar Helper</a>
                     </li>
                 
                 
@@ -109,8 +108,6 @@
 
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
-
-
                 
                 <li>
                     <a href="https://github.com/Holt59/cakephp3-bootstrap-helpers">
@@ -125,6 +122,87 @@
         </div>
     </div>
 </div>
+
+<div class="navbar navbar-default hidden-md hidden-lg" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sub-navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            
+            
+            
+            
+            <a class="navbar-brand" href="../basics/">
+                Form Helper</a>
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse" id="sub-navbar">
+            <!-- Main navigation -->
+            <ul class="nav navbar-nav">
+                
+                
+                
+                
+                
+                
+                <li >
+                    <a href="../basics/">Basic usage</a>
+                
+                
+                
+                <li class="active">
+                    <a href="./">Horizontal forms</a>
+                
+                
+                
+                <li >
+                    <a href="../custom-file-inputs/">Custom file inputs</a>
+                
+                
+                
+                <li >
+                    <a href="../buttons-et-al/">Buttons, Groups & Toolbars</a>
+                
+                
+                
+                <li >
+                    <a href="../new-input-options/">New input options</a>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
 
     <div class="container">
             <div class="col-md-9" role="main">
@@ -395,21 +473,13 @@ reset it to <code>true</code> after:</p>
 </form>
 
 </div></div></div></div>
-            <div class="col-md-3">
+            <div class="col-md-3 hidden-sm hidden-xs">
 
 <nav class="right-nav right-nav-fixed">
     <ul class="nav">
 
-
-
     
     
-
-
-    
-    
-
-
     
     
     <li class="nav-header">Form Helper</li>
@@ -460,23 +530,15 @@ reset it to <code>true</code> after:</p>
     
     
     
-
-
     
     
-
-
     
     
-
-
     
     
-
-
     
-
-
+    
+    
 
     </ul>
 </nav>
