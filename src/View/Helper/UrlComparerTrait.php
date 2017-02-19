@@ -23,42 +23,135 @@ use Cake\Routing\Router;
 trait UrlComparerTrait {
 
     /**
-     * Normalize an URL.
+     * Parts of the URL used for normalization.
      *
-     * @param string $url URL to normalize.
-     * @param bool $query Remove query parameters. Default is `true`.
-     * @param bool $hash Remove hash. Default is `true`.
-     *
-     * @return string Normalized URL.
+     * @var array
      */
-    protected function _normalize($url, $query = true, $hash = true) {
-        $url = Router::normalize($url);
-        if ($hash) {
-            list($url, ) = explode('#', $url);
-        }
-        if ($query) {
-            $url = Router::parse($url);
-            unset($url['?'], $url['#'], $url['plugin'], $url['pass'], $url['_matchedRoute']);
-            $url = Router::normalize(Router::url($url));
-        }
-        return $url;
+    protected $_parts = ['plugin', 'prefix', 'controller', 'action', 'pass'];
+
+    /**
+     * Retrieve the relative path of the root URL from hostname.
+     *
+     * @return string The relative path.
+     */
+    protected function _relative() {
+        return trim(Router::url('/'), '/');
     }
 
     /**
-     * Compare URL without regards to query parameters or hash.
+     * Retrieve the hostname (if any).
+     *
+     * @return string|null The hostname, or `null`.
+     */
+    protected function _hostname() {
+        $components = parse_url(Router::url('/', true));
+        if (isset($components['host'])) {
+            return $components['host'];
+        }
+        return null;
+    }
+
+    /**
+     * Checks if the given URL components match the current host.
+     *
+     * @param string $url URL to check.
+     *
+     * @return bool `true` if the URL matches, `false` otherwise.
+     */
+    protected function _matchHost($url) {
+        $components = parse_url($url);
+        return !(isset($components['host']) && $components['host'] != $this->_hostname());
+    }
+
+    /**
+     * Checks if the given URL components match the current relative URL. This
+     * methods only works with full URL, and do not check the host.
+     *
+     * @param string $url URL to check.
+     *
+     * @return bool `true` if the URL matches, `false` otherwise.
+     */
+    protected function _matchRelative($url) {
+        $relative = $this->_relative();
+        if (!$relative) {
+            return true;
+        }
+        $components = parse_url($url);
+        if (!isset($components['host'])) {
+            return true;
+        }
+        $path = trim($components['path'], '/');
+        return strpos($path, $relative) === 0;
+    }
+
+    /**
+     * Remove relative part an URL (if any).
+     *
+     * @param string $url URL from which the relative part should be removed.
+     *
+     * @param string The new URL.
+     */
+    protected function _removeRelative($url) {
+        $components = parse_url($url);
+        $relative = $this->_relative();
+        $path = trim($components['path'], '/');
+        if ($relative && strpos($path, $relative) === 0) {
+            $path = trim(substr($path, strlen($relative)), '/');
+        }
+        return '/'.$path;
+    }
+
+    /**
+     * Normalize an URL.
+     *
+     * @param string $url URL to normalize.
+     * @param array $pass Include pass parameters.
+     *
+     * @return string Normalized URL.
+     */
+    protected function _normalize($url, array $parts = []) {
+        if (!is_string($url)) {
+            $url = Router::url($url);
+        }
+        if (!$this->_matchHost($url)) {
+            return null;
+        }
+        if (!$this->_matchRelative($url)) {
+            return null;
+        }
+        $url = Router::parse($this->_removeRelative($url));
+        $arr = [];
+        foreach ($this->_parts as $part) {
+            if (!isset($url[$part]) || (isset($parts[$part]) && !$parts[$part])) {
+                continue;
+            }
+            if (is_array($url[$part])) {
+                $url[$part] = implode('/', $url[$part]);
+            }
+            if ($part != 'pass') {
+                $url[$part] = strtolower($url[$part]);
+            }
+            $arr[] = $url[$part];
+        }
+        return $this->_removeRelative(Router::normalize('/'.implode('/', $arr)));
+    }
+
+    /**
+     * Check if first URL is a parent of the right URL, without regards to query
+     * parameters or hash.
      *
      * @param string|array $lhs First URL to compare.
      * @param string|array $rhs Second URL to compare. Default is current URL (`Router::url()`).
      *
      * @return bool `true` if both URL match, `false` otherwise.
      */
-    public function compareUrls($lhs, $rhs = null) {
+    public function compareUrls($lhs, $rhs = null, $parts = []) {
         if ($rhs == null) {
             $rhs = Router::url();
         }
-        $lhs = Router::url($lhs, true);
-        $rhs = Router::url($rhs, true);
-        return $this->_normalize($lhs) == $this->_normalize($rhs);
+        $lhs = $this->_normalize($lhs, $parts);
+        $rhs = $this->_normalize($rhs);
+        return $lhs !== null && $rhs !== null && strpos($rhs, $lhs) === 0;
     }
 }
 

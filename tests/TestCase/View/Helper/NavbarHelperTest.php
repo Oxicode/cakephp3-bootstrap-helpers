@@ -2,16 +2,21 @@
 
 namespace Bootstrap\Test\TestCase\View\Helper;
 
-use Bootstrap\View\Helper\BootstrapNavbarHelper;
+use Bootstrap\View\Helper\NavbarHelper;
+use Cake\Core\Configure;
+use Cake\Network\Request;
+use Cake\Routing\RouteBuilder;
+use Cake\Routing\Router;
+use Cake\Routing\Route\DashedRoute;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
 
-class BootstrapNavbarHelperTest extends TestCase {
+class NavbarHelperTest extends TestCase {
 
     /**
-     * Instance of the BootstrapNavbarHelper.
+     * Instance of the NavbarHelper.
      *
-     * @var BootstrapNavbarHelper
+     * @var NavbarHelper
      */
     public $navbar;
 
@@ -23,7 +28,13 @@ class BootstrapNavbarHelperTest extends TestCase {
     public function setUp() {
         parent::setUp();
         $view = new View();
-        $this->navbar = new BootstrapNavbarHelper($view);
+        $view->loadHelper('Html', [
+            'className' => 'Bootstrap.Html'
+        ]);
+        $view->loadHelper('Form', [
+            'className' => 'Bootstrap.Form'
+        ]);
+        $this->navbar = new NavbarHelper($view);
     }
 
     public function testCreate() {
@@ -286,6 +297,88 @@ class BootstrapNavbarHelperTest extends TestCase {
         ];
         $this->assertHtml($expected, $result);
 
+        // Customt tests
+
+        Router::scope('/', function (RouteBuilder $routes) {
+            $routes->fallbacks(DashedRoute::class);
+        });
+        Router::fullBaseUrl('');
+        Configure::write('App.fullBaseUrl', 'http://localhost');
+        $request = new Request();
+        $request->addParams([
+            'action' => 'view',
+            'plugin' => null,
+            'controller' => 'pages',
+            'pass' => ['1']
+        ]);
+        $request->base = '/cakephp';
+        $request->here = '/cakephp/pages/view/1';
+        Router::setRequestInfo($request);
+
+        $this->navbar->config('autoActiveLink', true);
+        $result = $this->navbar->link('Link', '/pages', [
+            'active' => ['action' => false, 'pass' => false]
+        ]);
+        $expected = [
+            ['li' => ['class' => 'nav-item active']],
+            ['a' => ['class' => 'nav-link', 'href' => '/cakephp/pages']], 'Link', '/a',
+            '/li'
+        ];
+        $this->assertHtml($expected, $result);
+
+        $result = $this->navbar->link('Link', '/pages');
+        $expected = [
+            ['li' => ['class' => 'nav-item']],
+            ['a' => ['href' => '/cakephp/pages', 'class' => 'nav-link']], 'Link', '/a',
+            '/li'
+        ];
+        $this->assertHtml($expected, $result);
+
+        // More custom tests...
+        Router::scope('/', function (RouteBuilder $routes) {
+            $routes->connect('/', ['controller' => 'Pages', 'action' => 'display', 'home']); // (1)
+            $routes->connect('/pages/*', ['controller' => 'Pages', 'action' => 'display']); // (2)
+            $routes->fallbacks(DashedRoute::class);
+        });
+        Router::fullBaseUrl('');
+        Configure::write('App.fullBaseUrl', 'http://localhost');
+        $request = new Request();
+        $request->addParams([
+            'action' => 'display',
+            'plugin' => null,
+            'controller' => 'pages',
+            'pass' => ['faq']
+        ]);
+        $request->base = '/cakephp';
+        $request->here = '/cakephp/pages/faq';
+        Router::setRequestInfo($request);
+
+        $this->navbar->config('autoActiveLink', true);
+        $result = $this->navbar->link('Link', '/pages', [
+            'active' => ['action' => false, 'pass' => false]
+        ]);
+        $expected = [
+            ['li' => ['class' => 'nav-item active']],
+            ['a' => ['href' => '/cakephp/pages', 'class' => 'nav-link']], 'Link', '/a',
+            '/li'
+        ];
+        $this->assertHtml($expected, $result);
+
+        $result = $this->navbar->link('Link', '/pages/credits');
+        $expected = [
+            ['li' => ['class' => 'nav-item']],
+            ['a' => ['href' => '/cakephp/pages/credits', 'class' => 'nav-link']], 'Link', '/a',
+            '/li'
+        ];
+        $this->assertHtml($expected, $result);
+
+        $result = $this->navbar->link('Link', '/pages/faq');
+        $expected = [
+            ['li' => ['class' => 'nav-item active']],
+            ['a' => ['href' => '/cakephp/pages/faq', 'class' => 'nav-link']], 'Link', '/a',
+            '/li'
+        ];
+        $this->assertHtml($expected, $result);
     }
 
 };

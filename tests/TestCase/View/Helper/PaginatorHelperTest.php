@@ -2,20 +2,19 @@
 
 namespace Bootstrap\Test\TestCase\View\Helper;
 
-use Bootstrap\View\Helper\BootstrapHtmlHelper;
-use Bootstrap\View\Helper\BootstrapPaginatorHelper;
+use Bootstrap\View\Helper\PaginatorHelper;
 use Cake\Core\Configure;
 use Cake\Network\Request;
 use Cake\Routing\Router;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
 
-class BootstrapPaginatorHelperTest extends TestCase {
+class PaginatorHelperTest extends TestCase {
 
     /**
-     * Instance of BootstrapPaginatorHelper.
+     * Instance of PaginatorHelper.
      *
-     * @var BootstrapPaginatorHelper
+     * @var PaginatorHelper
      */
     public $paginator;
 
@@ -28,7 +27,10 @@ class BootstrapPaginatorHelperTest extends TestCase {
     {
         parent::setUp();
         $view = new View();
-        $this->paginator = new BootstrapPaginatorHelper($view);
+        $view->loadHelper('Html', [
+            'className' => 'Bootstrap.Html'
+        ]);
+        $this->paginator = new PaginatorHelper($view);
         $this->paginator->request = new Request();
         $this->paginator->request->addParams([
             'paging' => [
@@ -54,16 +56,22 @@ class BootstrapPaginatorHelperTest extends TestCase {
     public function testPrev() {
         $this->assertHtml([
             ['li' => [
-                'class' => 'disabled'
+                'class' => 'page-item disabled'
             ]],
-            ['a' => true], '&lt;', '/a',
+            ['a' => [
+                'class' => 'page-link',
+                'tabindex' => -1
+            ]], '&lt;', '/a',
             '/li'
         ], $this->paginator->prev('<'));
         $this->assertHtml([
             ['li' => [
-                'class' => 'disabled'
+                'class' => 'page-item disabled'
             ]],
-            ['a' => true],
+            ['a' => [
+                'class' => 'page-link',
+                'tabindex' => -1
+            ]],
             ['i' => [
                 'class' => 'fa fa-chevron-left',
                 'aria-hidden' => 'true'
@@ -74,15 +82,21 @@ class BootstrapPaginatorHelperTest extends TestCase {
 
     public function testNext() {
         $this->assertHtml([
-            ['li' => true],
+            ['li' => [
+                'class' => 'page-item'
+            ]],
             ['a' => [
+                'class' => 'page-link',
                 'href' => '/index?page=2'
             ]], '&gt;', '/a',
             '/li'
         ], $this->paginator->next('>'));
         $this->assertHtml([
-            ['li' => true],
+            ['li' => [
+                'class' => 'page-item'
+            ]],
             ['a' => [
+                'class' => 'page-link',
                 'href' => '/index?page=2'
             ]],
             ['i' => [

@@ -19,7 +19,7 @@ namespace Bootstrap\View\Helper;
  * A trait that provides useful methods to generate bootstrap html specific
  * code.
  */
-trait BootstrapTrait {
+trait ClassTrait {
 
     /**
      * Adds the given class to the element options.
@@ -61,18 +61,24 @@ trait BootstrapTrait {
      */
     protected function _addButtonClasses($options) {
         $options += [
-            'bootstrap-type' => $this->config('buttons.type'),
-            'bootstrap-size' => false
+            'bootstrap-type' => $this->getConfig('buttons.type'),
+            'bootstrap-size' => false,
+            'bootstrap-block' => false
         ];
         $type = $options['bootstrap-type'];
         $size = $options['bootstrap-size'];
-        unset($options['bootstrap-type'], $options['bootstrap-size']);
+        $block = $options['bootstrap-block'];
+        unset($options['bootstrap-type'], $options['bootstrap-size'],
+            $options['bootstrap-block']);
         $options = $this->addClass($options, 'btn');
         if (!preg_match('#btn-[a-z]+#', $options['class'])) {
             $options = $this->addClass($options, 'btn-'.$type);
         }
         if ($size) {
             $options = $this->addClass($options, 'btn-'.$size);
+        }
+        if ($block) {
+            $options = $this->addClass($options, 'btn-block');
         }
         return $options;
     }

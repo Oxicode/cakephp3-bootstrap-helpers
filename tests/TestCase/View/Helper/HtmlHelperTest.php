@@ -2,16 +2,16 @@
 
 namespace Bootstrap\Test\TestCase\View\Helper;
 
-use Bootstrap\View\Helper\BootstrapHtmlHelper;
+use Bootstrap\View\Helper\HtmlHelper;
 use Cake\TestSuite\TestCase;
 use Cake\View\View;
 
-class BootstrapHtmlHelperTest extends TestCase {
+class HtmlHelperTest extends TestCase {
 
     /**
-     * Instance of BootstrapHtmlHelper.
+     * Instance of HtmlHelper.
      *
-     * @var BootstrapHtmlHelper
+     * @var HtmlHelper
      */
     public $html;
 
@@ -23,7 +23,7 @@ class BootstrapHtmlHelperTest extends TestCase {
     public function setUp() {
         parent::setUp();
         $view = new View();
-        $this->html = new BootstrapHtmlHelper($view);
+        $this->html = new HtmlHelper($view);
     }
 
     public function testIcon() {
@@ -276,6 +276,48 @@ class BootstrapHtmlHelperTest extends TestCase {
             ['span' => ['class' => 'sr-only']], '10%', '/span',
             '/div',
             '/div'
+        ];
+        $this->assertHtml($expected, $result);
+    }
+
+    public function testDropdown() {
+        $result = $this->html->dropdown([
+            ['header' => 'Header 1'],
+            'divider',
+            ['header', 'Header 2'],
+            ['divider'],
+            ['item' => [
+                'title' => 'Link 1',
+                'url' => '#'
+            ]],
+            ['divider' => true],
+            ['header' => [
+                'title' => 'Header 3',
+            ]],
+            'Item 1',
+            ['Item 2', '#'],
+            ['item' => [
+                'title' => 'Item 3'
+            ]],
+            ['item' => [
+                'title' => 'Item 4',
+                'url' => '#',
+                'class' => 'my-class-4'
+            ]]
+        ]);
+        $expected = [
+            ['ul' => ['class' => 'dropdown-menu']],
+            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 1', '/li',
+            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
+            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 2', '/li',
+            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
+            ['li' => []], ['a' => ['href' => '#']], 'Link 1', '/a', '/li',
+            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
+            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 3', '/li',
+            ['li' => []], 'Item 1', '/li',
+            ['li' => []], ['a' => ['href' => '#']], 'Item 2', '/a', '/li',
+            ['li' => []], 'Item 3', '/li',
+            ['li' => ['class' => 'my-class-4']], ['a' => ['href' => '#']], 'Item 4', '/a', '/li',
         ];
         $this->assertHtml($expected, $result);
     }

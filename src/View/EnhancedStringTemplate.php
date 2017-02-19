@@ -15,9 +15,23 @@
 namespace Bootstrap\View;
 
 use Cake\View\StringTemplate;
-use Cake\Utility\Hash;
+use RuntimeException;
 
-class BootstrapStringTemplate extends StringTemplate {
+class EnhancedStringTemplate extends StringTemplate {
+
+    /**
+     * General callback function.
+     *
+     * @var callable
+     */
+    protected $_callback = null;
+
+    /**
+     * Array of callback function for specific templates.
+     *
+     * @var array
+     */
+    protected $_callbacks = null;
 
     /**
      * Compile templates into a more efficient printf() compatible format.
@@ -36,6 +50,7 @@ class BootstrapStringTemplate extends StringTemplate {
             if ($template === null) {
                 $this->_compiled[$name] = [null, null];
             }
+            $template = str_replace('%', '%%', $template);
             preg_match_all('#\{\{([\w.]+)\}\}#', $template, $matches);
             $this->_compiled[$name] = [
                 str_replace($matches[0], '%s', $template),
@@ -54,7 +69,7 @@ class BootstrapStringTemplate extends StringTemplate {
     */
     public function format($name, array $data) {
         if (!isset($this->_compiled[$name])) {
-            return '';
+            throw new RuntimeException("Cannot find template named '$name'.");
         }
         list($template, $placeholders) = $this->_compiled[$name];
         // If there is a {{attrs.xxxx}} block in $template, remove the xxxx attribute
@@ -62,7 +77,6 @@ class BootstrapStringTemplate extends StringTemplate {
         if (isset($data['attrs'])) {
             foreach ($placeholders as $placeholder) {
                 if (substr($placeholder, 0, 6) == 'attrs.'
-                    && in_array('attrs.'.substr($placeholder, 6), $placeholders)
                     && preg_match('#'.substr($placeholder, 6).'="([^"]*)"#',
                                   $data['attrs'], $matches) > 0) {
                     $data['attrs'] = preg_replace('#'.substr($placeholder, 6).'="[^"]*"#',
@@ -78,22 +92,7 @@ class BootstrapStringTemplate extends StringTemplate {
                 $data['attrs'] = ' '.$data['attrs'];
             }
         }
-        if ($template === null) {
-            return '';
-        }
-        if (isset($data['templateVars'])) {
-            $data += $data['templateVars'];
-            unset($data['templateVars']);
-        }
-        $replace = [];
-        foreach ($placeholders as $placeholder) {
-            $replacement = isset($data[$placeholder]) ? $data[$placeholder] : null;
-            if (is_array($replacement)) {
-                $replacement = implode('', $replacement);
-            }
-            $replace[] = $replacement;
-        }
-        return vsprintf($template, $replace);
+        return parent::format($name, $data);
     }
 
 };
