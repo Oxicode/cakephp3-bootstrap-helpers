@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Class Bootstrap\View\BootstrapStringTemplate | CakePHP 3 Bootstrap Helpers</title>
+	<title>Class Bootstrap\View\Widget\DateTimeWidget | CakePHP 3 Bootstrap Helpers</title>
 
 	<link rel="stylesheet" href="resources/bootstrap.min.css?071b3c2a8dd3bf21f24cec7c6955fbf9beff6181">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
@@ -89,6 +89,10 @@
 								<a href="namespace-Bootstrap.View.Helper.html">
 									Helper								</a>
 									</li>
+							<li class="active">
+								<a href="namespace-Bootstrap.View.Widget.html">
+									Widget								</a>
+									</li>
 										</ul></li></ul></li>
 					</ul>
 				</div>
@@ -97,7 +101,11 @@
 				<div id="elements">
 					<h3 class="nav-title">Classes</h3>
 					<ul class="nav-list">
-						<li class="active"><a href="class-Bootstrap.View.BootstrapStringTemplate.html">BootstrapStringTemplate</a></li>
+						<li><a href="class-Bootstrap.View.Widget.ColumnSelectBoxWidget.html">ColumnSelectBoxWidget</a></li>
+						<li class="active"><a href="class-Bootstrap.View.Widget.DateTimeWidget.html">DateTimeWidget</a></li>
+						<li><a href="class-Bootstrap.View.Widget.FancyFileWidget.html">FancyFileWidget</a></li>
+						<li><a href="class-Bootstrap.View.Widget.InlineRadioNestingLabelWidget.html">InlineRadioNestingLabelWidget</a></li>
+						<li><a href="class-Bootstrap.View.Widget.InlineRadioWidget.html">InlineRadioWidget</a></li>
 					</ul>
 
 
@@ -110,21 +118,27 @@
 			<div class="col-md-9">
 				<div id="rightInner">
 <div id="content" class="class">
-	<h1>Class BootstrapStringTemplate</h1>
+	<h1>Class DateTimeWidget</h1>
 
 
+	<div class="description">
+	<p>Input widget class for generating a date time input widget.</p>
+
+<p>This class is intended as an internal implementation detail
+of Cake\View\Helper\FormHelper and is not intended for direct use.</p>
+	</div>
 
 	<dl class="tree">
 		<dd style="padding-left:0px">
-			<a href="https://api.cakephp.org/3.4/class-Cake.View.StringTemplate.html" target="_blank">
-				<span>Cake\View\StringTemplate</span>
+			<a href="https://api.cakephp.org/3.4/class-Cake.View.Widget.DateTimeWidget.html" target="_blank">
+				<span>Cake\View\Widget\DateTimeWidget</span>
 			</a>
 			
 			
 		</dd>
 		<dd style="padding-left:30px">
 			<img src="resources/inherit.png" alt="Extended by">
-				<b><span>Bootstrap\View\BootstrapStringTemplate</span></b>
+				<b><span>Bootstrap\View\Widget\DateTimeWidget</span></b>
 			
 			
 		</dd>
@@ -140,10 +154,10 @@
 	<div class="info">
 		
 		
-		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a><br>
+		<b>Namespace:</b> <a href="namespace-Bootstrap.html">Bootstrap</a>\<a href="namespace-Bootstrap.View.html">View</a>\<a href="namespace-Bootstrap.View.Widget.html">Widget</a><br>
 		
 
-		<b>Location:</b> <a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#20-99" title="Go to source code">View/BootstrapStringTemplate.php</a><br>
+		<b>Location:</b> <a href="source-class-Bootstrap.View.Widget.DateTimeWidget.html#17-90" title="Go to source code">View/Widget/DateTimeWidget.php</a><br>
 	</div>
 
 
@@ -162,26 +176,14 @@
 		<ul class="member-summary">
 		<li class="clearfix">
 			<h3 class="method-name">
-					<a href="class-Bootstrap.View.BootstrapStringTemplate.html#__compileTemplates">_compileTemplates()</a>
-
-
-<span class="label label-warning">protected</span></span>
-
-			</h3>
-			<div class="description detailed">
-				Compile templates into a more efficient printf() compatible format.
-			</div>
-		</li>
-		<li class="clearfix">
-			<h3 class="method-name">
-					<a href="class-Bootstrap.View.BootstrapStringTemplate.html#_format">format()</a>
+					<a href="class-Bootstrap.View.Widget.DateTimeWidget.html#_render">render()</a>
 
 
 <span class="label label-success">public</span></span>
 
 			</h3>
 			<div class="description detailed">
-				Format a template string with $data
+				Renders a date time widget
 			</div>
 		</li>
 		</ul>
@@ -192,75 +194,91 @@
 	<div class="section">
 		<h2>Method Detail</h2>
 		<div class="method-detail">
-				<a id="__compileTemplates"></a>
-		<a id="method-Bootstrap\View\BootstrapStringTemplate_compileTemplates"></a>
+				<a id="_render"></a>
+		<a id="method-Bootstrap\View\Widget\DateTimeWidgetrender"></a>
 		<h3 class="method-name">
-<a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#22-45" title="Go to source code">_compileTemplates()</a>
-
-<span class="label label-warning">protected</span></span>
-
-			<a href="#__compileTemplates" class="permalink" title="Permalink to this method">¶</a>
-		</h3>
-		<pre class="language-php method-signature">
-<code>_compileTemplates($templates = [])</code></pre>
-
-		<div class="description detailed">
-			<p>Compile templates into a more efficient printf() compatible format.</p>
-
-
-				<h6>Parameters</h6>
-				<div class="parameter-list list">
-				<dl>
-					<dt>
-						<code class="language-php optional">array $templates = []</code>
-					</dt>
-					<dd><p>The template names to compile. If empty all templates will
-be compiled.</p></dd>
-				</dl>
-				</div>
-
-
-
-
-
-		</div>
-		</div>
-		<div class="method-detail">
-				<a id="_format"></a>
-		<a id="method-Bootstrap\View\BootstrapStringTemplateformat"></a>
-		<h3 class="method-name">
-<a href="source-class-Bootstrap.View.BootstrapStringTemplate.html#47-97" title="Go to source code">format()</a>
+<a href="source-class-Bootstrap.View.Widget.DateTimeWidget.html#25-88" title="Go to source code">render()</a>
 
 <span class="label label-success">public</span></span>
 
-			<a href="#_format" class="permalink" title="Permalink to this method">¶</a>
+			<a href="#_render" class="permalink" title="Permalink to this method">¶</a>
 		</h3>
 		<pre class="language-php method-signature">
-<code>format($name, $data)</code></pre>
+<code>render($data, $context)</code></pre>
 
 		<div class="description detailed">
-			<p>Format a template string with $data</p>
+			<p>Renders a date time widget</p>
+
+<ul>
+<li><code>name</code> - Set the input name.</li>
+<li><code>disabled</code> - Either true or an array of options to disable.</li>
+<li><code>val</code> - A date time string, integer or DateTime object</li>
+<li><code>empty</code> - Set to true to add an empty option at the top of the option elements. Set to a string to define the display value of the empty option.</li>
+</ul>
+
+<p>In addition to the above options, the following options allow you to control
+which input elements are generated. By setting any option to false you can disable
+that input picker. In addition each picker allows you to set additional options
+that are set as HTML properties on the picker.</p>
+
+<ul>
+<li><code>year</code> - Array of options for the year select box.</li>
+<li><code>month</code> - Array of options for the month select box.</li>
+<li><code>day</code> - Array of options for the day select box.</li>
+<li><code>hour</code> - Array of options for the hour select box.</li>
+<li><code>minute</code> - Array of options for the minute select box.</li>
+<li><code>second</code> - Set to true to enable the seconds input. Defaults to false.</li>
+<li><code>meridian</code> - Set to true to enable the meridian input. Defaults to false. The meridian will be enabled automatically if you choose a 12 hour format.</li>
+</ul>
+
+<p>The <code>year</code> option accepts the <code>start</code> and <code>end</code> options. These let you control
+the year range that is generated. It defaults to +-5 years from today.</p>
+
+<p>The <code>month</code> option accepts the <code>name</code> option which allows you to get month
+names instead of month numbers.</p>
+
+<p>The <code>hour</code> option allows you to set the following options:</p>
+
+<ul>
+<li><code>format</code> option which accepts 12 or 24, allowing you to indicate which hour format you want.</li>
+<li><code>start</code> The hour to start the options at.</li>
+<li><code>end</code> The hour to stop the options at.</li>
+</ul>
+
+<p>The start and end options are dependent on the format used. If the
+value is out of the start/end range it will not be included.</p>
+
+<p>The <code>minute</code> option allows you to define the following options:</p>
+
+<ul>
+<li><code>interval</code> The interval to round options to.</li>
+<li><code>round</code> Accepts <code>up</code> or <code>down</code>. Defines which direction the current value should be rounded to match the select options.</li>
+</ul>
 
 
 				<h6>Parameters</h6>
 				<div class="parameter-list list">
 				<dl>
 					<dt>
-						<code class="language-php ">string $name</code>
-					</dt>
-					<dd>The template name.</dd>
-					<dt>
 						<code class="language-php ">array $data</code>
 					</dt>
-					<dd>The data to insert.</dd>
+					<dd>Data to render with.</dd>
+					<dt>
+						<code class="language-php ">Cake\View\Form\ContextInterface $context</code>
+					</dt>
+					<dd>The current form context.</dd>
 				</dl>
 				</div>
 
 				<h6>Returns</h6>
 				<div class="list">
-					string<br>
+					string<br>A generated select box.<br>
 				</div>
 
+				<h6>Throws</h6>
+				<div class="list">
+					RuntimeException<br>When option data is invalid.<br>
+				</div>
 
 
 
