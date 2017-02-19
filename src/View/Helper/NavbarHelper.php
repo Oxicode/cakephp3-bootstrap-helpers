@@ -256,7 +256,7 @@ aria-haspopup="true" aria-expanded="false">{{content}}</a>',
         if (is_string($options['active'])) {
             $options['active'] = [];
         }
-        if ($this->config('autoActiveLink') && is_array($options['active'])) {
+        if ($this->getConfig('autoActiveLink') && is_array($options['active'])) {
             $options['active'] = $this->compareUrls($url, null, $options['active']);
         }
         $active = $options['active'] ? 'Active' : '';
