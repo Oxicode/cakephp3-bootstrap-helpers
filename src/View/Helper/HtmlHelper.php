@@ -87,10 +87,10 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
             'progressBarInner' => '<span class="sr-only">{{width}}%</span>',
             'progressBarContainer' => '<div class="progress{{attrs.class}}"{{attrs}}>{{content}}</div>',
 
-            'dropdownMenu' => '<ul class="dropdown-menu{{attrs.class}}"{{attrs}}>{{content}}</ul>',
-            'dropdownMenuItem' => '<li{{attrs}}>{{content}}</li>',
-            'dropdownMenuHeader' => '<li role="presentation" class="dropdown-header{{attrs.class}}"{{attrs}}>{{content}}</li>',
-            'dropdownMenuDivider' => '<li role="separator" class="divider{{attrs.class}}"{{attrs}}></li>'
+            'dropdownMenu' => '<div class="dropdown-menu{{attrs.class}}"{{attrs}}>{{content}}</div>',
+            'dropdownMenuItem' => '<a class="dropdown-item{{attrs.class}}"{{attrs}}>{{content}}</a>',
+            'dropdownMenuHeader' => '<h6 class="dropdown-header{{attrs.class}}"{{attrs}}>{{content}}</h6>',
+            'dropdownMenuDivider' => '<div class="dropdown-divider{{attrs.class}}"{{attrs}}></div>'
         ],
         'templateClass' => 'Bootstrap\View\EnhancedStringTemplate',
         'tooltip' => [
@@ -470,7 +470,7 @@ aria-valuenow="{{width}}" aria-valuemin="{{min}}" aria-valuemax="{{max}}" style=
                 }
                 if ($key == 'item') {
                     if (isset($value['url'])) {
-                        $value['title'] = $this->link($value['title'], $value['url']);
+                        $value['href'] = $this->Url->build($value['url']);
                     }
                     $content .= $this->formatTemplate('dropdownMenuItem', [
                         'content' => $value['title'],

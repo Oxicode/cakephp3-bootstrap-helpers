@@ -306,18 +306,19 @@ class HtmlHelperTest extends TestCase {
             ]]
         ]);
         $expected = [
-            ['ul' => ['class' => 'dropdown-menu']],
-            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 1', '/li',
-            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
-            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 2', '/li',
-            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
-            ['li' => []], ['a' => ['href' => '#']], 'Link 1', '/a', '/li',
-            ['li' => ['role' => 'separator', 'class' => 'divider']], '/li',
-            ['li' => ['role' => 'presentation', 'class' => 'dropdown-header']], 'Header 3', '/li',
-            ['li' => []], 'Item 1', '/li',
-            ['li' => []], ['a' => ['href' => '#']], 'Item 2', '/a', '/li',
-            ['li' => []], 'Item 3', '/li',
-            ['li' => ['class' => 'my-class-4']], ['a' => ['href' => '#']], 'Item 4', '/a', '/li',
+            ['div' => ['class' => 'dropdown-menu']],
+            ['h6' => ['class' => 'dropdown-header']], 'Header 1', '/h6',
+            ['div' => ['class' => 'dropdown-divider']], '/div',
+            ['h6' => ['class' => 'dropdown-header']], 'Header 2', '/h6',
+            ['div' => ['class' => 'dropdown-divider']], '/div',
+            ['a' => ['href' => '#', 'class' => 'dropdown-item']], 'Link 1', '/a',
+            ['div' => ['class' => 'dropdown-divider']], '/div',
+            ['h6' => ['class' => 'dropdown-header']], 'Header 3', '/h6',
+            ['a' => ['class' => 'dropdown-item']], 'Item 1', '/a',
+            ['a' => ['href' => '#', 'class' => 'dropdown-item']], 'Item 2', '/a',
+            ['a' => ['class' => 'dropdown-item']], 'Item 3', '/a',
+            ['a' => ['href' => '#', 'class' => 'dropdown-item my-class-4']], 'Item 4', '/a',
+            '/div'
         ];
         $this->assertHtml($expected, $result);
     }

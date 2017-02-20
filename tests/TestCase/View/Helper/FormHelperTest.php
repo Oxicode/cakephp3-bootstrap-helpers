@@ -571,17 +571,12 @@ class FormHelperTest extends TestCase {
             'Action',
             ['span' => ['class' => 'caret']], '/span',
             '/button',
-            ['ul' => [
-                'class' => 'dropdown-menu'
-            ]],
-            ['li' => []], ['a' => ['href'  => '#']], 'Link 1', '/a', '/li',
-            ['li' => []], ['a' => ['href'  => '#']], 'Link 2', '/a', '/li',
-            ['li' => [
-                'role' => 'separator',
-                'class' => 'divider'
-            ]], '/li',
-            ['li' => []], ['a' => ['href'  => '#']], 'Link 3', '/a', '/li',
-            '/ul',
+            ['div' => ['class' => 'dropdown-menu']],
+            ['a' => ['href'  => '#', 'class' => 'dropdown-item']], 'Link 1', '/a',
+            ['a' => ['href'  => '#', 'class' => 'dropdown-item']], 'Link 2', '/a',
+            ['div' => ['class' => 'dropdown-divider']], '/div',
+            ['a' => ['href'  => '#', 'class' => 'dropdown-item']], 'Link 3', '/a',
+            '/div',
             '/div',
             '/span',
             '/div',
@@ -589,10 +584,10 @@ class FormHelperTest extends TestCase {
         ];
         $this->_testInput($expected, $fieldName, $options + [
             'append' => $this->form->dropdownButton('Action', [
-                $this->form->Html->link('Link 1', '#'),
-                $this->form->Html->link('Link 2', '#'),
+                ['Link 1', '#'],
+                ['Link 2', '#'],
                 'divider',
-                $this->form->Html->link('Link 3', '#')
+                ['Link 3', '#']
             ])
         ]);
     }
